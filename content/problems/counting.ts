@@ -1,0 +1,393 @@
+import type { Problem } from "@/lib/types";
+
+export const COUNTING_PROBLEMS: Problem[] = [
+  {
+    id: "cnt-1",
+    statement:
+      "A wardrobe has $4$ shirts and $3$ pairs of pants. How many shirt-pants outfits are possible?",
+    answerType: "integer",
+    answer: 12,
+    difficulty: 2,
+    estMinutes: 1,
+    topicId: "counting-basics",
+    subtopic: "Product rule",
+    source: "AMC 8 style",
+    tags: ["product-rule"],
+    hints: [
+      "Choices multiply when made independently.",
+      "For each shirt, how many pants choices?",
+      "$4 \\cdot 3$.",
+    ],
+    solution: "Independent choices multiply: $4 \\cdot 3 = 12$ outfits.",
+  },
+  {
+    id: "cnt-2",
+    statement:
+      "How many three-digit numbers have all digits odd?",
+    answerType: "integer",
+    answer: 125,
+    difficulty: 3,
+    estMinutes: 2,
+    topicId: "counting-basics",
+    subtopic: "Digit counting",
+    source: "AMC 8 style",
+    tags: ["product-rule", "digits"],
+    hints: [
+      "How many odd digits are there?",
+      "Five: $1, 3, 5, 7, 9$ — and any of them can lead.",
+      "Three independent choices of five options.",
+    ],
+    solution:
+      "Each of the three digits is one of $\\{1,3,5,7,9\\}$: $5^3 = 125$.",
+  },
+  {
+    id: "cnt-3",
+    statement:
+      "A code consists of two distinct letters (A–Z) followed by two distinct digits. How many codes are possible?",
+    answerType: "mcq",
+    choices: ["$58500$", "$60840$", "$65000$", "$67600$", "$70200$"],
+    answer: 0,
+    difficulty: 4,
+    estMinutes: 3,
+    topicId: "counting-basics",
+    subtopic: "Product rule with restrictions",
+    source: "AMC 8 style",
+    tags: ["product-rule", "no-repetition"],
+    hints: [
+      "Count slot by slot, honoring the “distinct” conditions.",
+      "Letters: $26 \\cdot 25$. Digits: ?",
+      "Digits: $10 \\cdot 9$.",
+    ],
+    solution:
+      "$26 \\cdot 25 \\cdot 10 \\cdot 9 = 650 \\cdot 90 = 58500$.",
+    commonMistakes: ["Using $26^2 \\cdot 10^2$ — that permits repeats."],
+  },
+  {
+    id: "cnt-4",
+    statement:
+      "How many three-digit numbers contain at least one digit $7$?",
+    answerType: "integer",
+    answer: 252,
+    difficulty: 5,
+    estMinutes: 4,
+    topicId: "counting-basics",
+    subtopic: "Complementary counting",
+    source: "AMC 10 style",
+    tags: ["complementary"],
+    hints: [
+      "“At least one” is a signal to count the opposite.",
+      "Count three-digit numbers with no $7$ at all.",
+      "First digit: $8$ choices (1–9 minus 7); others: $9$ each.",
+    ],
+    solution:
+      "Total three-digit numbers: $900$. With no $7$: $8 \\cdot 9 \\cdot 9 = 648$. So at least one $7$: $900 - 648 = 252$.",
+    commonMistakes: ["Counting “exactly one 7” cases directly and mishandling overlaps."],
+    related: ["case-1"],
+  },
+  {
+    id: "pc-1",
+    statement:
+      "How many distinct arrangements does the word LEVEL have?",
+    answerType: "integer",
+    answer: 30,
+    difficulty: 4,
+    estMinutes: 3,
+    topicId: "perms-combs",
+    subtopic: "Permutations with repetition",
+    source: "AMC 8 style",
+    tags: ["permutations", "repetition"],
+    hints: [
+      "Five letters, but some repeat.",
+      "Two L's and two E's are indistinguishable.",
+      "Divide $5!$ by the repeats: $2!\\,2!$.",
+    ],
+    solution:
+      "$\\tfrac{5!}{2!\\,2!} = \\tfrac{120}{4} = 30$.",
+  },
+  {
+    id: "pc-2",
+    statement:
+      "A club of $10$ students chooses a committee of $3$. How many committees are possible?",
+    answerType: "integer",
+    answer: 120,
+    difficulty: 4,
+    estMinutes: 2,
+    topicId: "perms-combs",
+    subtopic: "Combinations",
+    source: "AMC 8 style",
+    tags: ["combinations"],
+    hints: [
+      "Does the order of committee members matter?",
+      "No — this is a combination.",
+      "$\\binom{10}{3} = \\tfrac{10 \\cdot 9 \\cdot 8}{6}$.",
+    ],
+    solution: "$\\binom{10}{3} = \\tfrac{720}{6} = 120$.",
+    commonMistakes: ["Using $10 \\cdot 9 \\cdot 8 = 720$ — that counts ordered committees."],
+  },
+  {
+    id: "pc-3",
+    statement:
+      "Six people sit around a round table. Two of them insist on sitting together. How many seatings are there, if rotations are considered identical?",
+    answerType: "integer",
+    answer: 48,
+    difficulty: 6,
+    estMinutes: 4,
+    topicId: "perms-combs",
+    subtopic: "Circular arrangements",
+    source: "AMC 10 style",
+    tags: ["circular", "grouping"],
+    hints: [
+      "Glue the pair into one super-person.",
+      "Five units around a circle: $(5-1)!$ arrangements.",
+      "The glued pair can sit in $2$ internal orders.",
+    ],
+    solution:
+      "Treat the pair as one unit: $5$ units in a circle give $4! = 24$ arrangements, times $2$ for the pair's internal order: $48$.",
+  },
+  {
+    id: "pc-4",
+    statement:
+      "How many lattice paths go from $(0,0)$ to $(4,4)$ using only unit steps right and up?",
+    answerType: "integer",
+    answer: 70,
+    difficulty: 6,
+    estMinutes: 3,
+    topicId: "perms-combs",
+    subtopic: "Lattice paths",
+    source: "AMC 10 style",
+    tags: ["paths", "binomial"],
+    hints: [
+      "Every path is a sequence of R's and U's.",
+      "Eight steps total: choose which four are R.",
+      "$\\binom{8}{4}$.",
+    ],
+    solution:
+      "A path is an arrangement of $4$ R's and $4$ U's: $\\binom{8}{4} = 70$.",
+  },
+  {
+    id: "case-1",
+    statement:
+      "How many integers from $1$ to $100$ are divisible by $3$ or $5$?",
+    answerType: "integer",
+    answer: 47,
+    difficulty: 5,
+    estMinutes: 3,
+    topicId: "casework",
+    subtopic: "Inclusion-exclusion",
+    source: "AMC 8 style",
+    tags: ["inclusion-exclusion"],
+    hints: [
+      "Count each set separately, then fix the double-count.",
+      "$\\lfloor 100/3 \\rfloor = 33$, $\\lfloor 100/5 \\rfloor = 20$.",
+      "Numbers divisible by both are divisible by $15$.",
+    ],
+    solution:
+      "$33 + 20 - 6 = 47$ by inclusion-exclusion (six multiples of $15$ were counted twice).",
+    commonMistakes: ["Forgetting to subtract the multiples of 15."],
+  },
+  {
+    id: "case-2",
+    statement:
+      "How many three-digit numbers have digits summing to $5$?",
+    answerType: "integer",
+    answer: 15,
+    difficulty: 6,
+    estMinutes: 4,
+    topicId: "casework",
+    subtopic: "Stars and bars with constraints",
+    source: "AMC 10 style",
+    tags: ["stars-and-bars", "digits"],
+    hints: [
+      "Digits $a+b+c = 5$ with $a \\ge 1$ (it's a three-digit number).",
+      "Substitute $a' = a - 1$ to get $a' + b + c = 4$, all $\\ge 0$.",
+      "Count with stars and bars: $\\binom{4+2}{2}$.",
+    ],
+    solution:
+      "With $a' = a-1 \\ge 0$: solutions to $a'+b+c = 4$ number $\\binom{6}{2} = 15$. No digit can exceed $9$ here, so no exclusions are needed.",
+  },
+  {
+    id: "case-3",
+    statement:
+      "A fair coin is flipped $4$ times. The probability of at least two heads is $\\tfrac{m}{n}$ in lowest terms. What is $m + n$?",
+    answerType: "integer",
+    answer: 27,
+    difficulty: 6,
+    estMinutes: 4,
+    topicId: "casework",
+    subtopic: "Complementary probability",
+    source: "AIME style",
+    tags: ["complementary", "binomial-probability"],
+    hints: [
+      "Count the complement: zero or one head.",
+      "$P(0H) = \\tfrac{1}{16}$, $P(1H) = \\tfrac{4}{16}$.",
+      "$1 - \\tfrac{5}{16}$.",
+    ],
+    solution:
+      "$P = 1 - \\tfrac{1 + 4}{16} = \\tfrac{11}{16}$, so $m+n = 27$.",
+  },
+  {
+    id: "prob-1",
+    statement:
+      "Two fair dice are rolled. What is the probability the sum is $7$?",
+    answerType: "mcq",
+    choices: ["$\\tfrac{1}{12}$", "$\\tfrac{1}{9}$", "$\\tfrac{1}{6}$", "$\\tfrac{5}{36}$", "$\\tfrac{1}{4}$"],
+    answer: 2,
+    difficulty: 4,
+    estMinutes: 2,
+    topicId: "probability",
+    subtopic: "Uniform sample spaces",
+    source: "AMC 8 style",
+    tags: ["dice", "sample-space"],
+    hints: [
+      "How many equally likely outcomes are there in total?",
+      "$36$. Now count the pairs summing to $7$.",
+      "$(1,6), (2,5), (3,4), (4,3), (5,2), (6,1)$.",
+    ],
+    solution:
+      "Six favorable outcomes out of $36$: $\\tfrac{6}{36} = \\tfrac16$. Sum $7$ is the most likely total.",
+    commonMistakes: ["Treating $(3,4)$ and $(4,3)$ as one outcome — the dice are distinct."],
+  },
+  {
+    id: "prob-2",
+    statement:
+      "A bag has $3$ red and $2$ blue marbles. Two are drawn without replacement. The probability both are red is $\\tfrac{m}{n}$ in lowest terms. What is $m + n$?",
+    answerType: "integer",
+    answer: 13,
+    difficulty: 5,
+    estMinutes: 3,
+    topicId: "probability",
+    subtopic: "Without replacement",
+    source: "AMC 10 style",
+    tags: ["conditional", "drawing"],
+    hints: [
+      "Multiply the probability of red on each draw.",
+      "First draw: $\\tfrac{3}{5}$. Second, given a red is gone?",
+      "$\\tfrac{3}{5} \\cdot \\tfrac{2}{4}$.",
+    ],
+    solution:
+      "$\\tfrac35 \\cdot \\tfrac24 = \\tfrac{3}{10}$, so $m+n = 13$.",
+  },
+  {
+    id: "prob-3",
+    statement:
+      "A family has two children. Given that at least one is a boy, what is the probability both are boys? (Assume boys and girls are equally likely and independent.)",
+    answerType: "mcq",
+    choices: ["$\\tfrac{1}{4}$", "$\\tfrac{1}{3}$", "$\\tfrac{1}{2}$", "$\\tfrac{2}{3}$", "$\\tfrac{3}{4}$"],
+    answer: 1,
+    difficulty: 6,
+    estMinutes: 3,
+    topicId: "probability",
+    subtopic: "Conditional probability",
+    source: "AMC 10 style",
+    tags: ["conditional", "classic"],
+    hints: [
+      "List the equally likely gender orders: BB, BG, GB, GG.",
+      "The condition removes GG.",
+      "Of the three remaining, how many are BB?",
+    ],
+    solution:
+      "Conditioning on “at least one boy” leaves $\\{BB, BG, GB\\}$, each equally likely, so $P(BB) = \\tfrac13$ — famously not $\\tfrac12$.",
+    commonMistakes: ["Answering $\\tfrac12$ — that answers a different question (\"the older child is a boy\")."],
+  },
+  {
+    id: "ev-1",
+    statement:
+      "A fair six-sided die is rolled once. If the expected value of the roll is $E$, what is $2E$?",
+    answerType: "integer",
+    answer: 7,
+    difficulty: 5,
+    estMinutes: 2,
+    topicId: "expected-value",
+    subtopic: "Definition",
+    source: "AMC 10 style",
+    tags: ["expected-value"],
+    hints: [
+      "Average the outcomes, weighted by probability.",
+      "$E = \\tfrac{1+2+\\cdots+6}{6}$.",
+      "$E = \\tfrac{21}{6} = 3.5$.",
+    ],
+    solution: "$E = \\tfrac{21}{6} = 3.5$, so $2E = 7$.",
+  },
+  {
+    id: "ev-2",
+    statement:
+      "Ten people throw their hats in a pile and each picks one back uniformly at random. What is the expected number of people who get their own hat?",
+    answerType: "integer",
+    answer: 1,
+    difficulty: 7,
+    estMinutes: 4,
+    topicId: "expected-value",
+    subtopic: "Linearity & indicators",
+    source: "AIME style",
+    tags: ["linearity", "indicators", "classic"],
+    hints: [
+      "Don't enumerate permutations. Use one indicator per person.",
+      "Each person gets their own hat with probability $\\tfrac{1}{10}$.",
+      "Linearity: sum the ten indicator expectations — dependence doesn't matter.",
+    ],
+    solution:
+      "Let $X_i$ indicate person $i$ getting their own hat: $E[X_i] = \\tfrac1{10}$. By linearity, $E[\\sum X_i] = 10 \\cdot \\tfrac1{10} = 1$ — regardless of the (heavy) dependence between people.",
+    commonMistakes: ["Believing dependence breaks the computation — linearity needs no independence."],
+  },
+  {
+    id: "ev-3",
+    statement:
+      "A fair die is rolled repeatedly. What is the expected number of rolls until the first $6$ appears?",
+    answerType: "integer",
+    answer: 6,
+    difficulty: 7,
+    estMinutes: 4,
+    topicId: "expected-value",
+    subtopic: "Geometric expectation",
+    source: "AMC 12 style",
+    tags: ["geometric-distribution", "recursion"],
+    hints: [
+      "Let $E$ be the expected number of rolls and condition on the first roll.",
+      "With probability $\\tfrac16$ you're done in 1; otherwise you've used a roll and are back where you started.",
+      "$E = 1 + \\tfrac56 E$.",
+    ],
+    solution:
+      "$E = \\tfrac16 \\cdot 1 + \\tfrac56(1 + E)$, i.e. $E = 1 + \\tfrac56 E$, giving $E = 6$. In general, expected waiting time for probability $p$ is $\\tfrac1p$.",
+  },
+  {
+    id: "pig-1",
+    statement:
+      "A drawer contains socks in $5$ colors. How many socks must you draw (blindly) to guarantee a matching pair?",
+    answerType: "integer",
+    answer: 6,
+    difficulty: 5,
+    estMinutes: 2,
+    topicId: "pigeonhole",
+    subtopic: "Basic pigeonhole",
+    source: "AMC 8 style",
+    tags: ["pigeonhole", "worst-case"],
+    hints: [
+      "Think worst case: how unlucky can you be?",
+      "You could draw one of each color first.",
+      "After $5$ singletons, the next sock must repeat a color.",
+    ],
+    solution:
+      "Worst case is one sock of each of the $5$ colors; the $6$th must match one. Answer: $6$.",
+    commonMistakes: ["Answering 5 — five draws can still be all different."],
+  },
+  {
+    id: "pig-2",
+    statement:
+      "What is the smallest number of people that guarantees at least $3$ of them share a birth month?",
+    answerType: "integer",
+    answer: 25,
+    difficulty: 6,
+    estMinutes: 3,
+    topicId: "pigeonhole",
+    subtopic: "Generalized pigeonhole",
+    source: "AMC 10 style",
+    tags: ["pigeonhole", "generalized"],
+    hints: [
+      "How many people can avoid any month reaching 3?",
+      "At most $2$ per month.",
+      "$12 \\cdot 2 = 24$ people can dodge; one more cannot.",
+    ],
+    solution:
+      "With $24$ people you can have exactly $2$ per month; the $25$th person forces some month to $3$. Answer: $25$.",
+  },
+];
