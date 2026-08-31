@@ -96,6 +96,10 @@
 
 .shell-top-stats { display: flex; gap: 1.6rem; align-items: center; }
 
+.shell-account { display: flex; align-items: center; }
+.shell-account form { display: flex; align-items: center; gap: 0.7rem; }
+.shell-account-email { color: var(--ink-dim); font-size: 0.78rem; }
+
 .top-stat { display: inline-flex; align-items: center; gap: 0.5rem; font-size: 0.78rem; color: var(--ink-dim); }
 .top-stat-key { color: var(--accent); letter-spacing: 0.12em; font-size: 0.68rem; }
 

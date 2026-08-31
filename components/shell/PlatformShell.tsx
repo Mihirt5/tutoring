@@ -5,6 +5,8 @@ import { usePathname } from "next/navigation";
 import { useProgress } from "@/lib/store";
 import { levelProgress } from "@/lib/engine/xp";
 import { dueItems } from "@/lib/engine/srs";
+import { signOut } from "@/lib/supabase/actions";
+import { useUser } from "@/lib/supabase/useUser";
 
 const NAV = [
   { href: "/learn", label: "Learn", glyph: "∂" },
@@ -22,6 +24,7 @@ const SECONDARY = [
 
 export function PlatformShell({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
+  const { user, loading } = useUser();
   const p = useProgress();
   const lp = levelProgress(p.xp);
   const due = dueItems(p.reviews).length;
@@ -82,6 +85,16 @@ export function PlatformShell({ children }: { children: React.ReactNode }) {
                 <span style={{ width: `${Math.min(100, (lp.into / lp.needed) * 100)}%` }} />
               </span>
             </span>
+          </div>
+          <div className="shell-account">
+            {!loading && (user ? (
+              <form action={signOut}>
+                <span className="mono shell-account-email">{user.email}</span>
+                <button className="btn btn-small btn-ghost" type="submit">Log out</button>
+              </form>
+            ) : (
+              <Link className="btn btn-small btn-ghost" href="/login">Log in</Link>
+            ))}
           </div>
           <Link className="btn btn-small btn-ghost" href="/">Institute site</Link>
         </header>

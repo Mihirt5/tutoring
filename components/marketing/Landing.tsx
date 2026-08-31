@@ -15,8 +15,8 @@ const STAGE_SECTIONS: Record<string, string> = {
   platonic: "#programs",
   surface: "#method",
   euler: "#problem",
-  network: "#coaches",
-  primes: "#results",
+  network: "#why",
+  primes: "#why",
   helix: "#curriculum",
   finale: "#apply",
 };
@@ -134,23 +134,6 @@ export default function Landing() {
         scrollTrigger: { trigger: "#method-steps", start: "top 70%", end: "bottom 40%", scrub: 0.4 },
       });
 
-      document.querySelectorAll<HTMLElement>("[data-count]").forEach(el => {
-        const target = parseFloat(el.dataset.count!);
-        const decimals = parseInt(el.dataset.decimals || "0", 10);
-        const counter = { v: 0 };
-        gsap.to(counter, {
-          v: target,
-          duration: 2.2,
-          ease: "power2.out",
-          scrollTrigger: { trigger: el, start: "top 85%", once: true },
-          onUpdate: () => {
-            el.textContent = decimals
-              ? counter.v.toFixed(decimals)
-              : Math.round(counter.v).toLocaleString("en-US");
-          },
-        });
-      });
-
       gsap.to("#timeline-fill", {
         scaleY: 1,
         ease: "none",
@@ -202,13 +185,15 @@ export default function Landing() {
           <nav className="nav-links" aria-label="Primary">
             <a href="#programs">Programs</a>
             <a href="#method">Method</a>
-            <a href="#coaches">Coaches</a>
-            <a href="#results">Results</a>
+            <a href="#why">Why us</a>
             <a href="#curriculum">Curriculum</a>
             <a href="#pricing">Pricing</a>
             <Link href="/learn">Platform</Link>
           </nav>
-          <Link className="btn btn-small btn-solid" href="/learn">Enter Academy</Link>
+          <div className="nav-actions">
+            <Link className="btn btn-small btn-ghost" href="/login">Log in</Link>
+            <Link className="btn btn-small btn-solid" href="/learn">Enter Academy</Link>
+          </div>
         </div>
         <div className="nav-progress" aria-hidden="true"><div className="nav-progress-fill" id="nav-progress-fill" /></div>
       </header>
@@ -265,7 +250,7 @@ export default function Landing() {
                 <ul className="chip-row" role="list">
                   <li>Number Theory</li><li>Counting</li><li>Geometry</li><li>Logic</li>
                 </ul>
-                <p className="card-meta mono">Grades 5–8 · 90-min sessions · Cohorts of 6</p>
+                <p className="card-meta mono">Grades 5–8 · Self-paced · Adaptive practice</p>
               </article>
 
               <article className="card glass plus-corners program-card" data-reveal>
@@ -299,9 +284,9 @@ export default function Landing() {
                 <p className="card-index mono">P·05</p>
                 <h3>IMO Preparation</h3>
                 <p className="card-tag">The summit</p>
-                <p>A training camp modeled on national team preparation: daily problem seminars,
-                  mock olympiads, and individual review with former IMO medalists.</p>
-                <p className="card-meta mono">By invitation · Year-round · 1:2 coaching</p>
+                <p>Modeled on national team preparation: daily problem sets, mock olympiads,
+                  and AI-guided review built on frameworks from former IMO medalists.</p>
+                <p className="card-meta mono">By invitation · Year-round · Self-paced</p>
               </article>
 
               <article className="card glass plus-corners program-card" data-reveal>
@@ -337,8 +322,8 @@ export default function Landing() {
                   <p className="step-num mono">Lemma 1</p>
                   <h3>Foundations</h3>
                   <p>Every technique rests on first principles. We rebuild algebra, geometry,
-                    combinatorics, and number theory from the axioms up — so nothing is
-                    memorized that can instead be derived.</p>
+                    combinatorics, and number theory from those principles up — so nothing
+                    is memorized that can instead be derived.</p>
                 </div>
                 <div className="step glass" data-step>
                   <p className="step-num mono">Lemma 2</p>
@@ -424,85 +409,43 @@ export default function Landing() {
           </div>
         </section>
 
-        {/* COACHES */}
-        <section className="section" id="coaches">
+        {/* WHY US */}
+        <section className="section" id="why">
           <div className="container">
             <header className="section-head">
-              <p className="eyebrow" data-reveal>§ 04 · The Coaches</p>
-              <h2 data-reveal>Learn from those<br />who have been there.</h2>
+              <p className="eyebrow" data-reveal>§ 04 · Why Lucid</p>
+              <h2 data-reveal>Built differently.</h2>
               <p className="section-sub" data-reveal>
-                Every Lucid coach has stood on the olympiad stage, published research,
-                or trained national teams — most, more than one of the three.
+                No cohorts to keep up with and no coach to schedule around — just you,
+                the curriculum, and an AI that won&rsquo;t let you fake understanding.
               </p>
             </header>
 
-            <div className="coach-grid">
-              <article className="card glass coach-card" data-reveal>
-                <div className="monogram" aria-hidden="true"><span>IN</span></div>
-                <h3>Dr.&nbsp;Ilya Novak</h3>
-                <p className="coach-cred mono">IMO Gold ×2 · PhD, Analytic Number Theory</p>
-                <p>Leads the USAMO and IMO seminars. Known for reducing terrifying problems
-                  to three quiet observations.</p>
-                <p className="coach-focus">Number theory · Algebra</p>
+            <div className="why-grid">
+              <article className="card glass why-card" data-reveal>
+                <div className="why-icon" aria-hidden="true"><span>∂</span></div>
+                <h3>100% virtual, always on</h3>
+                <p>Every lesson, problem, and mock contest lives on the platform.
+                  Log in whenever you have twenty minutes — there&rsquo;s no seat to book.</p>
               </article>
-              <article className="card glass coach-card" data-reveal>
-                <div className="monogram" aria-hidden="true"><span>SR</span></div>
-                <h3>Dr.&nbsp;Sofia Reyes-Almeida</h3>
-                <p className="coach-cred mono">EGMO Gold · Putnam Fellow · MIT PhD</p>
-                <p>Runs the combinatorics track. Insists every counting argument be
-                  provable two different ways before it counts.</p>
-                <p className="coach-focus">Combinatorics · Probability</p>
+              <article className="card glass why-card" data-reveal>
+                <div className="why-icon" aria-hidden="true"><span>λ</span></div>
+                <h3>Coached, not lectured</h3>
+                <p>The AI coach asks before it answers — Socratic hints, never the
+                  final answer, so understanding is earned, not copied.</p>
               </article>
-              <article className="card glass coach-card" data-reveal>
-                <div className="monogram" aria-hidden="true"><span>DC</span></div>
-                <h3>Prof.&nbsp;Daniel Cho</h3>
-                <p className="coach-cred mono">National Team Deputy Leader · 15 yrs coaching</p>
-                <p>Olympiad geometry specialist. Students describe his sessions as
-                  &ldquo;watching a diagram confess.&rdquo;</p>
-                <p className="coach-focus">Geometry · Transformations</p>
+              <article className="card glass why-card" data-reveal>
+                <div className="why-icon" aria-hidden="true"><span>Σ</span></div>
+                <h3>One continuous curriculum</h3>
+                <p>Six programs, one trajectory: AMC 8 through IMO Prep, each stage
+                  a strict prerequisite for the next.</p>
               </article>
-              <article className="card glass coach-card" data-reveal>
-                <div className="monogram" aria-hidden="true"><span>AO</span></div>
-                <h3>Dr.&nbsp;Amara Osei</h3>
-                <p className="coach-cred mono">IMO Silver · DPhil Oxford, Graph Theory</p>
-                <p>Directs the AIME intensive. Builds each student a personal map of
-                  exactly which fifteen skills stand between them and qualification.</p>
-                <p className="coach-focus">Combinatorics · Inequalities</p>
+              <article className="card glass why-card" data-reveal>
+                <div className="why-icon" aria-hidden="true"><span>$</span></div>
+                <h3>Priced like software</h3>
+                <p>Plans start at $5/month — a virtual platform shouldn&rsquo;t cost
+                  what an hour of private tutoring does.</p>
               </article>
-            </div>
-          </div>
-        </section>
-
-        {/* RESULTS */}
-        <section className="section" id="results">
-          <div className="container">
-            <header className="section-head">
-              <p className="eyebrow" data-reveal>§ 05 · Student Success</p>
-              <h2 data-reveal>The results are<br />a theorem, not a claim.</h2>
-              <p className="section-sub" data-reveal>Outcomes across the last five competition cycles.</p>
-            </header>
-
-            <div className="stats-band glass" data-reveal>
-              <div className="stat">
-                <p className="stat-value"><span data-count="1200">0</span><span className="stat-suffix">+</span></p>
-                <p className="stat-label mono">Students trained</p>
-              </div>
-              <div className="stat">
-                <p className="stat-value"><span data-count="312">0</span></p>
-                <p className="stat-label mono">AIME qualifiers</p>
-              </div>
-              <div className="stat">
-                <p className="stat-value"><span data-count="87">0</span></p>
-                <p className="stat-label mono">USAMO / JMO qualifiers</p>
-              </div>
-              <div className="stat">
-                <p className="stat-value"><span data-count="24">0</span></p>
-                <p className="stat-label mono">International medals</p>
-              </div>
-              <div className="stat">
-                <p className="stat-value"><span className="stat-prefix">+</span><span data-count="21.5" data-decimals="1">0</span></p>
-                <p className="stat-label mono">Avg. AMC score gain</p>
-              </div>
             </div>
           </div>
         </section>
@@ -511,8 +454,8 @@ export default function Landing() {
         <section className="section" id="curriculum">
           <div className="container">
             <header className="section-head">
-              <p className="eyebrow" data-reveal>§ 06 · Curriculum</p>
-              <h2 data-reveal>From axioms<br />to the IMO.</h2>
+              <p className="eyebrow" data-reveal>§ 05 · Curriculum</p>
+              <h2 data-reveal>From first principles<br />to the IMO.</h2>
               <p className="section-sub" data-reveal>
                 A single continuous path. Each milestone unlocks the next —
                 no stage skipped, no gap left unproved.
@@ -528,7 +471,7 @@ export default function Landing() {
                 ["Stage 2 · AMC 10/12", "Technique Under Pressure", "The full toolbox — Vieta, telescoping, mass points, generating intuitions — executed in 75 minutes."],
                 ["Stage 3 · AIME", "Synthesis", "Problems that cross domain boundaries. Decomposition strategy, answer-extraction discipline, three-hour endurance."],
                 ["Stage 4 · USAMO", "Rigor", "Complete written proofs, graded to olympiad standard. Inequalities, olympiad geometry, functional equations."],
-                ["Stage 5 · IMO", "Mastery", "National-camp-level training: daily seminars, mock olympiads, and coaching from those who have medaled."],
+                ["Stage 5 · IMO", "Mastery", "Elite-level training: daily problem sets, mock olympiads, and an AI coach built on frameworks from those who have medaled."],
               ].map(([stage, title, body]) => (
                 <div className="milestone" data-reveal key={stage}>
                   <div className="milestone-node" aria-hidden="true" />
@@ -543,46 +486,11 @@ export default function Landing() {
           </div>
         </section>
 
-        {/* TESTIMONIALS */}
-        <section className="section" id="testimonials">
-          <div className="container">
-            <header className="section-head">
-              <p className="eyebrow" data-reveal>§ 07 · Testimonials</p>
-              <h2 data-reveal>Proof by example.</h2>
-            </header>
-            <div className="quote-grid">
-              <figure className="card glass quote" data-reveal>
-                <blockquote>
-                  &ldquo;I went from missing AIME by two points to USAMO qualification in fourteen
-                  months. The difference was finally learning <em>why</em> techniques work,
-                  not just when to use them.&rdquo;
-                </blockquote>
-                <figcaption className="mono">Maya L. — USAMO qualifier, ’25</figcaption>
-              </figure>
-              <figure className="card glass quote" data-reveal>
-                <blockquote>
-                  &ldquo;The proof-writing seminar changed how my son thinks — in mathematics,
-                  and everywhere else. He argues carefully now. We are still deciding
-                  whether to be grateful.&rdquo;
-                </blockquote>
-                <figcaption className="mono">Parent of an AIME qualifier, ’24</figcaption>
-              </figure>
-              <figure className="card glass quote" data-reveal>
-                <blockquote>
-                  &ldquo;Lucid’s mock olympiads were harder than the real one. Walking into the
-                  IMO, I felt something I had never felt at a competition: calm.&rdquo;
-                </blockquote>
-                <figcaption className="mono">Jonas K. — IMO Bronze, ’24</figcaption>
-              </figure>
-            </div>
-          </div>
-        </section>
-
         {/* PRICING */}
         <section className="section" id="pricing">
           <div className="container">
             <header className="section-head">
-              <p className="eyebrow" data-reveal>§ 08 · Pricing</p>
+              <p className="eyebrow" data-reveal>§ 06 · Pricing</p>
               <h2 data-reveal>Choose your intensity.</h2>
               <p className="section-sub" data-reveal>
                 Every tier includes the full curriculum platform, problem bank,
@@ -592,41 +500,41 @@ export default function Landing() {
 
             <div className="pricing-grid">
               <article className="card glass price-card" data-reveal>
-                <p className="mono price-tier">Cohort</p>
-                <p className="price"><span className="price-num">$290</span><span className="price-per">/month</span></p>
+                <p className="mono price-tier">Starter</p>
+                <p className="price"><span className="price-num">$5</span><span className="price-per">/month</span></p>
                 <ul role="list">
-                  <li>Weekly 2-hour cohort session (6 students)</li>
-                  <li>Full platform: lessons, bank, contests</li>
+                  <li>Full curriculum platform: lessons, bank, contests</li>
+                  <li>AI coach, Socratic hints on every problem</li>
                   <li>Monthly mock competition, scored</li>
-                  <li>Written solutions to every problem</li>
+                  <li>Progress tracking &amp; mastery roadmap</li>
                 </ul>
-                <Link className="btn btn-ghost btn-block" href="/learn">Start free, then apply</Link>
+                <Link className="btn btn-ghost btn-block" href="/signup">Start free</Link>
               </article>
 
               <article className="card glass price-card featured" data-reveal>
                 <p className="featured-flag mono">Most chosen</p>
-                <p className="mono price-tier">Intensive</p>
-                <p className="price"><span className="price-num">$640</span><span className="price-per">/month</span></p>
+                <p className="mono price-tier">Plus</p>
+                <p className="price"><span className="price-num">$10</span><span className="price-per">/month</span></p>
                 <ul role="list">
-                  <li>Two sessions weekly, cohort of 4</li>
-                  <li>Graded proof feedback, line by line</li>
-                  <li>Personal curriculum roadmap + mentor</li>
-                  <li>Priority coach office hours</li>
-                  <li>Competition-day strategy coaching</li>
+                  <li>Everything in Starter</li>
+                  <li>Unlimited AI coach access</li>
+                  <li>Weekly mock competitions, scored</li>
+                  <li>Written solutions to every problem</li>
+                  <li>Full progress analytics</li>
                 </ul>
-                <Link className="btn btn-solid btn-block" href="/learn">Start free, then apply</Link>
+                <Link className="btn btn-solid btn-block" href="/signup">Get Plus</Link>
               </article>
 
               <article className="card glass price-card" data-reveal>
-                <p className="mono price-tier">Private</p>
-                <p className="price"><span className="price-num">$190</span><span className="price-per">/hour</span></p>
+                <p className="mono price-tier">Pro</p>
+                <p className="price"><span className="price-num">$15</span><span className="price-per">/month</span></p>
                 <ul role="list">
-                  <li>1-on-1 with an olympiad medalist</li>
-                  <li>Fully custom curriculum &amp; pace</li>
-                  <li>Unlimited written proof review</li>
-                  <li>Direct coach messaging between sessions</li>
+                  <li>Everything in Plus</li>
+                  <li>Priority AI coach, deeper proof review</li>
+                  <li>Competition-day strategy guides</li>
+                  <li>Early access to new content</li>
                 </ul>
-                <Link className="btn btn-ghost btn-block" href="/learn">Request a coach</Link>
+                <Link className="btn btn-ghost btn-block" href="/signup">Get Pro</Link>
               </article>
             </div>
           </div>
@@ -636,7 +544,7 @@ export default function Landing() {
         <section className="section" id="faq">
           <div className="container container-narrow">
             <header className="section-head">
-              <p className="eyebrow" data-reveal>§ 09 · FAQ</p>
+              <p className="eyebrow" data-reveal>§ 07 · FAQ</p>
               <h2 data-reveal>Open questions.</h2>
             </header>
 
@@ -658,21 +566,16 @@ export default function Landing() {
                   examples that reveal step by step, and practice with escalating hints.
                   You cannot scrub to the end.</p>
               </FaqItem>
-              <FaqItem q="Are the cohort sessions online or in person?">
-                <p>Live online, with a shared mathematical workspace built for real-time
-                  collaboration on diagrams and proofs. Intensive and IMO-track students
-                  gather in person twice a year for week-long camps.</p>
+              <FaqItem q="Is this self-paced, or are there scheduled sessions?">
+                <p>Entirely self-paced and 100% virtual. There's no cohort to keep up with
+                  and no seat to book — every lesson, problem set, and mock contest is on
+                  the platform whenever you are, and the AI coach is there the moment you
+                  get stuck.</p>
               </FaqItem>
               <FaqItem q="How much independent work is expected?">
                 <p>Four to eight hours weekly, depending on tier. Competition mathematics is
                   learned by struggling with problems, not by watching solutions — the
                   platform exists to sharpen that struggle, not replace it.</p>
-              </FaqItem>
-              <FaqItem q="What results should we expect?">
-                <p>We make no score guarantees — anyone who does is selling something else.
-                  What we can show is the distribution: students who complete a full stage
-                  of the roadmap improve their AMC score by 21.5 points on average, and
-                  roughly one in four of our AIME qualifiers reaches a USAMO or JMO.</p>
               </FaqItem>
             </div>
           </div>
@@ -681,7 +584,7 @@ export default function Landing() {
         {/* FINAL CTA */}
         <section className="cta" id="apply">
           <div className="container">
-            <p className="eyebrow" data-reveal>§ 10 · Q.E.D.</p>
+            <p className="eyebrow" data-reveal>§ 08 · Q.E.D.</p>
             <h2 className="cta-title" data-reveal>
               Start your journey to<br />mathematical excellence<span className="accent">.</span>
             </h2>

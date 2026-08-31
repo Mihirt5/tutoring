@@ -15,6 +15,8 @@ like progressing through an elite mathematics academy.
 
 ```
 /                          Marketing (cinematic Three.js landing)
+/login                     Log in (Supabase auth)
+/signup                    Sign up (Supabase auth)
 /learn                     Curriculum home — all paths, mastery rings, recommendations
 /learn/[path]              Path detail — units, lessons, prerequisites, progress
 /lesson/[slug]             Lesson player — block-by-block interactive experience
