@@ -37,7 +37,7 @@ export function PlatformShell({ children }: { children: React.ReactNode }) {
             <circle cx="16" cy="16" r="13" fill="none" stroke="currentColor" strokeWidth="1.5" opacity="0.55" />
             <path d="M16 6 L25.5 22 L6.5 22 Z" fill="none" stroke="currentColor" strokeWidth="1.5" />
           </svg>
-          <span className="brand-name">AXIOM</span>
+          <span className="brand-name">LUCID</span>
         </Link>
 
         <nav className="shell-nav" aria-label="Platform">

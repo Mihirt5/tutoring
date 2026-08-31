@@ -70,7 +70,7 @@ export function CoachPanel({
       <div className="coach-head">
         <span className="coach-mark mono" aria-hidden="true">λ</span>
         <div>
-          <p className="coach-title">Axiom Coach</p>
+          <p className="coach-title">Lucid Coach</p>
           <p className="coach-sub mono">
             {enabled === null ? "connecting…" : enabled ? "Socratic mode — answers are earned" : "offline · authored hints active"}
           </p>

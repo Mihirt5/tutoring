@@ -1,4 +1,4 @@
-// ── Axiom platform: shared type system ──────────────────────────
+// ── Lucid platform: shared type system ──────────────────────────
 // These shapes mirror the target Postgres schema in ARCHITECTURE.md
 // so localStorage progress can migrate to a server unchanged.
 

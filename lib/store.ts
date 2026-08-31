@@ -14,7 +14,7 @@ import { problemById } from "@/content/problems";
 
 _bindDifficultyLookup(id => problemById.get(id)?.difficulty ?? 0);
 
-const KEY = "axiom-progress-v1";
+const KEY = "lucid-progress-v1";
 
 export function defaultProgress(): Progress {
   return {

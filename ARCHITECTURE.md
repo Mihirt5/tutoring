@@ -1,4 +1,4 @@
-# Axiom Platform — Architecture
+# Lucid Platform — Architecture
 
 A complete digital learning ecosystem for competition mathematics: MathDash's structured
 progression, AoPS depth, Brilliant interactivity, Khan Academy clarity, Apple polish.

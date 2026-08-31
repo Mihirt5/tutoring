@@ -22,7 +22,7 @@ const plexMono = IBM_Plex_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Axiom — Competition Mathematics Academy · AMC · AIME · USAMO · IMO",
+  title: "Lucid — Competition Mathematics Academy · AMC · AIME · USAMO · IMO",
   description:
     "A complete digital learning ecosystem for competition mathematics: interactive lessons, adaptive practice, mock contests, and AI coaching from AMC 8 through the IMO.",
   icons: {

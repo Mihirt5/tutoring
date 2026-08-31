@@ -1,5 +1,5 @@
 // ─────────────────────────────────────────────────────────────────
-// AXIOM — cinematic mathematical environment
+// LUCID — cinematic mathematical environment
 // A single continuous scene. The camera travels along -Z through
 // staged constructions, each fading into focus as its section
 // scrolls into view: axioms → solids → surfaces → theorem →

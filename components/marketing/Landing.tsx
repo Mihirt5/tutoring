@@ -1,6 +1,6 @@
 "use client";
 
-// AXIOM marketing landing — ported from the original Vite build.
+// LUCID marketing landing — ported from the original Vite build.
 // One client component: cinematic Three.js canvas + GSAP scroll
 // orchestration + all page sections. The platform lives at /learn.
 
@@ -195,9 +195,9 @@ export default function Landing() {
 
       <header className="nav" id="nav">
         <div className="nav-inner">
-          <a className="brand" href="#top" aria-label="Axiom Institute — home">
+          <a className="brand" href="#top" aria-label="Lucid Institute — home">
             <BrandMark />
-            <span className="brand-name">AXIOM</span>
+            <span className="brand-name">LUCID</span>
           </a>
           <nav className="nav-links" aria-label="Primary">
             <a href="#programs">Programs</a>
@@ -217,7 +217,7 @@ export default function Landing() {
         {/* HERO */}
         <section className="hero" id="hero">
           <div className="container">
-            <p className="eyebrow" data-hero>Axiom · Institute of Competition Mathematics</p>
+            <p className="eyebrow" data-hero>Lucid · Institute of Competition Mathematics</p>
             <h1 className="hero-title">
               <span className="line" data-hero>Master</span>
               <span className="line" data-hero>Competition</span>
@@ -321,7 +321,7 @@ export default function Landing() {
           <div className="container">
             <div className="sticky-grid">
               <div className="sticky-col">
-                <p className="eyebrow" data-reveal>§ 02 · The Axiom Method</p>
+                <p className="eyebrow" data-reveal>§ 02 · The Lucid Method</p>
                 <h2 data-reveal>Reasoning is<br />a discipline.</h2>
                 <p className="section-sub" data-reveal>
                   Five stages, in strict logical order. Each one is a prerequisite
@@ -379,7 +379,7 @@ export default function Landing() {
                 <h2 data-reveal>Reasoning,<br />not recall.</h2>
                 <p className="section-sub" data-reveal>
                   Watch a competition problem dissolve under structured thought.
-                  This is how every Axiom lesson works — questions, not answers,
+                  This is how every Lucid lesson works — questions, not answers,
                   until the answer is inevitable.
                 </p>
                 <div className="problem-card glass plus-corners" data-reveal>
@@ -431,7 +431,7 @@ export default function Landing() {
               <p className="eyebrow" data-reveal>§ 04 · The Coaches</p>
               <h2 data-reveal>Learn from those<br />who have been there.</h2>
               <p className="section-sub" data-reveal>
-                Every Axiom coach has stood on the olympiad stage, published research,
+                Every Lucid coach has stood on the olympiad stage, published research,
                 or trained national teams — most, more than one of the three.
               </p>
             </header>
@@ -569,7 +569,7 @@ export default function Landing() {
               </figure>
               <figure className="card glass quote" data-reveal>
                 <blockquote>
-                  &ldquo;Axiom’s mock olympiads were harder than the real one. Walking into the
+                  &ldquo;Lucid’s mock olympiads were harder than the real one. Walking into the
                   IMO, I felt something I had never felt at a competition: calm.&rdquo;
                 </blockquote>
                 <figcaption className="mono">Jonas K. — IMO Bronze, ’24</figcaption>
@@ -641,7 +641,7 @@ export default function Landing() {
             </header>
 
             <div className="faq-list">
-              <FaqItem q="Who is Axiom for?">
+              <FaqItem q="Who is Lucid for?">
                 <p>Students in grades 5–12 who want to compete seriously in mathematics —
                   from first-time AMC 8 entrants to students preparing for national olympiad
                   selection. Ambition matters more than current level; the platform places
@@ -700,12 +700,12 @@ export default function Landing() {
 
       <footer className="footer">
         <div className="container footer-inner">
-          <a className="brand" href="#top" aria-label="Axiom Institute — home">
+          <a className="brand" href="#top" aria-label="Lucid Institute — home">
             <BrandMark />
-            <span className="brand-name">AXIOM</span>
+            <span className="brand-name">LUCID</span>
           </a>
           <p className="footer-note mono">Institute of Competition Mathematics · Est. on first principles</p>
-          <p className="footer-copy mono">© <span suppressHydrationWarning>{new Date().getFullYear()}</span> Axiom Institute</p>
+          <p className="footer-copy mono">© <span suppressHydrationWarning>{new Date().getFullYear()}</span> Lucid Institute</p>
         </div>
       </footer>
     </div>
