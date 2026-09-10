@@ -66,11 +66,15 @@ problem sets; writes weekly parent reports.
 **Parent flow:** weekly progress digest, time studied, improvement graphs, completed
 lessons, assignments, upcoming contests, mentor feedback.
 
-## 3. Database Schema (target Postgres; v1 mirrors this in localStorage 1:1)
+## 3. Database Schema (live in Supabase Postgres via `supabase/migrations/`;
+app code still reads/writes localStorage — wiring the store to these tables
+instead is the next step, see §10)
 
 ```sql
-users            (id, role student|mentor|parent|admin, email, name, created_at)
-profiles         (user_id, grade, goals, timezone, streak_count, streak_last_day, xp)
+-- auth.users is Supabase-managed (email, created_at, etc.); profiles extends it 1:1,
+-- auto-created by an `on_auth_user_created` trigger on signup.
+profiles         (id -> auth.users, role student|mentor|parent|admin, name, grade,
+                  goals, timezone, streak_count, streak_last_day, xp, created_at)
 mentor_links     (mentor_id, student_id, status)
 parent_links     (parent_id, student_id)
 
@@ -201,7 +205,8 @@ store module whose API mirrors the future server (`getMastery`, `recordAttempt`,
 v2 (accounts): Next.js route handlers over Postgres —
 `POST /api/attempts`, `GET /api/mastery`, `GET/POST /api/reviews`,
 `POST /api/contest-runs`, `GET /api/students/:id/report` (mentor/parent scoped),
-auth via Clerk middleware, row-level scoping by role links.
+auth via Supabase, row-level scoping enforced by Postgres RLS policies
+(see `supabase/migrations/`) rather than app-layer checks.
 
 ## 11. Tech Stack
 
@@ -214,7 +219,8 @@ auth via Clerk middleware, row-level scoping by role links.
 | AI | AI SDK v6 + Vercel AI Gateway | Provider-agnostic, streaming, observability |
 | Charts | Hand-rolled SVG | Full design control, no lib weight |
 | Tests | Vitest | Engine correctness (mastery, scoring, SRS) |
-| Future | Clerk (auth) · Neon Postgres · Stripe | Marketplace-native on Vercel |
+| Auth + DB | Supabase (Postgres + auth), via Vercel Marketplace | RLS-scoped user data, provisioned resource `supabase-amethyst-drawer` |
+| Future | Stripe | Marketplace-native on Vercel, for subscriptions |
 
 ## 12. Component Hierarchy
 
@@ -240,8 +246,9 @@ RootLayout (fonts, KaTeX css, tokens)
 
 - **Responsive:** desktop sidebar → mobile bottom tab bar; lesson player single-column;
   simulator keeps timer pinned; all charts fluid SVG; `prefers-reduced-motion` honored.
-- **Auth (v2):** Clerk — student/mentor/parent roles, org support for academies;
-  middleware-protected platform routes; demo profile migrates on first sign-in.
+- **Auth (live):** Supabase — student/mentor/parent roles via `profiles.role`;
+  demo profile migrates on first sign-in. Route-level protection still to add
+  (currently only `useUser`/`createClient` gate UI, not middleware).
 - **Subscriptions:** Free (3 lessons + limited bank) · Cohort $290/mo · Intensive
   $640/mo (mentor + graded proofs) · Private $190/hr — Stripe in v2; tiers gate mentor
   features and coach message volume, never core curriculum visibility.
