@@ -27,5 +27,5 @@ export async function signup(_prevState: AuthFormState, formData: FormData): Pro
   });
   if (error) return { error: error.message };
 
-  redirect("/signup/check-email");
+  redirect(`/signup/check-email?email=${encodeURIComponent(email)}`);
 }

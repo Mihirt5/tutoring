@@ -1,12 +1,18 @@
-"use client";
-
 import Link from "next/link";
-import { useActionState } from "react";
-import { login } from "./actions";
+import { LoginForm } from "./login-form";
 
-export default function LoginPage() {
-  const [state, formAction, pending] = useActionState(login, null);
-  const notConnected = state?.error?.startsWith("Supabase isn't connected");
+const NOTICES: Record<string, string> = {
+  confirmation_failed:
+    "That confirmation link was invalid or expired. Log in below, or sign up again for a fresh link.",
+};
+
+export default async function LoginPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ error?: string }>;
+}) {
+  const { error } = await searchParams;
+  const notice = error ? NOTICES[error] : undefined;
 
   return (
     <div className="auth-shell">
@@ -22,36 +28,13 @@ export default function LoginPage() {
         <p className="mono auth-eyebrow">Welcome back</p>
         <h1 className="auth-title">Log in</h1>
 
-        <form className="auth-form" action={formAction}>
-          <label className="auth-field">
-            <span className="mono auth-label">Email</span>
-            <input className="auth-input" type="email" name="email" autoComplete="email" required />
-          </label>
-          <label className="auth-field">
-            <span className="mono auth-label">Password</span>
-            <input className="auth-input" type="password" name="password" autoComplete="current-password" required />
-          </label>
+        {notice && <p className="auth-error">{notice}</p>}
 
-          {state?.error && <p className="auth-error">{state.error}</p>}
-
-          <button className="btn btn-solid btn-block" type="submit" disabled={pending}>
-            {pending ? "Logging in…" : "Log in"}
-          </button>
-        </form>
+        <LoginForm />
 
         <p className="auth-switch">
           No account yet? <Link href="/signup">Sign up</Link>
         </p>
-
-        {notConnected && (
-          <div className="auth-setup-note">
-            <p className="mono">Setup</p>
-            <p>
-              Create a Supabase project, then set <code className="mono">NEXT_PUBLIC_SUPABASE_URL</code> and{" "}
-              <code className="mono">NEXT_PUBLIC_SUPABASE_ANON_KEY</code> in your environment and redeploy.
-            </p>
-          </div>
-        )}
       </div>
     </div>
   );

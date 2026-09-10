@@ -1,6 +1,13 @@
 import Link from "next/link";
+import { ResendForm } from "./resend-form";
 
-export default function CheckEmailPage() {
+export default async function CheckEmailPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ email?: string }>;
+}) {
+  const { email } = await searchParams;
+
   return (
     <div className="auth-shell">
       <Link className="brand auth-brand" href="/">
@@ -15,10 +22,20 @@ export default function CheckEmailPage() {
         <p className="mono auth-eyebrow">Almost there</p>
         <h1 className="auth-title">Check your email</h1>
         <p className="auth-note">
-          We sent a confirmation link to the address you signed up with. Click it to
+          We sent a confirmation link to{" "}
+          {email ? <strong>{email}</strong> : "the address you signed up with"}. Click it to
           activate your account, then log in.
         </p>
-        <Link className="btn btn-ghost btn-block" href="/login">Back to log in</Link>
+        <p className="auth-hint">
+          Nothing after a minute? Check your spam folder{email ? ", or resend it below" : ""}. Links
+          expire after 24 hours.
+        </p>
+
+        {email ? <ResendForm email={email} /> : null}
+
+        <Link className="auth-switch" href="/login">
+          Back to log in
+        </Link>
       </div>
     </div>
   );
