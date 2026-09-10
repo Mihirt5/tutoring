@@ -150,7 +150,7 @@ export function ContestRunner({ track }: { track: Track }) {
           {problems.map((p, i) => {
             const a = answers[i];
             const status = a === null ? "blank" : a === p.answer ? "correct" : "wrong";
-            const color = status === "correct" ? CHART.good : status === "wrong" ? CHART.serious : "rgba(255,255,255,0.25)";
+            const color = status === "correct" ? CHART.good : status === "wrong" ? CHART.serious : "#c9d4e2";
             return (
               <div key={p.id} className="cr-row">
                 <BarRow

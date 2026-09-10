@@ -7,9 +7,9 @@
 import { useState } from "react";
 import type { DiagramKind } from "@/lib/types";
 
-const ACCENT = "#4d7fff";
-const INK = "#aeb8c7";
-const FAINT = "rgba(255,255,255,0.14)";
+const ACCENT = "#2563eb";
+const INK = "#47566b";
+const FAINT = "#d3dce8";
 
 function Slider({
   label, min, max, step = 1, value, onChange,
@@ -61,8 +61,8 @@ function RatioBars() {
   return (
     <div>
       <svg viewBox="0 0 400 96" className="dg-svg" role="img" aria-label={`Ratio ${a}:${b} of ${total}`}>
-        <rect x="30" y="18" width={(W * a) / (a + b) - 2} height="24" rx="4" fill={ACCENT} opacity="0.85" />
-        <rect x={30 + (W * a) / (a + b) + 2} y="18" width={(W * b) / (a + b) - 2} height="24" rx="4" fill={INK} opacity="0.5" />
+        <rect x="30" y="18" width={(W * a) / (a + b) - 2} height="24" rx="4" fill={ACCENT} />
+        <rect x={30 + (W * a) / (a + b) + 2} y="18" width={(W * b) / (a + b) - 2} height="24" rx="4" fill="#6c9cf2" />
         <text x={30 + (W * a) / (a + b) / 2} y="34" fill="#fff" fontSize="12" textAnchor="middle">{(a * part).toFixed(0)}</text>
         <text x={30 + (W * a) / (a + b) + 2 + (W * b) / (a + b) / 2} y="34" fill="#fff" fontSize="12" textAnchor="middle">{(b * part).toFixed(0)}</text>
         <text x="30" y="70" fill={INK} fontSize="11">
@@ -137,7 +137,7 @@ function GridPaths() {
             <g key={`${r}-${c}`}>
               <rect
                 x={40 + c * cell} y={160 - (r + 1) * cell} width={cell - 3} height={cell - 3}
-                rx="4" fill={r === n && c === n ? ACCENT : "rgba(255,255,255,0.05)"}
+                rx="4" fill={r === n && c === n ? ACCENT : "#eef3f9"}
               />
               <text
                 x={40 + c * cell + (cell - 3) / 2} y={160 - (r + 1) * cell + (cell - 3) / 2 + 4}
@@ -179,7 +179,7 @@ function ModClock() {
           const hit = orbit.includes(i);
           return (
             <g key={i}>
-              <circle cx={x} cy={y} r="10" fill={hit ? ACCENT : "rgba(255,255,255,0.07)"} />
+              <circle cx={x} cy={y} r="10" fill={hit ? ACCENT : "#eef3f9"} />
               <text x={x} y={y + 4} fill={hit ? "#fff" : INK} fontSize="11" textAnchor="middle">{i}</text>
             </g>
           );
@@ -237,7 +237,9 @@ function EvSpinner() {
   const [b, setB] = useState(4);
   const [c, setC] = useState(10);
   const ev = (a + b + c) / 3;
-  const seg = (i: number, val: number, color: string, op: number) => {
+  const SEG_FILL = ["#2563eb", "#6c9cf2", "#aecbf7"];
+  const SEG_TEXT = ["#fff", "#fff", "#1f2d44"];
+  const seg = (i: number, val: number) => {
     const a0 = (i / 3) * Math.PI * 2 - Math.PI / 2;
     const a1 = ((i + 1) / 3) * Math.PI * 2 - Math.PI / 2;
     const cx = 110, cy = 90, R = 58;
@@ -248,10 +250,10 @@ function EvSpinner() {
       <g key={i}>
         <path
           d={`M ${cx} ${cy} L ${p0[0]} ${p0[1]} A ${R} ${R} 0 0 1 ${p1[0]} ${p1[1]} Z`}
-          fill={color} opacity={op} stroke="#0b0e14" strokeWidth="2"
+          fill={SEG_FILL[i]} stroke="#ffffff" strokeWidth="2"
         />
         <text x={cx + R * 0.6 * Math.cos(mid)} y={cy + R * 0.6 * Math.sin(mid) + 4}
-          fill="#fff" fontSize="13" textAnchor="middle">{val}</text>
+          fill={SEG_TEXT[i]} fontSize="13" textAnchor="middle">{val}</text>
       </g>
     );
   };
@@ -259,9 +261,9 @@ function EvSpinner() {
   return (
     <div>
       <svg viewBox="0 0 400 180" className="dg-svg" role="img" aria-label={`Spinner with payoffs ${a}, ${b}, ${c}; expected value ${ev.toFixed(2)}`}>
-        {seg(0, a, "#4d7fff", 0.9)}
-        {seg(1, b, "#4d7fff", 0.55)}
-        {seg(2, c, "#4d7fff", 0.3)}
+        {seg(0, a)}
+        {seg(1, b)}
+        {seg(2, c)}
         <line x1={X(0)} y1="120" x2={X(12)} y2="120" stroke={FAINT} strokeWidth="2" />
         {[a, b, c].map((v, i) => (
           <circle key={i} cx={X(v)} cy="120" r="4" fill={INK} />

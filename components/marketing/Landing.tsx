@@ -1,25 +1,14 @@
 "use client";
 
-// LUCID marketing landing — ported from the original Vite build.
-// One client component: cinematic Three.js canvas + GSAP scroll
-// orchestration + all page sections. The platform lives at /learn.
+// LUCID marketing landing. One client component: a restrained lattice
+// hero backdrop + GSAP scroll orchestration + all page sections.
+// The platform lives at /learn.
 
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { initScene, CAM_START, TRAVEL } from "./scene.js";
-
-const STAGE_SECTIONS: Record<string, string> = {
-  genesis: "#hero",
-  platonic: "#programs",
-  surface: "#method",
-  euler: "#problem",
-  network: "#why",
-  primes: "#why",
-  helix: "#curriculum",
-  finale: "#apply",
-};
+import { HeroLattice } from "./HeroLattice";
 
 function BrandMark() {
   return (
@@ -46,47 +35,13 @@ function FaqItem({ q, children }: { q: string; children: React.ReactNode }) {
 }
 
 export default function Landing() {
-  const canvasRef = useRef<HTMLCanvasElement>(null);
   const rootRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
     const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    const world = initScene(canvasRef.current);
-    const tick = () => world.tick();
-    gsap.ticker.add(tick);
-    world.setReduced(reduced);
-
-    const placeStages = () => {
-      const doc = document.documentElement.scrollHeight - window.innerHeight;
-      if (doc <= 0) return;
-      for (const [name, sel] of Object.entries(STAGE_SECTIONS)) {
-        const el = document.querySelector<HTMLElement>(sel);
-        if (!el) continue;
-        const center = el.offsetTop + el.offsetHeight / 2 - window.innerHeight / 2;
-        const p = Math.min(Math.max(center / doc, 0), 1);
-        world.placeStage(name, CAM_START - p * TRAVEL - 13);
-      }
-    };
-
-    const onPointer = (e: PointerEvent) => {
-      world.setPointer(
-        (e.clientX / window.innerWidth) * 2 - 1,
-        (e.clientY / window.innerHeight) * 2 - 1,
-      );
-    };
-    if (!reduced && matchMedia("(pointer: fine)").matches) {
-      window.addEventListener("pointermove", onPointer);
-    }
 
     const ctx = gsap.context(() => {
-      ScrollTrigger.create({
-        trigger: document.body,
-        start: 0,
-        end: () => document.documentElement.scrollHeight - window.innerHeight,
-        onUpdate: self => world.setProgress(self.progress),
-      });
-
       const nav = document.getElementById("nav")!;
       ScrollTrigger.create({
         start: 40,
@@ -101,21 +56,21 @@ export default function Landing() {
       });
 
       gsap.from("[data-hero]", {
-        y: reduced ? 0 : 42,
+        y: reduced ? 0 : 16,
         autoAlpha: 0,
-        duration: 1.1,
-        ease: "power3.out",
-        stagger: 0.09,
-        delay: 0.2,
+        duration: 0.7,
+        ease: "power2.out",
+        stagger: 0.07,
+        delay: 0.1,
       });
 
       gsap.utils.toArray<Element>("[data-reveal]").forEach(el => {
         gsap.from(el, {
-          y: reduced ? 0 : 38,
+          y: reduced ? 0 : 20,
           autoAlpha: 0,
-          duration: 0.95,
-          ease: "power3.out",
-          scrollTrigger: { trigger: el, start: "top 86%", once: true },
+          duration: 0.6,
+          ease: "power2.out",
+          scrollTrigger: { trigger: el, start: "top 88%", once: true },
         });
       });
 
@@ -129,7 +84,7 @@ export default function Landing() {
       });
 
       gsap.to("#method-rail-fill", {
-        scaleY: 1,
+        scaleX: 1,
         ease: "none",
         scrollTrigger: { trigger: "#method-steps", start: "top 70%", end: "bottom 40%", scrub: 0.4 },
       });
@@ -137,13 +92,7 @@ export default function Landing() {
       gsap.to("#timeline-fill", {
         scaleY: 1,
         ease: "none",
-        scrollTrigger: {
-          trigger: "#timeline",
-          start: "top 65%",
-          end: "bottom 55%",
-          scrub: 0.4,
-          onUpdate: self => world.setRoadmap(self.progress),
-        },
+        scrollTrigger: { trigger: "#timeline", start: "top 65%", end: "bottom 55%", scrub: 0.4 },
       });
 
       document.querySelectorAll(".milestone").forEach(m => {
@@ -156,26 +105,11 @@ export default function Landing() {
       });
     }, rootRef);
 
-    ScrollTrigger.addEventListener("refresh", placeStages);
-    placeStages();
-    requestAnimationFrame(placeStages);
-
-    return () => {
-      ctx.revert();
-      ScrollTrigger.removeEventListener("refresh", placeStages);
-      window.removeEventListener("pointermove", onPointer);
-      gsap.ticker.remove(tick);
-      world.dispose();
-    };
+    return () => ctx.revert();
   }, []);
 
   return (
     <div ref={rootRef}>
-      <div className="stage">
-        <canvas id="bg-canvas" ref={canvasRef} aria-hidden="true" />
-        <div className="stage-vignette" aria-hidden="true" />
-      </div>
-
       <header className="nav" id="nav">
         <div className="nav-inner">
           <a className="brand" href="#top" aria-label="Lucid Institute — home">
@@ -192,7 +126,7 @@ export default function Landing() {
           </nav>
           <div className="nav-actions">
             <Link className="btn btn-small btn-ghost" href="/login">Log in</Link>
-            <Link className="btn btn-small btn-solid" href="/learn">Enter Academy</Link>
+            <Link className="btn btn-small btn-solid" href="/learn">Enter the platform</Link>
           </div>
         </div>
         <div className="nav-progress" aria-hidden="true"><div className="nav-progress-fill" id="nav-progress-fill" /></div>
@@ -201,32 +135,43 @@ export default function Landing() {
       <main id="top">
         {/* HERO */}
         <section className="hero" id="hero">
+          <HeroLattice />
           <div className="container">
-            <p className="eyebrow" data-hero>Lucid · Institute of Competition Mathematics</p>
+            <p className="eyebrow" data-hero>Institute of Competition Mathematics</p>
             <h1 className="hero-title">
-              <span className="line" data-hero>Master</span>
-              <span className="line" data-hero>Competition</span>
-              <span className="line" data-hero>Mathematics<span className="accent">.</span></span>
+              <span className="line" data-hero>Learn competition math</span>
+              <span className="line" data-hero>by solving, not watching<span className="accent">.</span></span>
             </h1>
             <p className="hero-sub" data-hero>
-              A complete learning ecosystem for competition mathematics — interactive
-              lessons, adaptive practice, mock contests, and AI coaching, from
-              AMC&nbsp;8 through the IMO.
+              One continuous curriculum from AMC&nbsp;8 to the IMO: interactive lessons
+              that gate on understanding, adaptive practice, scored mock contests, and a
+              Socratic AI coach that hints but never hands you the answer.
             </p>
             <div className="hero-actions" data-hero>
-              <Link className="btn btn-solid" href="/learn">Start Learning Free</Link>
-              <a className="btn btn-ghost" href="#programs">Explore Programs</a>
+              <Link className="btn btn-solid" href="/learn">Start learning free</Link>
+              <a className="btn btn-ghost" href="#curriculum">See the curriculum</a>
             </div>
             <p className="hero-path mono" data-hero>
-              AMC&nbsp;8 <span className="sep">→</span> AMC&nbsp;10/12 <span className="sep">→</span> AIME
-              <span className="sep">→</span> USAMO <span className="sep">→</span> IMO
+              <span>PATH</span>
+              <span>AMC&nbsp;8</span><span className="sep">→</span><span>AMC&nbsp;10/12</span>
+              <span className="sep">→</span><span>AIME</span><span className="sep">→</span><span>USAMO</span>
+              <span className="sep">→</span><span className="accent">IMO</span>
             </p>
           </div>
-          <a className="scroll-cue mono" href="#programs" data-hero>
-            <span>The proof begins below</span>
-            <span className="cue-line" aria-hidden="true" />
-          </a>
         </section>
+
+        {/* TRUST STRIP */}
+        <div className="trust-strip">
+          <div className="container">
+            <span className="trust-label">Built for the full climb</span>
+            <div className="trust-figs">
+              <span><strong>58</strong> lessons</span>
+              <span><strong>104</strong> original problems</span>
+              <span><strong>7</strong> contest tracks</span>
+              <span><strong>$5</strong>/mo to start</span>
+            </div>
+          </div>
+        </div>
 
         {/* PROGRAMS */}
         <section className="section" id="programs">
@@ -402,7 +347,7 @@ export default function Landing() {
                   <p className="step-num mono">Step 4 · Conclude</p>
                   <h3>Multiply and finish</h3>
                   <p>(2·3&nbsp;+&nbsp;1)(2·7&nbsp;+&nbsp;1)&nbsp;=&nbsp;7&nbsp;×&nbsp;15.</p>
-                  <p className="answer mono">Answer&nbsp;=&nbsp;105&ensp;∎</p>
+                  <p className="answer mono">Answer&nbsp;=&nbsp;105</p>
                 </div>
               </div>
             </div>
@@ -586,17 +531,17 @@ export default function Landing() {
           <div className="container">
             <p className="eyebrow" data-reveal>§ 08 · Q.E.D.</p>
             <h2 className="cta-title" data-reveal>
-              Start your journey to<br />mathematical excellence<span className="accent">.</span>
+              Start with one problem<span className="accent">.</span>
             </h2>
             <p className="section-sub cta-sub" data-reveal>
-              The full curriculum, problem bank, and AI coach are open.
-              Your mastery map begins with the first problem.
+              The full curriculum, problem bank, and AI coach are open — free to start,
+              no card required.
             </p>
             <div className="hero-actions cta-actions" data-reveal>
-              <Link className="btn btn-solid btn-large" href="/learn">Enter the Academy</Link>
-              <a className="btn btn-ghost btn-large" href="#programs">Review the Programs</a>
+              <Link className="btn btn-solid btn-large" href="/learn">Enter the platform</Link>
+              <a className="btn btn-ghost btn-large" href="#programs">Review the programs</a>
             </div>
-            <p className="qed mono" data-reveal>∎</p>
+            <span className="qed" data-reveal aria-hidden="true" />
           </div>
         </section>
       </main>

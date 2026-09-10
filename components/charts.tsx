@@ -1,16 +1,16 @@
 "use client";
 
 // Dashboard charts — hand-rolled, single-hue sequential encodings,
-// direct labels, recessive grid. Colors validated against the dark
-// surface (see dataviz validation in the build log):
-//   accent #4d7fff · good #1fa863 · neutral #6d82dd · serious #e0596e
+// direct labels, recessive grid. Light surface, blue-monochrome ramp.
+//   accent #2563eb · good #12855a · neutral #6c9cf2 · serious #d23f3f
 
 export const CHART = {
-  accent: "#4d7fff",
-  good: "#1fa863",
-  neutral: "#6d82dd",
-  serious: "#e0596e",
-  ink: "#aeb8c7",
+  accent: "#2563eb",
+  good: "#12855a",
+  neutral: "#6c9cf2",
+  serious: "#d23f3f",
+  ink: "#8393a8",
+  track: "#eef3f9",
 };
 
 /** Horizontal magnitude bar with direct label. */
@@ -31,11 +31,12 @@ export function BarRow({
   );
 }
 
-/** Sequential heatmap cell color: one hue, light→dark by magnitude. */
+/** Sequential heatmap cell color: one hue, pale→saturated by magnitude. */
 export function heatColor(v: number): string {
-  // v ∈ [0,1] → opacity ramp of the accent on the dark surface
-  const alpha = 0.08 + Math.max(0, Math.min(1, v)) * 0.82;
-  return `rgba(77, 127, 255, ${alpha.toFixed(2)})`;
+  // v ∈ [0,1] → tint of the accent on the light surface (kept pale enough
+  // that --ink text stays readable on every step)
+  const alpha = 0.06 + Math.max(0, Math.min(1, v)) * 0.5;
+  return `rgba(37, 99, 235, ${alpha.toFixed(2)})`;
 }
 
 /** Activity bars: minutes per day, last `days` days. */
@@ -80,15 +81,15 @@ export function Ring({ value, label, size = 92 }: { value: number; label: string
   return (
     <div className="ch-ring" style={{ width: size }}>
       <svg width={size} height={size} role="img" aria-label={`${label}: ${Math.round(v * 100)}%`}>
-        <circle cx={size / 2} cy={size / 2} r={r} fill="none" stroke="rgba(255,255,255,0.08)" strokeWidth="6" />
+        <circle cx={size / 2} cy={size / 2} r={r} fill="none" stroke={CHART.track} strokeWidth="6" />
         <circle
           cx={size / 2} cy={size / 2} r={r} fill="none"
           stroke={CHART.accent} strokeWidth="6" strokeLinecap="round"
           strokeDasharray={`${C * v} ${C}`}
           transform={`rotate(-90 ${size / 2} ${size / 2})`}
         />
-        <text x="50%" y="50%" dy="0.35em" textAnchor="middle" fill="#e8ecf1"
-          fontSize={size / 4.6} fontWeight="650" fontFamily="var(--font-display)">
+        <text x="50%" y="50%" dy="0.35em" textAnchor="middle" fill="#0f1b2d"
+          fontSize={size / 4.6} fontWeight="600" fontFamily="var(--font-display)">
           {Math.round(v * 100)}%
         </text>
       </svg>
