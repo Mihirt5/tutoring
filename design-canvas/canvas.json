@@ -1,0 +1,17 @@
+{
+  "artboards": [
+    { "file": "Main.dc.html", "x": 0, "y": 0, "w": 1440, "h": 900, "title": "Landing — hero" },
+    { "file": "Auth.dc.html", "x": 0, "y": 1040, "w": 1440, "h": 900, "title": "Auth — log in / sign up / check email" },
+    { "file": "Lesson.dc.html", "x": 0, "y": 2080, "w": 1440, "h": 1240, "title": "Platform — lesson player" },
+    { "file": "LandingSections.dc.html", "x": 1560, "y": 0, "w": 1440, "h": 2600, "title": "Landing — programs / method / pricing" },
+    { "file": "Dashboard.dc.html", "x": 1560, "y": 2740, "w": 1440, "h": 1180, "title": "Platform — dashboard" },
+    { "file": "DesignSystem.dc.html", "x": 1560, "y": 4060, "w": 1280, "h": 2560, "title": "Design system — tokens & components" }
+  ],
+  "annotations": [
+    { "id": "direction", "x": -380, "y": 0, "w": 320, "text": "REDESIGN DIRECTION\nLight white / blue, in the spirit of projectparallel.com — clinical precision, modern tech elegance.\n\n• Paper white + one cool off-white section fill\n• A single blue accent (#2563EB), no second colour on marketing\n• IBM Plex Sans + IBM Plex Mono (mono stays for labels & data)\n• 4px spacing base, 8/12px radii, soft low shadows\n• Hairline rules instead of glass panels" },
+    { "id": "motion", "x": -380, "y": 500, "w": 320, "text": "MOTION\nThe cinematic Three.js scene is gone. The hero now carries a pale coordinate lattice and one locus curve that draws in over ~3s then rests, with three nodes on a slow drift. Everything stops under prefers-reduced-motion." },
+    { "id": "platform", "x": -380, "y": 2080, "w": 320, "text": "PLATFORM\nSame information architecture as today — sidebar shell, XP/streak, dashboard instrumentation, gated lessons. Re-skinned to the light system: white cards on a cool ground, blue-monochrome charts, active nav in blue-tint." },
+    { "id": "spec", "x": 1560, "y": 3960, "w": 340, "text": "This sheet is the build spec. When the direction is signed off I implement it against these exact tokens, component states, and motion rules — replacing app/globals.css and app/platform.css." }
+  ],
+  "launch": { "view": "canvas" }
+}

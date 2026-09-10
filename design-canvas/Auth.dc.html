@@ -1,0 +1,112 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap">
+  <style>
+    :root{
+      --paper:#ffffff; --paper-2:#f5f8fc; --paper-3:#eaf0f7;
+      --ink:#0f1b2d; --ink-2:#47566b; --ink-3:#8393a8;
+      --line:#e4eaf2; --line-2:#d3dce8;
+      --blue:#2563eb; --blue-strong:#1d4ed8; --blue-tint:#ecf2ff; --blue-line:#cfe0ff;
+      --err:#d23f3f;
+      --shadow-sm:0 1px 2px rgba(15,27,45,.04),0 1px 3px rgba(15,27,45,.05);
+      --shadow-md:0 8px 24px rgba(15,27,45,.07),0 2px 6px rgba(15,27,45,.04);
+      --r-sm:8px; --r-md:12px;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--paper-2);color:var(--ink);font-family:'IBM Plex Sans',system-ui,-apple-system,'Segoe UI',sans-serif;font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+    h1{margin:0;font-weight:600;letter-spacing:-.02em;line-height:1.15;font-size:24px}
+    p{margin:0}
+    a{color:var(--blue);text-decoration:none}a:hover{color:var(--blue-strong)}
+    .mono{font-family:'IBM Plex Mono',ui-monospace,monospace}
+    .eyebrow{font-family:'IBM Plex Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:var(--blue)}
+    .card{background:#fff;border:1px solid var(--line);border-radius:var(--r-md);box-shadow:var(--shadow-sm);padding:32px;width:380px}
+    .field{display:flex;flex-direction:column;gap:6px}
+    .lbl{font-family:'IBM Plex Mono',ui-monospace,monospace;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3)}
+    .input{height:44px;border:1px solid var(--line-2);border-radius:var(--r-sm);padding:0 12px;font-family:inherit;font-size:15px;color:var(--ink);background:#fff}
+    .input.focus{border-color:var(--blue);box-shadow:0 0 0 3px var(--blue-tint)}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;height:44px;padding:0 20px;border-radius:var(--r-sm);font-weight:600;font-size:15px;font-family:inherit;border:1px solid transparent;cursor:pointer;width:100%;transition:background .16s ease,border-color .16s ease,color .16s ease}
+    .btn-primary{background:var(--blue);color:#fff}.btn-primary:hover{background:var(--blue-strong)}
+    .btn-secondary{background:#fff;border-color:var(--line-2);color:var(--ink)}.btn-secondary:hover{border-color:var(--blue);color:var(--blue)}
+    .spin{width:16px;height:16px;border:2px solid rgba(255,255,255,.4);border-top-color:#fff;border-radius:50%;animation:sp .7s linear infinite}
+    @keyframes sp{to{transform:rotate(360deg)}}
+    .notice{font-size:13px;border-radius:var(--r-sm);padding:10px 12px;line-height:1.45}
+    .notice-err{color:var(--err);background:#fdeceb;border:1px solid #f6cfcc}
+    .notice-info{color:var(--blue-strong);background:var(--blue-tint);border:1px solid var(--blue-line)}
+  </style>
+</helmet>
+
+<div style="width:1440px;height:900px;background:var(--paper-2);position:relative;font-family:'IBM Plex Sans',system-ui,sans-serif;padding:56px 64px">
+
+  <div style="display:flex;align-items:center;gap:10px;margin-bottom:44px">
+    <svg width="24" height="24" viewBox="0 0 32 32" fill="none">
+      <circle cx="16" cy="16" r="13" stroke="var(--line-2)" stroke-width="2"/>
+      <path d="M16 6 L25.5 22 L6.5 22 Z" stroke="var(--blue)" stroke-width="2" fill="none" stroke-linejoin="round"/>
+    </svg>
+    <span style="font-weight:700;letter-spacing:.14em;font-size:14px">LUCID</span>
+  </div>
+
+  <div style="display:flex;gap:28px;align-items:flex-start">
+
+    <!-- LOG IN -->
+    <div class="card">
+      <p class="eyebrow">Welcome back</p>
+      <h1 style="margin-top:8px">Log in</h1>
+      <div class="notice notice-err" style="margin-top:20px">That confirmation link was invalid or expired. Log in below, or sign up again for a fresh link.</div>
+      <div style="display:flex;flex-direction:column;gap:16px;margin-top:20px">
+        <div class="field"><span class="lbl">Email</span><input class="input" value="rithika@example.com"></div>
+        <div class="field"><span class="lbl">Password</span><input class="input focus" type="password" value="............"></div>
+        <button class="btn btn-primary">Log in</button>
+      </div>
+      <p style="margin-top:18px;font-size:14px;color:var(--ink-2);text-align:center">No account yet? <a>Sign up</a></p>
+    </div>
+
+    <!-- SIGN UP -->
+    <div class="card">
+      <p class="eyebrow">Start free</p>
+      <h1 style="margin-top:8px">Create your account</h1>
+      <div style="display:flex;flex-direction:column;gap:16px;margin-top:24px">
+        <div class="field"><span class="lbl">Email</span><input class="input" value=""></div>
+        <div class="field"><span class="lbl">Password</span><input class="input" type="password" value=""><span style="font-size:12px;color:var(--ink-3)">At least 8 characters.</span></div>
+        <button class="btn btn-primary"><span class="spin"></span>Creating account&hellip;</button>
+      </div>
+      <p style="margin-top:18px;font-size:14px;color:var(--ink-2);text-align:center">Already have an account? <a>Log in</a></p>
+    </div>
+
+    <!-- CHECK EMAIL -->
+    <div class="card">
+      <p class="eyebrow">Almost there</p>
+      <h1 style="margin-top:8px">Check your email</h1>
+      <p style="margin-top:16px;font-size:14px;color:var(--ink-2);line-height:1.55">
+        We sent a confirmation link to <strong style="color:var(--ink)">rithika@example.com</strong>.
+        Click it to activate your account, then log in.
+      </p>
+      <p style="margin-top:12px;font-size:13px;color:var(--ink-3);line-height:1.5">
+        Nothing after a minute? Check your spam folder, or resend below. Links expire after 24&nbsp;hours.
+      </p>
+      <div class="notice notice-info" style="margin-top:18px">Sent again — check your inbox (and spam).</div>
+      <div style="display:flex;flex-direction:column;gap:10px;margin-top:16px">
+        <button class="btn btn-secondary">Resend confirmation email</button>
+        <p style="text-align:center;font-size:14px"><a>Back to log in</a></p>
+      </div>
+    </div>
+
+  </div>
+
+  <p class="mono" style="position:absolute;left:64px;bottom:36px;font-size:11px;color:var(--ink-3);letter-spacing:.04em">
+    Auth screens share one card: 380px, 12px radius, 32px padding, mono field labels, one primary action.
+  </p>
+
+</div>
+
+<script data-dc-script data-props='{"$preview":{"width":1440,"height":900}}'>
+class Component extends DCLogic {}
+</script>
+</body>
+</html>

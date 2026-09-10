@@ -1,0 +1,140 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap">
+  <style>
+    :root{
+      --paper:#ffffff; --paper-2:#f5f8fc; --paper-3:#eaf0f7;
+      --ink:#0f1b2d; --ink-2:#47566b; --ink-3:#8393a8;
+      --line:#e4eaf2; --line-2:#d3dce8;
+      --blue:#2563eb; --blue-strong:#1d4ed8; --blue-tint:#ecf2ff; --blue-line:#cfe0ff;
+      --good:#12855a; --good-tint:#e6f4ee;
+      --shadow-sm:0 1px 2px rgba(15,27,45,.04),0 1px 3px rgba(15,27,45,.05);
+      --r-sm:8px; --r-md:12px;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--paper);color:var(--ink);font-family:'IBM Plex Sans',system-ui,-apple-system,'Segoe UI',sans-serif;font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+    h1{margin:0;font-weight:600;letter-spacing:-.022em;font-size:30px;line-height:1.15}
+    h3{margin:0;font-weight:600;font-size:16px;letter-spacing:-.01em}
+    p{margin:0}
+    .mono{font-family:'IBM Plex Mono',ui-monospace,monospace}
+    .eyebrow{font-family:'IBM Plex Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:var(--blue)}
+    .m{font-family:'IBM Plex Mono',ui-monospace,monospace;font-style:normal}
+    .navlink{display:flex;align-items:center;gap:12px;height:40px;padding:0 12px;border-radius:var(--r-sm);font-size:14px;font-weight:500;color:var(--ink-2)}
+    .navlink .g{font-family:'IBM Plex Mono',monospace;font-size:14px;color:var(--ink-3);width:16px;text-align:center}
+    .navlink.active{background:var(--blue-tint);color:var(--blue);font-weight:600}
+    .navlink.active .g{color:var(--blue)}
+    .choice{display:flex;align-items:center;gap:12px;border:1px solid var(--line-2);border-radius:var(--r-sm);padding:12px 14px;font-size:14px;cursor:pointer;background:#fff}
+    .choice .dot{width:16px;height:16px;border-radius:50%;border:1.5px solid var(--line-2);flex-shrink:0}
+    .choice.sel{border-color:var(--blue);background:var(--blue-tint)}
+    .choice.sel .dot{border-color:var(--blue);background:var(--blue);box-shadow:inset 0 0 0 3px #fff}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;height:44px;padding:0 22px;border-radius:var(--r-sm);font-weight:600;font-size:15px;font-family:inherit;border:1px solid transparent;cursor:pointer;transition:background .16s ease}
+    .btn-primary{background:var(--blue);color:#fff}.btn-primary:hover{background:var(--blue-strong)}
+    .btn-ghost{color:var(--ink-2);border:1px solid var(--line-2);background:#fff}
+  </style>
+</helmet>
+
+<div style="width:1440px;height:1240px;display:flex;background:var(--paper);font-family:'IBM Plex Sans',system-ui,sans-serif;overflow:hidden">
+
+  <!-- SIDEBAR -->
+  <aside style="width:248px;height:1240px;background:#fff;border-right:1px solid var(--line);padding:24px 16px;display:flex;flex-direction:column;gap:8px;flex-shrink:0">
+    <div style="display:flex;align-items:center;gap:10px;padding:0 12px 20px">
+      <svg width="22" height="22" viewBox="0 0 32 32" fill="none">
+        <circle cx="16" cy="16" r="13" stroke="var(--line-2)" stroke-width="2"/>
+        <path d="M16 6 L25.5 22 L6.5 22 Z" stroke="var(--blue)" stroke-width="2" fill="none" stroke-linejoin="round"/>
+      </svg>
+      <span style="font-weight:700;letter-spacing:.14em;font-size:13px">LUCID</span>
+    </div>
+    <div class="navlink active"><span class="g">&part;</span>Learn</div>
+    <div class="navlink"><span class="g">&Sigma;</span>Problems</div>
+    <div class="navlink"><span class="g">&oplus;</span>Contests</div>
+    <div class="navlink"><span class="g">&circlearrowright;</span>Review</div>
+    <div class="navlink"><span class="g">&nabla;</span>Dashboard</div>
+    <div class="navlink"><span class="g">&lambda;</span>AI Coach</div>
+  </aside>
+
+  <!-- MAIN -->
+  <div style="flex:1;display:flex;flex-direction:column;min-width:0">
+    <header style="height:64px;flex-shrink:0;background:#fff;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:0 32px">
+      <div style="display:flex;align-items:center;gap:16px">
+        <button class="btn-ghost" style="height:34px;padding:0 12px;font-size:13px;border-radius:8px">&larr; Exit</button>
+        <span class="mono" style="font-size:12px;color:var(--ink-3)">Number Theory &middot; Lesson 4 of 9</span>
+      </div>
+      <div style="display:flex;align-items:center;gap:12px">
+        <span class="mono" style="font-size:12px;color:var(--ink-3)">Step 3 / 6</span>
+        <div style="width:200px;height:6px;background:var(--paper-3);border-radius:999px;overflow:hidden"><div style="width:50%;height:100%;background:var(--blue)"></div></div>
+      </div>
+    </header>
+
+    <main style="flex:1;overflow:hidden;padding:56px 32px;display:flex;justify-content:center">
+      <div style="width:100%;max-width:720px">
+        <p class="eyebrow">Guided discovery</p>
+        <h1 style="margin-top:12px">Counting divisors with the exponent trick</h1>
+        <p style="margin-top:20px;font-size:17px;color:var(--ink-2);line-height:1.65">
+          Every positive divisor of <span class="m">2<sup>3</sup>&middot;5<sup>7</sup></span> is built by choosing how many
+          factors of 2 to take and how many factors of 5. Those two choices are independent — which is the whole idea.
+        </p>
+
+        <div style="border-left:2px solid var(--blue);background:var(--paper-2);border-radius:0 var(--r-sm) var(--r-sm) 0;padding:18px 22px;margin-top:28px">
+          <p class="mono" style="font-size:11px;color:var(--blue);letter-spacing:.06em;text-transform:uppercase">Intuition</p>
+          <p style="margin-top:8px;font-size:15px;color:var(--ink-2);line-height:1.6">
+            A divisor <span class="m">d = 2<sup>x</sup>&middot;5<sup>y</sup></span> is legal exactly when
+            <span class="m">0 &le; x &le; 3</span> and <span class="m">0 &le; y &le; 7</span>. Count the pairs.
+          </p>
+        </div>
+
+        <div style="margin-top:28px;padding:22px 24px;border:1px solid var(--line);border-radius:var(--r-md)">
+          <p style="font-size:15px;color:var(--ink);font-weight:600">Worked step</p>
+          <p style="margin-top:10px;font-size:15px;color:var(--ink-2);line-height:1.7">
+            There are <span class="m">4</span> choices for <span class="m">x</span> (namely <span class="m">0,1,2,3</span>)
+            and <span class="m">8</span> choices for <span class="m">y</span>. By the multiplication principle the divisor count is
+          </p>
+          <p style="margin-top:12px;text-align:center;font-family:'IBM Plex Mono',monospace;font-size:18px;color:var(--ink)">
+            (3 + 1)(7 + 1) = 32
+          </p>
+        </div>
+
+        <!-- inline check -->
+        <div style="margin-top:32px">
+          <div style="display:flex;align-items:baseline;gap:10px">
+            <span class="mono" style="font-size:11px;color:var(--ink-3);letter-spacing:.06em">CHECK</span>
+            <p style="font-size:16px;font-weight:600">How many divisors does <span class="m">2<sup>3</sup>&middot;5<sup>7</sup></span> have that are <em>perfect squares</em>?</p>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:10px;margin-top:14px">
+            <div class="choice"><span class="dot"></span>6</div>
+            <div class="choice sel"><span class="dot"></span>8</div>
+            <div class="choice"><span class="dot"></span>10</div>
+            <div class="choice"><span class="dot"></span>16</div>
+          </div>
+          <div style="display:flex;align-items:center;gap:16px;margin-top:16px">
+            <button class="btn btn-primary">Check answer</button>
+            <button style="background:none;border:0;color:var(--blue);font-size:14px;font-weight:500;cursor:pointer;font-family:inherit;padding:0">Show a hint (2 left)</button>
+          </div>
+          <div style="margin-top:14px;background:var(--blue-tint);border:1px solid var(--blue-line);border-radius:var(--r-sm);padding:14px 16px">
+            <p style="font-size:14px;color:var(--blue-strong);line-height:1.55">
+              <strong>Hint 1.</strong> A square divisor needs <span class="m">x</span> and <span class="m">y</span> both even.
+              How many even values are in <span class="m">{0,1,2,3}</span>? In <span class="m">{0,&hellip;,7}</span>?
+            </p>
+          </div>
+        </div>
+
+        <div style="display:flex;justify-content:space-between;margin-top:40px;padding-top:24px;border-top:1px solid var(--line)">
+          <button class="btn btn-ghost">Previous</button>
+          <button class="btn btn-primary">Continue &rarr;</button>
+        </div>
+      </div>
+    </main>
+  </div>
+</div>
+
+<script data-dc-script data-props='{"$preview":{"width":1440,"height":1240}}'>
+class Component extends DCLogic {}
+</script>
+</body>
+</html>

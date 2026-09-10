@@ -1,0 +1,193 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap">
+  <style>
+    :root{
+      --paper:#ffffff; --paper-2:#f5f8fc; --paper-3:#eaf0f7;
+      --ink:#0f1b2d; --ink-2:#47566b; --ink-3:#8393a8;
+      --line:#e4eaf2; --line-2:#d3dce8;
+      --blue:#2563eb; --blue-strong:#1d4ed8; --blue-tint:#ecf2ff; --blue-line:#cfe0ff;
+      --good:#12855a;
+      --shadow-sm:0 1px 2px rgba(15,27,45,.04),0 1px 3px rgba(15,27,45,.05);
+      --r-sm:8px; --r-md:12px;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--paper-2);color:var(--ink);font-family:'IBM Plex Sans',system-ui,-apple-system,'Segoe UI',sans-serif;font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+    h1{margin:0;font-weight:600;letter-spacing:-.022em;font-size:26px;line-height:1.15}
+    p{margin:0}
+    .mono{font-family:'IBM Plex Mono',ui-monospace,monospace}
+    .eyebrow{font-family:'IBM Plex Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:var(--blue)}
+    .panel{background:#fff;border:1px solid var(--line);border-radius:var(--r-md);box-shadow:var(--shadow-sm)}
+    .plabel{font-family:'IBM Plex Mono',ui-monospace,monospace;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3)}
+    .navlink{display:flex;align-items:center;gap:12px;height:40px;padding:0 12px;border-radius:var(--r-sm);font-size:14px;font-weight:500;color:var(--ink-2)}
+    .navlink .g{font-family:'IBM Plex Mono',monospace;font-size:14px;color:var(--ink-3);width:16px;text-align:center}
+    .navlink.active{background:var(--blue-tint);color:var(--blue);font-weight:600}
+    .navlink.active .g{color:var(--blue)}
+    .btn-sm{display:inline-flex;align-items:center;justify-content:center;height:34px;padding:0 14px;border-radius:var(--r-sm);font-size:13px;font-weight:600;font-family:inherit;border:1px solid var(--line-2);background:#fff;color:var(--ink-2);cursor:pointer}
+  </style>
+</helmet>
+
+<div style="width:1440px;height:1180px;display:flex;background:var(--paper-2);font-family:'IBM Plex Sans',system-ui,sans-serif;overflow:hidden">
+
+  <!-- SIDEBAR -->
+  <aside style="width:248px;height:1180px;background:#fff;border-right:1px solid var(--line);padding:24px 16px;display:flex;flex-direction:column;gap:8px;flex-shrink:0">
+    <div style="display:flex;align-items:center;gap:10px;padding:0 12px 20px">
+      <svg width="22" height="22" viewBox="0 0 32 32" fill="none">
+        <circle cx="16" cy="16" r="13" stroke="var(--line-2)" stroke-width="2"/>
+        <path d="M16 6 L25.5 22 L6.5 22 Z" stroke="var(--blue)" stroke-width="2" fill="none" stroke-linejoin="round"/>
+      </svg>
+      <span style="font-weight:700;letter-spacing:.14em;font-size:13px">LUCID</span>
+    </div>
+    <div class="navlink"><span class="g">&part;</span>Learn</div>
+    <div class="navlink"><span class="g">&Sigma;</span>Problems</div>
+    <div class="navlink"><span class="g">&oplus;</span>Contests</div>
+    <div class="navlink"><span class="g">&circlearrowright;</span>Review<span class="mono" style="margin-left:auto;font-size:11px;background:var(--blue-tint);color:var(--blue);padding:1px 7px;border-radius:999px">7</span></div>
+    <div class="navlink active"><span class="g">&nabla;</span>Dashboard</div>
+    <div class="navlink"><span class="g">&lambda;</span>AI Coach</div>
+    <div style="margin-top:16px;padding:16px 12px 0;border-top:1px solid var(--line)">
+      <p class="plabel" style="margin-bottom:8px">Observers</p>
+      <div class="navlink" style="height:34px">Mentor view</div>
+      <div class="navlink" style="height:34px">Parent view</div>
+    </div>
+  </aside>
+
+  <!-- MAIN -->
+  <div style="flex:1;display:flex;flex-direction:column;min-width:0">
+    <header style="height:64px;flex-shrink:0;background:#fff;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:0 32px">
+      <div style="display:flex;gap:10px" class="mono">
+        <span style="font-size:12px;color:var(--ink-2);border:1px solid var(--line-2);border-radius:999px;padding:4px 12px"><span style="color:var(--ink-3)">STREAK</span> 12d</span>
+        <span style="font-size:12px;color:var(--ink-2);border:1px solid var(--line-2);border-radius:999px;padding:4px 12px;display:flex;align-items:center;gap:8px"><span style="color:var(--ink-3)">LV 6</span> 1,240 XP
+          <span style="width:56px;height:4px;background:var(--paper-3);border-radius:999px;overflow:hidden;display:inline-block"><span style="display:block;width:64%;height:100%;background:var(--blue)"></span></span>
+        </span>
+      </div>
+      <div style="display:flex;align-items:center;gap:12px">
+        <span class="mono" style="font-size:12px;color:var(--ink-3)">rithika@example.com</span>
+        <button class="btn-sm">Log out</button>
+        <button class="btn-sm">Institute site</button>
+      </div>
+    </header>
+
+    <main style="flex:1;overflow:hidden;padding:40px 32px">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:28px">
+        <div>
+          <p class="eyebrow">Dashboard</p>
+          <h1 style="margin-top:8px">The state of your mathematics.</h1>
+        </div>
+        <button class="btn-sm">Reset progress</button>
+      </div>
+
+      <!-- stat tiles -->
+      <div style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;margin-bottom:16px">
+        <div class="panel" style="padding:18px 20px">
+          <p style="font-size:28px;font-weight:600;letter-spacing:-.02em">12<span style="font-size:16px;color:var(--ink-3)">d</span></p>
+          <p class="plabel" style="margin-top:4px">Streak</p>
+        </div>
+        <div class="panel" style="padding:18px 20px">
+          <p style="font-size:28px;font-weight:600;letter-spacing:-.02em">1,240<span style="font-size:15px;color:var(--ink-3)"> xp</span></p>
+          <p class="plabel" style="margin-top:4px">Level 6 &middot; 320/500</p>
+        </div>
+        <div class="panel" style="padding:18px 20px">
+          <p style="font-size:28px;font-weight:600;letter-spacing:-.02em">387</p>
+          <p class="plabel" style="margin-top:4px">Problems solved</p>
+        </div>
+        <div class="panel" style="padding:18px 20px">
+          <p style="font-size:28px;font-weight:600;letter-spacing:-.02em">24</p>
+          <p class="plabel" style="margin-top:4px">Lessons complete</p>
+        </div>
+      </div>
+
+      <!-- projection -->
+      <div class="panel" style="padding:24px 28px;margin-bottom:16px;display:flex;justify-content:space-between;align-items:center">
+        <div>
+          <p class="plabel">Contest projection &middot; AMC 10</p>
+          <p style="margin-top:8px;font-size:40px;font-weight:600;letter-spacing:-.02em">103.5<span class="mono" style="font-size:18px;color:var(--ink-3)"> / 150</span></p>
+          <p style="margin-top:6px;font-size:14px;color:var(--ink-2)"><strong style="color:var(--ink)">78%</strong> probability of clearing 100 <span class="mono" style="color:var(--ink-3)">&middot; AIME floor</span></p>
+          <p class="mono" style="margin-top:10px;font-size:11px;color:var(--ink-3)">Projection = topic mastery &times; official difficulty curve, with optimal blank strategy.</p>
+        </div>
+        <svg width="120" height="120" viewBox="0 0 120 120">
+          <circle cx="60" cy="60" r="50" fill="none" stroke="var(--paper-3)" stroke-width="10"/>
+          <circle cx="60" cy="60" r="50" fill="none" stroke="var(--blue)" stroke-width="10" stroke-linecap="round"
+            stroke-dasharray="314" stroke-dashoffset="88" transform="rotate(-90 60 60)"/>
+          <text x="60" y="56" text-anchor="middle" font-size="22" font-weight="600" fill="var(--ink)" font-family="IBM Plex Sans,sans-serif">72</text>
+          <text x="60" y="74" text-anchor="middle" font-size="9" fill="var(--ink-3)" font-family="IBM Plex Mono,monospace" letter-spacing="1">READINESS</text>
+        </svg>
+      </div>
+
+      <!-- two col -->
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+        <div class="panel" style="padding:22px 24px">
+          <p class="plabel" style="margin-bottom:16px">Topic mastery</p>
+          <div style="display:flex;flex-direction:column;gap:14px">
+            <div>
+              <div style="display:flex;justify-content:space-between;font-size:13px;margin-bottom:5px"><span>Number Theory</span><span class="mono" style="color:var(--ink-3)">84 &middot; conf 91%</span></div>
+              <div style="height:6px;background:var(--paper-3);border-radius:999px;overflow:hidden"><div style="width:84%;height:100%;background:var(--blue)"></div></div>
+            </div>
+            <div>
+              <div style="display:flex;justify-content:space-between;font-size:13px;margin-bottom:5px"><span>Algebra</span><span class="mono" style="color:var(--ink-3)">76 &middot; conf 88%</span></div>
+              <div style="height:6px;background:var(--paper-3);border-radius:999px;overflow:hidden"><div style="width:76%;height:100%;background:var(--blue)"></div></div>
+            </div>
+            <div>
+              <div style="display:flex;justify-content:space-between;font-size:13px;margin-bottom:5px"><span>Counting &amp; Probability</span><span class="mono" style="color:var(--ink-3)">61 &middot; conf 74%</span></div>
+              <div style="height:6px;background:var(--paper-3);border-radius:999px;overflow:hidden"><div style="width:61%;height:100%;background:var(--blue)"></div></div>
+            </div>
+            <div>
+              <div style="display:flex;justify-content:space-between;font-size:13px;margin-bottom:5px"><span>Geometry</span><span class="mono" style="color:var(--ink-3)">52 &middot; conf 69%</span></div>
+              <div style="height:6px;background:var(--paper-3);border-radius:999px;overflow:hidden"><div style="width:52%;height:100%;background:var(--blue)"></div></div>
+            </div>
+            <div>
+              <div style="display:flex;justify-content:space-between;font-size:13px;margin-bottom:5px"><span>Trigonometry</span><span class="mono" style="color:var(--ink-3)">38 &middot; conf 55%</span></div>
+              <div style="height:6px;background:var(--paper-3);border-radius:999px;overflow:hidden"><div style="width:38%;height:100%;background:var(--blue-line)"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <div style="display:flex;flex-direction:column;gap:16px">
+          <div class="panel" style="padding:22px 24px">
+            <p class="plabel" style="margin-bottom:14px">Strengths &amp; gaps &middot; AMC 10 topics</p>
+            <div style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px">
+              <div style="background:var(--blue);color:#fff;border-radius:6px;padding:10px 8px"><span style="font-size:11px;opacity:.85">Number</span><br><span class="mono" style="font-size:14px;font-weight:600">84</span></div>
+              <div style="background:#6c9cf2;color:#fff;border-radius:6px;padding:10px 8px"><span style="font-size:11px;opacity:.9">Algebra</span><br><span class="mono" style="font-size:14px;font-weight:600">76</span></div>
+              <div style="background:#aecbf7;color:var(--ink);border-radius:6px;padding:10px 8px"><span style="font-size:11px">Counting</span><br><span class="mono" style="font-size:14px;font-weight:600">61</span></div>
+              <div style="background:#d5e5fb;color:var(--ink-2);border-radius:6px;padding:10px 8px"><span style="font-size:11px">Geometry</span><br><span class="mono" style="font-size:14px;font-weight:600">52</span></div>
+            </div>
+          </div>
+          <div class="panel" style="padding:22px 24px">
+            <p class="plabel" style="margin-bottom:14px">This week</p>
+            <div style="display:flex;flex-direction:column;gap:12px">
+              <div>
+                <div style="display:flex;justify-content:space-between;font-size:13px;margin-bottom:5px"><span>Study minutes</span><span class="mono" style="color:var(--ink-3)">142 / 180</span></div>
+                <div style="height:6px;background:var(--paper-3);border-radius:999px;overflow:hidden"><div style="width:79%;height:100%;background:var(--blue)"></div></div>
+              </div>
+              <div>
+                <div style="display:flex;justify-content:space-between;font-size:13px;margin-bottom:5px"><span>Problems attempted</span><span class="mono" style="color:var(--ink-3)">17 / 20</span></div>
+                <div style="height:6px;background:var(--paper-3);border-radius:999px;overflow:hidden"><div style="width:85%;height:100%;background:var(--blue)"></div></div>
+              </div>
+              <div style="display:flex;gap:3px;align-items:flex-end;height:44px;margin-top:4px">
+                <div style="flex:1;height:40%;background:var(--blue-line);border-radius:2px"></div>
+                <div style="flex:1;height:70%;background:var(--blue-line);border-radius:2px"></div>
+                <div style="flex:1;height:30%;background:var(--blue-line);border-radius:2px"></div>
+                <div style="flex:1;height:85%;background:var(--blue);border-radius:2px"></div>
+                <div style="flex:1;height:55%;background:var(--blue-line);border-radius:2px"></div>
+                <div style="flex:1;height:95%;background:var(--blue);border-radius:2px"></div>
+                <div style="flex:1;height:60%;background:var(--blue);border-radius:2px"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+</div>
+
+<script data-dc-script data-props='{"$preview":{"width":1440,"height":1180}}'>
+class Component extends DCLogic {}
+</script>
+</body>
+</html>

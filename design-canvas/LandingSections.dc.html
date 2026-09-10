@@ -1,0 +1,186 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap">
+  <style>
+    :root{
+      --paper:#ffffff; --paper-2:#f5f8fc; --paper-3:#eaf0f7;
+      --ink:#0f1b2d; --ink-2:#47566b; --ink-3:#8393a8;
+      --line:#e4eaf2; --line-2:#d3dce8;
+      --blue:#2563eb; --blue-strong:#1d4ed8; --blue-tint:#ecf2ff; --blue-line:#cfe0ff;
+      --shadow-sm:0 1px 2px rgba(15,27,45,.04),0 1px 3px rgba(15,27,45,.05);
+      --shadow-md:0 8px 24px rgba(15,27,45,.07),0 2px 6px rgba(15,27,45,.04);
+      --r-sm:8px; --r-md:12px;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--paper);color:var(--ink);
+      font-family:'IBM Plex Sans',system-ui,-apple-system,'Segoe UI',sans-serif;font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+    h1,h2,h3{margin:0;font-weight:600;letter-spacing:-.02em;line-height:1.1;color:var(--ink);text-wrap:balance}
+    p{margin:0}
+    a{color:var(--blue);text-decoration:none}a:hover{color:var(--blue-strong)}
+    .mono{font-family:'IBM Plex Mono',ui-monospace,monospace}
+    .eyebrow{font-family:'IBM Plex Mono',ui-monospace,monospace;font-size:12px;font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:var(--blue)}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;height:44px;padding:0 20px;border-radius:var(--r-sm);font-weight:600;font-size:15px;font-family:inherit;border:1px solid transparent;cursor:pointer;transition:background .16s ease,border-color .16s ease,color .16s ease,box-shadow .16s ease;width:100%}
+    .btn-primary{background:var(--blue);color:#fff}.btn-primary:hover{background:var(--blue-strong);box-shadow:var(--shadow-sm)}
+    .btn-secondary{background:#fff;border-color:var(--line-2);color:var(--ink)}.btn-secondary:hover{border-color:var(--blue);color:var(--blue)}
+    .sec-head{max-width:640px;margin-bottom:56px}
+    .sec-head h2{font-size:40px;margin-top:16px}
+    .sec-head p{margin-top:16px;font-size:18px;color:var(--ink-2)}
+    .card{background:#fff;border:1px solid var(--line);border-radius:var(--r-md);box-shadow:var(--shadow-sm);transition:box-shadow .18s ease,border-color .18s ease}
+    .card:hover{box-shadow:var(--shadow-md);border-color:var(--line-2)}
+    .prog-idx{font-size:12px;color:var(--ink-3);letter-spacing:.06em}
+    .prog h3{font-size:20px;margin:14px 0 6px}
+    .prog .tag{font-size:13px;color:var(--blue);font-weight:500}
+    .prog p{font-size:14px;color:var(--ink-2);margin-top:10px;line-height:1.55}
+    .prog .meta{font-size:11px;color:var(--ink-3);letter-spacing:.03em;margin-top:16px;padding-top:14px;border-top:1px solid var(--line)}
+    .chip{font-size:11px;color:var(--ink-2);border:1px solid var(--line-2);border-radius:999px;padding:3px 9px}
+  </style>
+</helmet>
+
+<div style="width:1440px;background:var(--paper);font-family:'IBM Plex Sans',system-ui,sans-serif">
+
+  <!-- PROGRAMS -->
+  <section style="padding:96px 64px;border-bottom:1px solid var(--line)">
+    <div class="sec-head">
+      <p class="eyebrow">&sect; 01 &nbsp;Programs</p>
+      <h2>Six programs. One trajectory.</h2>
+      <p>Every program is a stage of the same ascent — from first principles to the frontier of pre-college mathematics.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px">
+      <article class="card prog" style="padding:24px">
+        <p class="prog-idx mono">P&middot;01</p><h3>AMC 8</h3>
+        <p class="tag">Foundations of contest thinking</p>
+        <p>Number sense, clever counting, and geometric intuition — contest problems as puzzles with findable structure.</p>
+        <div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:14px">
+          <span class="chip">Number Theory</span><span class="chip">Counting</span><span class="chip">Geometry</span>
+        </div>
+        <p class="meta mono">Grades 5&ndash;8 &middot; Self-paced</p>
+      </article>
+      <article class="card prog" style="padding:24px">
+        <p class="prog-idx mono">P&middot;02</p><h3>AMC 10/12</h3>
+        <p class="tag">Speed, precision, depth</p>
+        <p>Algebraic technique, combinatorial identities, and trigonometry executed cleanly under time pressure.</p>
+        <p class="meta mono">Grades 8&ndash;12 &middot; 25 problems &middot; 75 minutes</p>
+      </article>
+      <article class="card prog" style="padding:24px">
+        <p class="prog-idx mono">P&middot;03</p><h3>AIME</h3>
+        <p class="tag">Where problems become puzzles</p>
+        <p>Multi-step problems demanding synthesis across domains. We train the decomposition instinct: reduce, transform, conquer.</p>
+        <p class="meta mono">Invitational &middot; 15 problems &middot; 3 hours</p>
+      </article>
+      <article class="card prog" style="padding:24px">
+        <p class="prog-idx mono">P&middot;04</p><h3>USAMO</h3>
+        <p class="tag">The art of proof</p>
+        <p>Olympiad geometry, inequalities, functional equations, and number theory — argued with complete rigor, written to be read.</p>
+        <p class="meta mono">Proof-based &middot; 6 problems &middot; 9 hours</p>
+      </article>
+      <article class="card prog" style="padding:24px">
+        <p class="prog-idx mono">P&middot;05</p><h3>IMO Preparation</h3>
+        <p class="tag">The summit</p>
+        <p>Modeled on national-team preparation: daily problem sets, mock olympiads, and AI-guided review from former medalists' frameworks.</p>
+        <p class="meta mono">By invitation &middot; Year-round</p>
+      </article>
+      <article class="card prog" style="padding:24px">
+        <p class="prog-idx mono">P&middot;06</p><h3>Advanced Problem Solving</h3>
+        <p class="tag">Beyond the syllabus</p>
+        <p>Research-style seminars for students who have outgrown the contest calendar — Putnam prep, mathematical writing, open problems.</p>
+        <p class="meta mono">Post-olympiad &middot; Seminar format</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- METHOD -->
+  <section style="padding:96px 64px;background:var(--paper-2);border-bottom:1px solid var(--line)">
+    <div class="sec-head">
+      <p class="eyebrow">&sect; 02 &nbsp;The Lucid Method</p>
+      <h2>Reasoning is a discipline.</h2>
+      <p>Five stages, in strict logical order. Each one is a prerequisite for the next — like lemmas building toward a theorem.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:16px">
+      <div style="background:#fff;border:1px solid var(--line);border-radius:var(--r-md);padding:20px">
+        <p class="mono" style="font-size:11px;color:var(--blue);letter-spacing:.04em">LEMMA 1</p>
+        <h3 style="font-size:16px;margin:10px 0 8px">Foundations</h3>
+        <p style="font-size:13px;color:var(--ink-2);line-height:1.5">School mathematics rebuilt from first principles, so nothing is memorized that can be derived.</p>
+      </div>
+      <div style="background:#fff;border:1px solid var(--line);border-radius:var(--r-md);padding:20px">
+        <p class="mono" style="font-size:11px;color:var(--blue);letter-spacing:.04em">LEMMA 2</p>
+        <h3 style="font-size:16px;margin:10px 0 8px">Pattern Recognition</h3>
+        <p style="font-size:13px;color:var(--ink-2);line-height:1.5">Seeing structure: invariants, symmetry, extremal cases, parity — the instinct that turns a blank page into a plan.</p>
+      </div>
+      <div style="background:#fff;border:1px solid var(--line);border-radius:var(--r-md);padding:20px">
+        <p class="mono" style="font-size:11px;color:var(--blue);letter-spacing:.04em">LEMMA 3</p>
+        <h3 style="font-size:16px;margin:10px 0 8px">Proof Writing</h3>
+        <p style="font-size:13px;color:var(--ink-2);line-height:1.5">From intuition to rigor — write, critique, rewrite until precision is second nature.</p>
+      </div>
+      <div style="background:#fff;border:1px solid var(--line);border-radius:var(--r-md);padding:20px">
+        <p class="mono" style="font-size:11px;color:var(--blue);letter-spacing:.04em">LEMMA 4</p>
+        <h3 style="font-size:16px;margin:10px 0 8px">Creative Problem Solving</h3>
+        <p style="font-size:13px;color:var(--ink-2);line-height:1.5">Non-routine problems with no labeled method — constructing an approach that did not exist before you sat down.</p>
+      </div>
+      <div style="background:var(--ink);border:1px solid var(--ink);border-radius:var(--r-md);padding:20px">
+        <p class="mono" style="font-size:11px;color:#8fb3ff;letter-spacing:.04em">THEOREM</p>
+        <h3 style="font-size:16px;margin:10px 0 8px;color:#fff">Timed Competition Practice</h3>
+        <p style="font-size:13px;color:#aebdd4;line-height:1.5">Full simulations under authentic constraints, then forensic review of every decision.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section style="padding:96px 64px">
+    <div class="sec-head">
+      <p class="eyebrow">&sect; 03 &nbsp;Pricing</p>
+      <h2>Choose your intensity.</h2>
+      <p>Every tier includes the full curriculum platform, problem bank, mock contests, and the AI coach.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;align-items:start">
+      <article class="card" style="padding:28px">
+        <p class="mono" style="font-size:12px;color:var(--ink-3);letter-spacing:.08em;text-transform:uppercase">Starter</p>
+        <p style="margin-top:14px"><span style="font-size:40px;font-weight:600;letter-spacing:-.02em">$5</span><span style="color:var(--ink-3);font-size:15px"> /month</span></p>
+        <ul style="list-style:none;padding:0;margin:22px 0 24px;display:flex;flex-direction:column;gap:12px;font-size:14px;color:var(--ink-2)">
+          <li>Full curriculum: lessons, bank, contests</li>
+          <li>AI coach — Socratic hints on every problem</li>
+          <li>Monthly scored mock competition</li>
+          <li>Progress tracking &amp; mastery roadmap</li>
+        </ul>
+        <button class="btn btn-secondary">Start free</button>
+      </article>
+      <article class="card" style="padding:28px;border-color:var(--blue-line);box-shadow:var(--shadow-md);position:relative">
+        <span class="mono" style="position:absolute;top:-11px;left:28px;background:var(--blue);color:#fff;font-size:10px;letter-spacing:.08em;text-transform:uppercase;padding:4px 10px;border-radius:999px">Most chosen</span>
+        <p class="mono" style="font-size:12px;color:var(--blue);letter-spacing:.08em;text-transform:uppercase">Plus</p>
+        <p style="margin-top:14px"><span style="font-size:40px;font-weight:600;letter-spacing:-.02em">$10</span><span style="color:var(--ink-3);font-size:15px"> /month</span></p>
+        <ul style="list-style:none;padding:0;margin:22px 0 24px;display:flex;flex-direction:column;gap:12px;font-size:14px;color:var(--ink-2)">
+          <li>Everything in Starter</li>
+          <li>Unlimited AI coach access</li>
+          <li>Weekly scored mock competitions</li>
+          <li>Written solutions to every problem</li>
+          <li>Full progress analytics</li>
+        </ul>
+        <button class="btn btn-primary">Get Plus</button>
+      </article>
+      <article class="card" style="padding:28px">
+        <p class="mono" style="font-size:12px;color:var(--ink-3);letter-spacing:.08em;text-transform:uppercase">Pro</p>
+        <p style="margin-top:14px"><span style="font-size:40px;font-weight:600;letter-spacing:-.02em">$15</span><span style="color:var(--ink-3);font-size:15px"> /month</span></p>
+        <ul style="list-style:none;padding:0;margin:22px 0 24px;display:flex;flex-direction:column;gap:12px;font-size:14px;color:var(--ink-2)">
+          <li>Everything in Plus</li>
+          <li>Priority AI coach, deeper proof review</li>
+          <li>Competition-day strategy guides</li>
+          <li>Early access to new content</li>
+        </ul>
+        <button class="btn btn-secondary">Get Pro</button>
+      </article>
+    </div>
+  </section>
+
+</div>
+
+<script data-dc-script data-props='{"$preview":{"width":1440,"height":2600}}'>
+class Component extends DCLogic {}
+</script>
+</body>
+</html>
