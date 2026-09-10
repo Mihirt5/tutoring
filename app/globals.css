@@ -356,11 +356,11 @@ h3 {
 /* ── Hero ────────────────────────────────────────────────────── */
 
 .hero {
-  min-height: min(88svh, 780px);
+  min-height: min(90svh, 740px);
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: calc(var(--nav-h) + 3.5rem) 0 5rem;
+  padding: calc(var(--nav-h) + 6.5rem) 0 4rem;
   position: relative;
   overflow: hidden;
 }
@@ -368,19 +368,19 @@ h3 {
 .hero .container { position: relative; z-index: 1; }
 
 .hero-title {
-  font-size: clamp(2.6rem, 6vw, 3.9rem);
+  font-size: clamp(2.4rem, 4.6vw, 3.5rem);
   font-weight: 600;
   letter-spacing: -0.028em;
   line-height: 1.04;
-  margin: 0.4rem 0 1.6rem;
+  margin: 0 0 1.5rem;
 }
 
 .hero-title .line { display: block; }
 
 .hero-sub {
-  font-size: clamp(1.02rem, 1.4vw, 1.2rem);
+  font-size: clamp(1.02rem, 1.35vw, 1.1875rem);
   color: var(--ink-dim);
-  max-width: 38rem;
+  max-width: 39rem;
   line-height: 1.6;
 }
 
@@ -388,11 +388,11 @@ h3 {
   display: flex;
   flex-wrap: wrap;
   gap: 0.75rem;
-  margin-top: 2.2rem;
+  margin-top: 2.25rem;
 }
 
 .hero-path {
-  margin-top: 2.6rem;
+  margin-top: 2.75rem;
   color: var(--ink-dim);
   font-size: 0.75rem;
   letter-spacing: 0.02em;
@@ -1100,31 +1100,28 @@ h3 {
   top: 0;
   right: 0;
   bottom: 0;
-  width: min(46%, 560px);
+  width: min(50%, 720px);
   z-index: 0;
   overflow: hidden;
   pointer-events: none;
-  -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 46%);
-  mask-image: linear-gradient(90deg, transparent 0, #000 46%);
 }
 
 .hero-lattice svg {
   position: absolute;
-  top: 50%;
+  top: 0;
   right: 0;
-  transform: translateY(-50%);
   max-width: none;
   display: block;
 }
-.hero-lattice .lat-grid { stroke: var(--accent-line); stroke-width: 1; opacity: 0.5; }
+.hero-lattice .lat-grid { stroke: var(--accent-line); stroke-width: 1; opacity: 0.6; }
 .hero-lattice .lat-curve {
   stroke: var(--accent);
-  stroke-width: 2;
+  stroke-width: 2.5;
   fill: none;
   stroke-linecap: round;
-  stroke-dasharray: 900;
-  stroke-dashoffset: 900;
-  animation: lat-draw 2.8s ease-out 0.35s forwards;
+  stroke-dasharray: 640;
+  stroke-dashoffset: 640;
+  animation: lat-draw 3.2s ease-out 0.3s forwards;
 }
 .hero-lattice .lat-node {
   fill: var(--accent);
@@ -1134,7 +1131,7 @@ h3 {
 .hero-lattice .lat-node:nth-of-type(3) { animation-delay: -4.6s; }
 
 @keyframes lat-draw { to { stroke-dashoffset: 0; } }
-@keyframes lat-float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-5px); } }
+@keyframes lat-float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-6px); } }
 
 /* ── Trust strip ─────────────────────────────────────────────── */
 
