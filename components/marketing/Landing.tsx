@@ -39,7 +39,21 @@ export default function Landing() {
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
-    const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    // Section reveals: a plain observer, independent of the rAF loop.
+    // (The hero entrance is pure CSS — see globals.css.)
+    const io = new IntersectionObserver(
+      (entries) => {
+        for (const e of entries) {
+          if (e.isIntersecting) {
+            e.target.classList.add("in");
+            io.unobserve(e.target);
+          }
+        }
+      },
+      { rootMargin: "0px 0px -12% 0px" },
+    );
+    document.querySelectorAll("[data-reveal]").forEach((el) => io.observe(el));
 
     const ctx = gsap.context(() => {
       const nav = document.getElementById("nav")!;
@@ -55,39 +69,40 @@ export default function Landing() {
         scrollTrigger: { trigger: document.body, start: 0, end: "max", scrub: 0.3 },
       });
 
-      gsap.from("[data-hero]", {
-        y: reduced ? 0 : 16,
-        autoAlpha: 0,
-        duration: 0.7,
-        ease: "power2.out",
-        stagger: 0.07,
-        delay: 0.1,
-      });
+      // Method strip: pin the section and sweep the highlighted lemma across
+      // the row as the user scrolls through it. Below 900px the strip wraps
+      // to a plain stack, so the scroll-jack is desktop-only.
+      const methodSteps = gsap.utils.toArray<HTMLElement>("#method-steps [data-step]");
+      if (methodSteps.length) {
+        methodSteps[0].classList.add("active");
 
-      gsap.utils.toArray<Element>("[data-reveal]").forEach(el => {
-        gsap.from(el, {
-          y: reduced ? 0 : 20,
-          autoAlpha: 0,
-          duration: 0.6,
-          ease: "power2.out",
-          scrollTrigger: { trigger: el, start: "top 88%", once: true },
+        ScrollTrigger.matchMedia({
+          "(min-width: 901px)": () => {
+            const scrollDistance = methodSteps.length * 360;
+
+            ScrollTrigger.create({
+              trigger: ".method-section",
+              start: "top top+=64",
+              end: "+=" + scrollDistance,
+              pin: true,
+              scrub: 0.5,
+              onUpdate: self => {
+                const idx = Math.min(
+                  methodSteps.length - 1,
+                  Math.floor(self.progress * methodSteps.length),
+                );
+                methodSteps.forEach((el, i) => el.classList.toggle("active", i === idx));
+              },
+            });
+
+            gsap.to("#method-rail-fill", {
+              scaleX: 1,
+              ease: "none",
+              scrollTrigger: { trigger: ".method-section", start: "top top", end: "+=" + scrollDistance, scrub: 0.5 },
+            });
+          },
         });
-      });
-
-      document.querySelectorAll("[data-step]").forEach(step => {
-        ScrollTrigger.create({
-          trigger: step,
-          start: "top 62%",
-          end: "bottom 38%",
-          onToggle: self => step.classList.toggle("active", self.isActive),
-        });
-      });
-
-      gsap.to("#method-rail-fill", {
-        scaleX: 1,
-        ease: "none",
-        scrollTrigger: { trigger: "#method-steps", start: "top 70%", end: "bottom 40%", scrub: 0.4 },
-      });
+      }
 
       gsap.to("#timeline-fill", {
         scaleY: 1,
@@ -105,7 +120,10 @@ export default function Landing() {
       });
     }, rootRef);
 
-    return () => ctx.revert();
+    return () => {
+      io.disconnect();
+      ctx.revert();
+    };
   }, []);
 
   return (
@@ -119,10 +137,8 @@ export default function Landing() {
           <nav className="nav-links" aria-label="Primary">
             <a href="#programs">Programs</a>
             <a href="#method">Method</a>
-            <a href="#why">Why us</a>
             <a href="#curriculum">Curriculum</a>
             <a href="#pricing">Pricing</a>
-            <Link href="/learn">Platform</Link>
           </nav>
           <div className="nav-actions">
             <Link className="btn btn-small btn-ghost" href="/login">Log in</Link>
@@ -143,8 +159,8 @@ export default function Landing() {
               <span className="line" data-hero>by solving, not watching<span className="accent">.</span></span>
             </h1>
             <p className="hero-sub" data-hero>
-              One continuous curriculum from AMC&nbsp;8 to the IMO: interactive lessons
-              that gate on understanding, adaptive practice, scored mock contests, and a
+              One continuous curriculum from AMC&nbsp;8 to advanced problem solving: interactive
+              lessons that gate on understanding, adaptive practice, scored mock contests, and a
               Socratic AI coach that hints but never hands you the answer.
             </p>
             <div className="hero-actions" data-hero>
@@ -154,8 +170,8 @@ export default function Landing() {
             <p className="hero-path mono" data-hero>
               <span>PATH</span>
               <span>AMC&nbsp;8</span><span className="sep">→</span><span>AMC&nbsp;10/12</span>
-              <span className="sep">→</span><span>AIME</span><span className="sep">→</span><span>USAMO</span>
-              <span className="sep">→</span><span className="accent">IMO</span>
+              <span className="sep">→</span><span>AIME</span><span className="sep">→</span><span>USAMTS</span>
+              <span className="sep">→</span><span className="accent">Problem Solving</span>
             </p>
           </div>
         </section>
@@ -186,16 +202,16 @@ export default function Landing() {
             </header>
 
             <div className="programs-grid">
-              <article className="card glass plus-corners program-card wide" data-reveal>
+              <article className="card glass plus-corners program-card" data-reveal>
                 <p className="card-index mono">P·01</p>
                 <h3>AMC 8</h3>
                 <p className="card-tag">Foundations of contest thinking</p>
-                <p>Number sense, clever counting, and geometric intuition. Students learn that
-                  contest problems are puzzles with structure — and that structure can be found.</p>
+                <p>Number sense, clever counting, and geometric intuition — contest problems
+                  as puzzles with findable structure.</p>
                 <ul className="chip-row" role="list">
-                  <li>Number Theory</li><li>Counting</li><li>Geometry</li><li>Logic</li>
+                  <li>Number Theory</li><li>Counting</li><li>Geometry</li>
                 </ul>
-                <p className="card-meta mono">Grades 5–8 · Self-paced · Adaptive practice</p>
+                <p className="card-meta mono">Grades 5–8 · Self-paced</p>
               </article>
 
               <article className="card glass plus-corners program-card" data-reveal>
@@ -218,137 +234,79 @@ export default function Landing() {
 
               <article className="card glass plus-corners program-card" data-reveal>
                 <p className="card-index mono">P·04</p>
-                <h3>USAMO</h3>
+                <h3>USAMTS</h3>
                 <p className="card-tag">The art of proof</p>
-                <p>Olympiad geometry, inequalities, functional equations, and number theory —
-                  argued with complete rigor, written to be read.</p>
-                <p className="card-meta mono">Proof-based · 6 problems · 9 hours</p>
+                <p>Take-home, untimed rounds argued with complete rigor. The talent-search
+                  format that rewards a clean write-up over a fast guess.</p>
+                <p className="card-meta mono">Proof-based · Take-home · Untimed</p>
               </article>
 
               <article className="card glass plus-corners program-card" data-reveal>
                 <p className="card-index mono">P·05</p>
-                <h3>IMO Preparation</h3>
-                <p className="card-tag">The summit</p>
-                <p>Modeled on national team preparation: daily problem sets, mock olympiads,
-                  and AI-guided review built on frameworks from former IMO medalists.</p>
-                <p className="card-meta mono">By invitation · Year-round · Self-paced</p>
+                <h3>Problem Solving</h3>
+                <p className="card-tag">Standardized test math</p>
+                <p>SAT and ACT-style math built on the same reasoning habits — fast,
+                  accurate technique applied to a different clock.</p>
+                <p className="card-meta mono">Grades 8–12 · Self-paced · Adaptive practice</p>
               </article>
 
               <article className="card glass plus-corners program-card" data-reveal>
                 <p className="card-index mono">P·06</p>
                 <h3>Advanced Problem Solving</h3>
                 <p className="card-tag">Beyond the syllabus</p>
-                <p>Research-style seminars for students who have outgrown the contest calendar —
-                  Putnam preparation, mathematical writing, and open problems.</p>
-                <p className="card-meta mono">Post-olympiad · Seminar format · Rolling</p>
+                <p>For students who have finished the core curriculum — open-ended, non-routine
+                  problems with no labeled method and no single right approach.</p>
+                <p className="card-meta mono">Post-curriculum · Seminar format · Rolling</p>
               </article>
             </div>
           </div>
         </section>
 
         {/* METHOD */}
-        <section className="section section-tight" id="method">
+        <section className="section section-tight method-section" id="method">
           <div className="container">
-            <div className="sticky-grid">
-              <div className="sticky-col">
-                <p className="eyebrow" data-reveal>§ 02 · The Lucid Method</p>
-                <h2 data-reveal>Reasoning is<br />a discipline.</h2>
-                <p className="section-sub" data-reveal>
-                  Five stages, in strict logical order. Each one is a prerequisite
-                  for the next — like lemmas building toward a theorem.
-                </p>
-                <div className="method-rail" aria-hidden="true">
-                  <div className="method-rail-fill" id="method-rail-fill" />
-                </div>
+            <header className="section-head">
+              <p className="eyebrow" data-reveal>§ 02 · The Lucid Method</p>
+              <h2 data-reveal>Reasoning is<br />a discipline.</h2>
+              <p className="section-sub" data-reveal>
+                Five stages, in strict logical order. Each one is a prerequisite
+                for the next — like lemmas building toward a theorem.
+              </p>
+              <div className="method-rail" aria-hidden="true">
+                <div className="method-rail-fill" id="method-rail-fill" />
               </div>
+            </header>
 
-              <div className="steps" id="method-steps">
-                <div className="step glass" data-step>
-                  <p className="step-num mono">Lemma 1</p>
-                  <h3>Foundations</h3>
-                  <p>Every technique rests on first principles. We rebuild algebra, geometry,
-                    combinatorics, and number theory from those principles up — so nothing
-                    is memorized that can instead be derived.</p>
-                </div>
-                <div className="step glass" data-step>
-                  <p className="step-num mono">Lemma 2</p>
-                  <h3>Pattern Recognition</h3>
-                  <p>Students learn to see structure: invariants, symmetry, extremal cases,
-                    parity. The trained instinct that turns a blank page into a plan.</p>
-                </div>
-                <div className="step glass" data-step>
-                  <p className="step-num mono">Lemma 3</p>
-                  <h3>Proof Writing</h3>
-                  <p>From intuition to rigor. Students write, critique, and rewrite arguments
-                    until precision becomes second nature — the skill that separates
-                    AIME qualifiers from olympiad medalists.</p>
-                </div>
-                <div className="step glass" data-step>
-                  <p className="step-num mono">Lemma 4</p>
-                  <h3>Creative Problem Solving</h3>
-                  <p>Non-routine problems with no labeled method. The core olympiad skill:
-                    constructing an approach that did not exist before you sat down.</p>
-                </div>
-                <div className="step glass" data-step>
-                  <p className="step-num mono">Theorem</p>
-                  <h3>Timed Competition Practice</h3>
-                  <p>Full simulations under authentic constraints, followed by forensic review
-                    of every decision — the ones that worked, and the ones that almost did.</p>
-                </div>
+            <div className="method-strip" id="method-steps">
+              <div className="method-card glass" data-step>
+                <p className="step-num mono">Lemma 1</p>
+                <h3>Foundations</h3>
+                <p>School mathematics rebuilt from first principles, so nothing is
+                  memorized that can instead be derived.</p>
               </div>
-            </div>
-          </div>
-        </section>
-
-        {/* PROBLEM */}
-        <section className="section section-tight" id="problem">
-          <div className="container">
-            <div className="sticky-grid">
-              <div className="sticky-col">
-                <p className="eyebrow" data-reveal>§ 03 · Guided Reasoning</p>
-                <h2 data-reveal>Reasoning,<br />not recall.</h2>
-                <p className="section-sub" data-reveal>
-                  Watch a competition problem dissolve under structured thought.
-                  This is how every Lucid lesson works — questions, not answers,
-                  until the answer is inevitable.
-                </p>
-                <div className="problem-card glass plus-corners" data-reveal>
-                  <p className="mono problem-label">AIME-style · Number Theory</p>
-                  <p className="problem-text serif-math">
-                    Find the number of ordered pairs (a,&nbsp;b) of positive integers
-                    such that&nbsp;lcm(a,&nbsp;b)&nbsp;=&nbsp;2<sup>3</sup>·5<sup>7</sup>.
-                  </p>
-                </div>
+              <div className="method-card glass" data-step>
+                <p className="step-num mono">Lemma 2</p>
+                <h3>Pattern Recognition</h3>
+                <p>Seeing structure: invariants, symmetry, extremal cases, parity —
+                  the instinct that turns a blank page into a plan.</p>
               </div>
-
-              <div className="steps" id="problem-steps">
-                <div className="step glass" data-step>
-                  <p className="step-num mono">Step 1 · Observe</p>
-                  <h3>Structure first</h3>
-                  <p>Both a and b must divide 2<sup>3</sup>·5<sup>7</sup>, so write
-                    a&nbsp;=&nbsp;2<sup>x₁</sup>5<sup>y₁</sup> and b&nbsp;=&nbsp;2<sup>x₂</sup>5<sup>y₂</sup>.
-                    The problem is secretly about exponents.</p>
-                </div>
-                <div className="step glass" data-step>
-                  <p className="step-num mono">Step 2 · Reduce</p>
-                  <h3>Split by independence</h3>
-                  <p>The lcm condition becomes max(x₁,&nbsp;x₂)&nbsp;=&nbsp;3 and
-                    max(y₁,&nbsp;y₂)&nbsp;=&nbsp;7 — two independent conditions.
-                    Count each, then multiply.</p>
-                </div>
-                <div className="step glass" data-step>
-                  <p className="step-num mono">Step 3 · Count</p>
-                  <h3>A one-line lemma</h3>
-                  <p>Pairs with max(m,&nbsp;n)&nbsp;=&nbsp;k number exactly 2k&nbsp;+&nbsp;1:
-                    either m&nbsp;=&nbsp;k (k&nbsp;+&nbsp;1 choices for n),
-                    or n&nbsp;=&nbsp;k with m&nbsp;&lt;&nbsp;k (k more).</p>
-                </div>
-                <div className="step glass" data-step>
-                  <p className="step-num mono">Step 4 · Conclude</p>
-                  <h3>Multiply and finish</h3>
-                  <p>(2·3&nbsp;+&nbsp;1)(2·7&nbsp;+&nbsp;1)&nbsp;=&nbsp;7&nbsp;×&nbsp;15.</p>
-                  <p className="answer mono">Answer&nbsp;=&nbsp;105</p>
-                </div>
+              <div className="method-card glass" data-step>
+                <p className="step-num mono">Lemma 3</p>
+                <h3>Proof Writing</h3>
+                <p>From intuition to rigor — write, critique, and rewrite arguments
+                  until precision becomes second nature.</p>
+              </div>
+              <div className="method-card glass" data-step>
+                <p className="step-num mono">Lemma 4</p>
+                <h3>Creative Problem Solving</h3>
+                <p>Non-routine problems with no labeled method — constructing an
+                  approach that did not exist before you sat down.</p>
+              </div>
+              <div className="method-card glass" data-step>
+                <p className="step-num mono">Theorem</p>
+                <h3>Timed Competition Practice</h3>
+                <p>Full simulations under authentic constraints, then forensic
+                  review of every decision.</p>
               </div>
             </div>
           </div>
@@ -358,7 +316,7 @@ export default function Landing() {
         <section className="section" id="why">
           <div className="container">
             <header className="section-head">
-              <p className="eyebrow" data-reveal>§ 04 · Why Lucid</p>
+              <p className="eyebrow" data-reveal>§ 03 · Why Lucid</p>
               <h2 data-reveal>Built differently.</h2>
               <p className="section-sub" data-reveal>
                 No cohorts to keep up with and no coach to schedule around — just you,
@@ -382,8 +340,8 @@ export default function Landing() {
               <article className="card glass why-card" data-reveal>
                 <div className="why-icon" aria-hidden="true"><span>Σ</span></div>
                 <h3>One continuous curriculum</h3>
-                <p>Six programs, one trajectory: AMC 8 through IMO Prep, each stage
-                  a strict prerequisite for the next.</p>
+                <p>Six programs, one trajectory: AMC 8 through advanced problem solving,
+                  each stage a strict prerequisite for the next.</p>
               </article>
               <article className="card glass why-card" data-reveal>
                 <div className="why-icon" aria-hidden="true"><span>$</span></div>
@@ -399,8 +357,8 @@ export default function Landing() {
         <section className="section" id="curriculum">
           <div className="container">
             <header className="section-head">
-              <p className="eyebrow" data-reveal>§ 05 · Curriculum</p>
-              <h2 data-reveal>From first principles<br />to the IMO.</h2>
+              <p className="eyebrow" data-reveal>§ 04 · Curriculum</p>
+              <h2 data-reveal>From first principles<br />to advanced problem solving.</h2>
               <p className="section-sub" data-reveal>
                 A single continuous path. Each milestone unlocks the next —
                 no stage skipped, no gap left unproved.
@@ -415,8 +373,8 @@ export default function Landing() {
                 ["Stage 1 · AMC 8", "Contest Fluency", "First exposure to competition structure. Speed with accuracy, pattern libraries, honest error analysis."],
                 ["Stage 2 · AMC 10/12", "Technique Under Pressure", "The full toolbox — Vieta, telescoping, mass points, generating intuitions — executed in 75 minutes."],
                 ["Stage 3 · AIME", "Synthesis", "Problems that cross domain boundaries. Decomposition strategy, answer-extraction discipline, three-hour endurance."],
-                ["Stage 4 · USAMO", "Rigor", "Complete written proofs, graded to olympiad standard. Inequalities, olympiad geometry, functional equations."],
-                ["Stage 5 · IMO", "Mastery", "Elite-level training: daily problem sets, mock olympiads, and an AI coach built on frameworks from those who have medaled."],
+                ["Stage 4 · USAMTS", "Rigor", "Complete written proofs on take-home, untimed rounds. Precision and clarity replace speed as the constraint."],
+                ["Stage 5 · Problem Solving", "Mastery", "Open-ended, non-routine problems and standardized test math — reasoning habits applied to any clock, any format."],
               ].map(([stage, title, body]) => (
                 <div className="milestone" data-reveal key={stage}>
                   <div className="milestone-node" aria-hidden="true" />
@@ -435,7 +393,7 @@ export default function Landing() {
         <section className="section" id="pricing">
           <div className="container">
             <header className="section-head">
-              <p className="eyebrow" data-reveal>§ 06 · Pricing</p>
+              <p className="eyebrow" data-reveal>§ 05 · Pricing</p>
               <h2 data-reveal>Choose your intensity.</h2>
               <p className="section-sub" data-reveal>
                 Every tier includes the full curriculum platform, problem bank,
@@ -489,7 +447,7 @@ export default function Landing() {
         <section className="section" id="faq">
           <div className="container container-narrow">
             <header className="section-head">
-              <p className="eyebrow" data-reveal>§ 07 · FAQ</p>
+              <p className="eyebrow" data-reveal>§ 06 · FAQ</p>
               <h2 data-reveal>Open questions.</h2>
             </header>
 
@@ -529,7 +487,7 @@ export default function Landing() {
         {/* FINAL CTA */}
         <section className="cta" id="apply">
           <div className="container">
-            <p className="eyebrow" data-reveal>§ 08 · Q.E.D.</p>
+            <p className="eyebrow" data-reveal>§ 07 · Q.E.D.</p>
             <h2 className="cta-title" data-reveal>
               Start with one problem<span className="accent">.</span>
             </h2>

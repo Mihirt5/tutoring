@@ -23,9 +23,9 @@ const plexMono = IBM_Plex_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Lucid — Competition Mathematics Academy · AMC · AIME · USAMO · IMO",
+  title: "Lucid — Competition Mathematics Academy · AMC · AIME · USAMTS",
   description:
-    "A complete digital learning ecosystem for competition mathematics: interactive lessons, adaptive practice, mock contests, and AI coaching from AMC 8 through the IMO.",
+    "A complete digital learning ecosystem for competition mathematics: interactive lessons, adaptive practice, mock contests, and AI coaching from AMC 8 through advanced problem solving.",
   icons: {
     icon: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='13' fill='none' stroke='%23D3DCE8' stroke-width='2'/%3E%3Cpath d='M16 6 L25.5 22 L6.5 22 Z' fill='none' stroke='%232563EB' stroke-width='2' stroke-linejoin='round'/%3E%3C/svg%3E",
   },

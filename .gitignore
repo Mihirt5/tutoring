@@ -42,3 +42,6 @@ next-env.d.ts
 
 # local tooling
 .claude/
+
+# unreviewed AI-generated problem batches — review before merging into content/problems/*.ts
+content/problems/generated/
