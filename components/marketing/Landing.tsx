@@ -104,20 +104,6 @@ export default function Landing() {
         });
       }
 
-      gsap.to("#timeline-fill", {
-        scaleY: 1,
-        ease: "none",
-        scrollTrigger: { trigger: "#timeline", start: "top 65%", end: "bottom 55%", scrub: 0.4 },
-      });
-
-      document.querySelectorAll(".milestone").forEach(m => {
-        ScrollTrigger.create({
-          trigger: m,
-          start: "top 62%",
-          onEnter: () => m.classList.add("lit"),
-          onLeaveBack: () => m.classList.remove("lit"),
-        });
-      });
     }, rootRef);
 
     return () => {
@@ -137,7 +123,6 @@ export default function Landing() {
           <nav className="nav-links" aria-label="Primary">
             <a href="#programs">Programs</a>
             <a href="#method">Method</a>
-            <a href="#curriculum">Curriculum</a>
             <a href="#pricing">Pricing</a>
           </nav>
           <div className="nav-actions">
@@ -159,13 +144,13 @@ export default function Landing() {
               <span className="line" data-hero>by solving, not watching<span className="accent">.</span></span>
             </h1>
             <p className="hero-sub" data-hero>
-              One continuous curriculum from AMC&nbsp;8 to advanced problem solving: interactive
+              One continuous curriculum from AMC&nbsp;8 to advanced problem solving. Interactive
               lessons that gate on understanding, adaptive practice, scored mock contests, and a
               Socratic AI coach that hints but never hands you the answer.
             </p>
             <div className="hero-actions" data-hero>
               <Link className="btn btn-solid" href="/learn">Start learning free</Link>
-              <a className="btn btn-ghost" href="#curriculum">See the curriculum</a>
+              <a className="btn btn-ghost" href="#programs">See the programs</a>
             </div>
             <p className="hero-path mono" data-hero>
               <span>PATH</span>
@@ -182,9 +167,9 @@ export default function Landing() {
             <span className="trust-label">Built for the full climb</span>
             <div className="trust-figs">
               <span><strong>58</strong> lessons</span>
-              <span><strong>104</strong> original problems</span>
-              <span><strong>7</strong> contest tracks</span>
-              <span><strong>$5</strong>/mo to start</span>
+              <span><strong>1000+</strong> original problems</span>
+              <span><strong>6</strong> contest tracks</span>
+              <span><strong>Free </strong>to start</span>
             </div>
           </div>
         </div>
@@ -196,8 +181,8 @@ export default function Landing() {
               <p className="eyebrow" data-reveal>§ 01 · Programs</p>
               <h2 data-reveal>Six programs.<br />One trajectory.</h2>
               <p className="section-sub" data-reveal>
-                Every program is a stage of the same ascent — from first principles to
-                the frontier of pre-college mathematics.
+                Every program is a stage of the same climb, from first principles to
+                the edge of pre-college math.
               </p>
             </header>
 
@@ -206,11 +191,8 @@ export default function Landing() {
                 <p className="card-index mono">P·01</p>
                 <h3>AMC 8</h3>
                 <p className="card-tag">Foundations of contest thinking</p>
-                <p>Number sense, clever counting, and geometric intuition — contest problems
-                  as puzzles with findable structure.</p>
-                <ul className="chip-row" role="list">
-                  <li>Number Theory</li><li>Counting</li><li>Geometry</li>
-                </ul>
+                <p>Number sense, clever counting, geometric intuition. Contest problems
+                  are puzzles with structure you can find.</p>
                 <p className="card-meta mono">Grades 5–8 · Self-paced</p>
               </article>
 
@@ -245,8 +227,8 @@ export default function Landing() {
                 <p className="card-index mono">P·05</p>
                 <h3>Problem Solving</h3>
                 <p className="card-tag">Standardized test math</p>
-                <p>SAT and ACT-style math built on the same reasoning habits — fast,
-                  accurate technique applied to a different clock.</p>
+                <p>SAT and ACT-style math, built on the same reasoning habits, just
+                  aimed at a different clock.</p>
                 <p className="card-meta mono">Grades 8–12 · Self-paced · Adaptive practice</p>
               </article>
 
@@ -254,7 +236,7 @@ export default function Landing() {
                 <p className="card-index mono">P·06</p>
                 <h3>Advanced Problem Solving</h3>
                 <p className="card-tag">Beyond the syllabus</p>
-                <p>For students who have finished the core curriculum — open-ended, non-routine
+                <p>For students who have finished the core curriculum. Open-ended, non-routine
                   problems with no labeled method and no single right approach.</p>
                 <p className="card-meta mono">Post-curriculum · Seminar format · Rolling</p>
               </article>
@@ -270,7 +252,7 @@ export default function Landing() {
               <h2 data-reveal>Reasoning is<br />a discipline.</h2>
               <p className="section-sub" data-reveal>
                 Five stages, in strict logical order. Each one is a prerequisite
-                for the next — like lemmas building toward a theorem.
+                for the next, like lemmas building toward a theorem.
               </p>
               <div className="method-rail" aria-hidden="true">
                 <div className="method-rail-fill" id="method-rail-fill" />
@@ -287,20 +269,20 @@ export default function Landing() {
               <div className="method-card glass" data-step>
                 <p className="step-num mono">Lemma 2</p>
                 <h3>Pattern Recognition</h3>
-                <p>Seeing structure: invariants, symmetry, extremal cases, parity —
-                  the instinct that turns a blank page into a plan.</p>
+                <p>Invariants, symmetry, extremal cases, parity. The instinct that
+                  turns a blank page into a plan.</p>
               </div>
               <div className="method-card glass" data-step>
                 <p className="step-num mono">Lemma 3</p>
                 <h3>Proof Writing</h3>
-                <p>From intuition to rigor — write, critique, and rewrite arguments
-                  until precision becomes second nature.</p>
+                <p>From intuition to rigor. Write, critique, rewrite, until precision
+                  becomes second nature.</p>
               </div>
               <div className="method-card glass" data-step>
                 <p className="step-num mono">Lemma 4</p>
                 <h3>Creative Problem Solving</h3>
-                <p>Non-routine problems with no labeled method — constructing an
-                  approach that did not exist before you sat down.</p>
+                <p>Non-routine problems with no labeled method. You build the approach
+                  yourself, from nothing.</p>
               </div>
               <div className="method-card glass" data-step>
                 <p className="step-num mono">Theorem</p>
@@ -319,7 +301,7 @@ export default function Landing() {
               <p className="eyebrow" data-reveal>§ 03 · Why Lucid</p>
               <h2 data-reveal>Built differently.</h2>
               <p className="section-sub" data-reveal>
-                No cohorts to keep up with and no coach to schedule around — just you,
+                No cohort to keep up with, no coach to schedule around. Just you,
                 the curriculum, and an AI that won&rsquo;t let you fake understanding.
               </p>
             </header>
@@ -329,62 +311,26 @@ export default function Landing() {
                 <div className="why-icon" aria-hidden="true"><span>∂</span></div>
                 <h3>100% virtual, always on</h3>
                 <p>Every lesson, problem, and mock contest lives on the platform.
-                  Log in whenever you have twenty minutes — there&rsquo;s no seat to book.</p>
+                  Log in whenever you have twenty minutes. No seat to book.</p>
               </article>
               <article className="card glass why-card" data-reveal>
                 <div className="why-icon" aria-hidden="true"><span>λ</span></div>
                 <h3>Coached, not lectured</h3>
-                <p>The AI coach asks before it answers — Socratic hints, never the
-                  final answer, so understanding is earned, not copied.</p>
+                <p>The AI coach asks before it answers. Socratic hints, never
+                  the final answer.</p>
               </article>
               <article className="card glass why-card" data-reveal>
                 <div className="why-icon" aria-hidden="true"><span>Σ</span></div>
                 <h3>One continuous curriculum</h3>
-                <p>Six programs, one trajectory: AMC 8 through advanced problem solving,
-                  each stage a strict prerequisite for the next.</p>
+                <p>Six programs, one trajectory. AMC 8 through advanced problem solving,
+                  each stage a prerequisite for the next.</p>
               </article>
               <article className="card glass why-card" data-reveal>
                 <div className="why-icon" aria-hidden="true"><span>$</span></div>
                 <h3>Priced like software</h3>
-                <p>Plans start at $5/month — a virtual platform shouldn&rsquo;t cost
+                <p>Plans start at $5/month. A virtual platform shouldn&rsquo;t cost
                   what an hour of private tutoring does.</p>
               </article>
-            </div>
-          </div>
-        </section>
-
-        {/* CURRICULUM */}
-        <section className="section" id="curriculum">
-          <div className="container">
-            <header className="section-head">
-              <p className="eyebrow" data-reveal>§ 04 · Curriculum</p>
-              <h2 data-reveal>From first principles<br />to advanced problem solving.</h2>
-              <p className="section-sub" data-reveal>
-                A single continuous path. Each milestone unlocks the next —
-                no stage skipped, no gap left unproved.
-              </p>
-            </header>
-
-            <div className="timeline" id="timeline">
-              <div className="timeline-rail" aria-hidden="true"><div className="timeline-fill" id="timeline-fill" /></div>
-
-              {[
-                ["Stage 0 · Months 0–6", "Foundations", "Rigorous re-derivation of school mathematics. Fluency drills, first proofs, and the habit of asking why."],
-                ["Stage 1 · AMC 8", "Contest Fluency", "First exposure to competition structure. Speed with accuracy, pattern libraries, honest error analysis."],
-                ["Stage 2 · AMC 10/12", "Technique Under Pressure", "The full toolbox — Vieta, telescoping, mass points, generating intuitions — executed in 75 minutes."],
-                ["Stage 3 · AIME", "Synthesis", "Problems that cross domain boundaries. Decomposition strategy, answer-extraction discipline, three-hour endurance."],
-                ["Stage 4 · USAMTS", "Rigor", "Complete written proofs on take-home, untimed rounds. Precision and clarity replace speed as the constraint."],
-                ["Stage 5 · Problem Solving", "Mastery", "Open-ended, non-routine problems and standardized test math — reasoning habits applied to any clock, any format."],
-              ].map(([stage, title, body]) => (
-                <div className="milestone" data-reveal key={stage}>
-                  <div className="milestone-node" aria-hidden="true" />
-                  <div className="milestone-card glass">
-                    <p className="mono milestone-stage">{stage}</p>
-                    <h3>{title}</h3>
-                    <p>{body}</p>
-                  </div>
-                </div>
-              ))}
             </div>
           </div>
         </section>
@@ -393,7 +339,7 @@ export default function Landing() {
         <section className="section" id="pricing">
           <div className="container">
             <header className="section-head">
-              <p className="eyebrow" data-reveal>§ 05 · Pricing</p>
+              <p className="eyebrow" data-reveal>§ 04 · Pricing</p>
               <h2 data-reveal>Choose your intensity.</h2>
               <p className="section-sub" data-reveal>
                 Every tier includes the full curriculum platform, problem bank,
@@ -404,7 +350,7 @@ export default function Landing() {
             <div className="pricing-grid">
               <article className="card glass price-card" data-reveal>
                 <p className="mono price-tier">Starter</p>
-                <p className="price"><span className="price-num">$5</span><span className="price-per">/month</span></p>
+                <p className="price"><span className="price-num">Free</span></p>
                 <ul role="list">
                   <li>Full curriculum platform: lessons, bank, contests</li>
                   <li>AI coach, Socratic hints on every problem</li>
@@ -417,7 +363,7 @@ export default function Landing() {
               <article className="card glass price-card featured" data-reveal>
                 <p className="featured-flag mono">Most chosen</p>
                 <p className="mono price-tier">Plus</p>
-                <p className="price"><span className="price-num">$10</span><span className="price-per">/month</span></p>
+                <p className="price"><span className="price-num">$5</span><span className="price-per">/month</span></p>
                 <ul role="list">
                   <li>Everything in Starter</li>
                   <li>Unlimited AI coach access</li>
@@ -430,7 +376,7 @@ export default function Landing() {
 
               <article className="card glass price-card" data-reveal>
                 <p className="mono price-tier">Pro</p>
-                <p className="price"><span className="price-num">$15</span><span className="price-per">/month</span></p>
+                <p className="price"><span className="price-num">$10</span><span className="price-per">/month</span></p>
                 <ul role="list">
                   <li>Everything in Plus</li>
                   <li>Priority AI coach, deeper proof review</li>
@@ -447,38 +393,36 @@ export default function Landing() {
         <section className="section" id="faq">
           <div className="container container-narrow">
             <header className="section-head">
-              <p className="eyebrow" data-reveal>§ 06 · FAQ</p>
+              <p className="eyebrow" data-reveal>§ 05 · FAQ</p>
               <h2 data-reveal>Open questions.</h2>
             </header>
 
             <div className="faq-list">
               <FaqItem q="Who is Lucid for?">
-                <p>Students in grades 5–12 who want to compete seriously in mathematics —
-                  from first-time AMC 8 entrants to students preparing for national olympiad
-                  selection. Ambition matters more than current level; the platform places
-                  you by trajectory, not trophy case.</p>
+                <p>Students in grades 5–12 who want to compete seriously in mathematics,
+                  from first-time AMC 8 entrants to students deep into AIME and USAMTS
+                  prep. Ambition matters more than current level. We place you by
+                  trajectory, not trophy case.</p>
               </FaqItem>
               <FaqItem q="My student has never done a competition. Where do they start?">
-                <p>With the free platform. The adaptive engine measures reasoning habits
-                  rather than syllabus coverage and recommends the exact entry point on the
-                  curriculum roadmap — no placement test anxiety required.</p>
+                <p>With the free platform. The adaptive engine looks at reasoning habits,
+                  not just syllabus coverage, and finds the right entry point. No
+                  placement test anxiety.</p>
               </FaqItem>
               <FaqItem q="How does the platform differ from watching video courses?">
-                <p>Nothing here is passive. Every lesson is built from interactive blocks —
-                  intuition, guided discovery, inline checks that gate progression, worked
-                  examples that reveal step by step, and practice with escalating hints.
-                  You cannot scrub to the end.</p>
+                <p>Nothing here is passive. Every lesson mixes guided discovery, worked
+                  examples, and inline checks that gate your progress. You can't just
+                  scrub to the end.</p>
               </FaqItem>
               <FaqItem q="Is this self-paced, or are there scheduled sessions?">
-                <p>Entirely self-paced and 100% virtual. There's no cohort to keep up with
-                  and no seat to book — every lesson, problem set, and mock contest is on
-                  the platform whenever you are, and the AI coach is there the moment you
-                  get stuck.</p>
+                <p>Entirely self-paced and 100% virtual. No cohort to keep up with, no
+                  seat to book. Everything's on the platform whenever you are, and the
+                  AI coach is there the moment you get stuck.</p>
               </FaqItem>
               <FaqItem q="How much independent work is expected?">
-                <p>Four to eight hours weekly, depending on tier. Competition mathematics is
-                  learned by struggling with problems, not by watching solutions — the
-                  platform exists to sharpen that struggle, not replace it.</p>
+                <p>Four to eight hours a week, depending on tier. You learn competition
+                  math by struggling with problems, not by watching solutions. The
+                  platform sharpens that struggle. It doesn't replace it.</p>
               </FaqItem>
             </div>
           </div>
@@ -487,12 +431,12 @@ export default function Landing() {
         {/* FINAL CTA */}
         <section className="cta" id="apply">
           <div className="container">
-            <p className="eyebrow" data-reveal>§ 07 · Q.E.D.</p>
+            <p className="eyebrow" data-reveal>§ 06 · Q.E.D.</p>
             <h2 className="cta-title" data-reveal>
               Start with one problem<span className="accent">.</span>
             </h2>
             <p className="section-sub cta-sub" data-reveal>
-              The full curriculum, problem bank, and AI coach are open — free to start,
+              The full curriculum, problem bank, and AI coach are open. Free to start,
               no card required.
             </p>
             <div className="hero-actions cta-actions" data-reveal>

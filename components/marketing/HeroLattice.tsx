@@ -29,7 +29,7 @@ export function HeroLattice() {
             <line key={`y${y}`} x1="0" y1={y} x2={GW} y2={y} />
           ))}
         </g>
-        <path className="lat-curve" d="M60 640 C 200 640, 240 200, 380 200 S 560 560, 700 320" />
+        <path className="lat-curve" d="M60 640 C 200 640, 240 200, 380 200 S 640 560, 900 280" />
         <circle className="lat-node" cx="140" cy="560" r="5" />
         <circle className="lat-node" cx="380" cy="200" r="5" />
         <circle className="lat-node" cx="620" cy="400" r="5" />

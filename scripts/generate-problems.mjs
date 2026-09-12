@@ -1,10 +1,11 @@
-// Pilot problem generator. Uses the AI Gateway to write ORIGINAL competition-style
+// Pilot problem generator. Uses OpenRouter to write ORIGINAL competition-style
 // problems for a handful of topics, validates their shape, and writes them to a
 // staging JSON file for human review — nothing here touches content/problems/*.ts
 // directly. Once a batch looks good, merge the reviewed problems in by hand.
 //
-// Requires AI_GATEWAY_API_KEY (create one at vercel.com -> AI Gateway -> API Keys,
-// then `vercel env pull .env.local`, or paste it into .env.local directly).
+// Requires OPENROUTER_API_KEY (create one at openrouter.ai/keys, add it to
+// .env.local). Defaults to a free-tier model — swap MODEL_ID below once you've
+// validated quality and want something stronger.
 //
 // Usage:
 //   node --env-file=.env.local scripts/generate-problems.mjs
@@ -18,18 +19,26 @@
 import { writeFileSync, mkdirSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import { generateObject } from "ai";
+import { generateText } from "ai";
+import { createOpenRouter } from "@openrouter/ai-sdk-provider";
 import { z } from "zod";
 
 const rootDir = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
 
-if (!process.env.AI_GATEWAY_API_KEY) {
+// Free-tier model — decent reasoning for a $0 model, but review answers
+// carefully. Swap for a paid OpenRouter model (or claude-sonnet-5 via the AI
+// Gateway) once quality/quota need it.
+const MODEL_ID = "nvidia/nemotron-3-ultra-550b-a55b:free";
+
+if (!process.env.OPENROUTER_API_KEY) {
   console.error(
-    "Missing AI_GATEWAY_API_KEY. Create one at vercel.com -> your team -> AI Gateway -> API Keys,\n" +
+    "Missing OPENROUTER_API_KEY. Create one at openrouter.ai/keys,\n" +
     "add it to .env.local, then re-run with: node --env-file=.env.local scripts/generate-problems.mjs",
   );
   process.exit(1);
 }
+
+const openrouter = createOpenRouter({ apiKey: process.env.OPENROUTER_API_KEY });
 
 function parseArgs(argv) {
   const args = { track: "AMC 8", count: 5, topics: ["counting-basics", "divisibility", "quadratics"] };
@@ -55,7 +64,11 @@ const DIFFICULTY_BAND = {
 const ProblemSchema = z.object({
   statement: z.string().describe("The full problem statement. Use $...$ for inline LaTeX math."),
   answerType: z.enum(["integer", "mcq"]),
-  answer: z.number().describe("Integer value, or for mcq the 0-indexed choice."),
+  // The model reliably gets the MATH right but unreliably gets index arithmetic
+  // right, so we ask for the literal correct value/text here and resolve it to
+  // a 0-indexed choice ourselves in post-processing — never trust the model's
+  // own index math for mcq.
+  answer: z.union([z.number(), z.string()]).describe("Integer value, or for mcq the exact text of the correct choice (not an index)."),
   choices: z.array(z.string()).length(5).optional().describe("Required when answerType is mcq, exactly 5 choices."),
   subtopic: z.string(),
   tags: z.array(z.string()).min(1).max(4),
@@ -63,20 +76,47 @@ const ProblemSchema = z.object({
   estMinutes: z.number().int(),
   hints: z.tuple([z.string(), z.string(), z.string()]).describe("Three escalating hints: orienting, strategic, concrete."),
   solution: z.string().describe("Full worked solution, ending in the final answer."),
-  commonMistakes: z.array(z.string()).max(2).optional(),
+  commonMistakes: z.array(z.string()).max(4).optional(),
 });
 
 const BatchSchema = z.object({ problems: z.array(ProblemSchema) });
 
+// Some free/open models on OpenRouter error out on native structured-output
+// (tool-calling) requests, so we ask for plain JSON in the prompt and parse +
+// validate it ourselves with zod — works with any text-capable model.
+function extractJson(text) {
+  const fenced = text.match(/```(?:json)?\s*([\s\S]*?)```/);
+  const raw = fenced ? fenced[1] : text;
+  const start = raw.indexOf("{");
+  const end = raw.lastIndexOf("}");
+  if (start === -1 || end === -1) throw new Error("no JSON object found in model output");
+  return JSON.parse(raw.slice(start, end + 1));
+}
+
+function sleep(ms) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
+// Free-tier models on OpenRouter occasionally return transient
+// overload/internal-server errors — worth a couple of retries before giving up.
+async function withRetries(fn, attempts = 3) {
+  let lastErr;
+  for (let i = 0; i < attempts; i++) {
+    try {
+      return await fn();
+    } catch (err) {
+      lastErr = err;
+      if (i < attempts - 1) await sleep(3000 * (i + 1));
+    }
+  }
+  throw lastErr;
+}
+
 async function generateForTopic(topicId) {
   const [lo, hi] = DIFFICULTY_BAND[track] ?? [1, 8];
 
-  const { object } = await generateObject({
-    // gpt-4o-mini: the only reliable model this Gateway account (free tier) can
-    // reach. Weaker at multi-step math than claude-sonnet-5 — review answers
-    // extra carefully; switch this once AI Gateway credits are added.
-    model: "openai/gpt-4o-mini",
-    schema: BatchSchema,
+  const { text } = await withRetries(() => generateText({
+    model: openrouter.chat(MODEL_ID),
     prompt: `Write ${count} ORIGINAL ${track}-style competition math problems for the topic "${topicId}".
 
 Rules:
@@ -84,17 +124,41 @@ Rules:
 - Difficulty must fall between ${lo} and ${hi} on a 1-10 scale, varied across the batch.
 - Double-check every computation yourself before finalizing — an incorrect final answer is a critical failure.
 - answerType "integer" for a numeric final answer; "mcq" only when five clean answer choices genuinely fit.
+- For mcq, "answer" must be the exact text of the correct choice, copied verbatim from "choices" — never an index number.
 - hints must be exactly three, escalating: (1) an orienting question, (2) a strategic nudge, (3) a concrete next step — never the answer itself.
 - solution must be a complete, rigorous, step-by-step derivation ending in the final answer.
-- Use LaTeX ($...$ inline, $$...$$ display) for all math.`,
-  });
+- Use LaTeX ($...$ inline, $$...$$ display) for all math.
 
-  return object.problems.map((p, i) => ({
-    id: `${topicId}-gen-${Date.now().toString(36)}-${i}`,
-    topicId,
-    source: `${track} style`,
-    ...p,
+Respond with ONLY a single JSON object, no prose, no markdown fences, of the exact shape:
+{"problems": [{"statement": string, "answerType": "integer" | "mcq", "answer": number | string, "choices"?: string[5], "subtopic": string, "tags": string[1-4], "difficulty": number, "estMinutes": number, "hints": [string, string, string], "solution": string, "commonMistakes"?: string[]}]}`,
   }));
+
+  const parsed = BatchSchema.parse(extractJson(text));
+
+  return parsed.problems.map((p, i) => {
+    const problem = {
+      id: `${topicId}-gen-${Date.now().toString(36)}-${i}`,
+      topicId,
+      source: `${track} style`,
+      ...p,
+    };
+
+    if (p.answerType === "mcq") {
+      const idx = (p.choices ?? []).findIndex(
+        (c) => c.trim().replace(/^\$|\$$/g, "") === String(p.answer).trim().replace(/^\$|\$$/g, ""),
+      );
+      if (idx === -1) {
+        problem._needsReview = `mcq answer "${p.answer}" did not match any choice verbatim — check by hand`;
+      } else {
+        problem.answer = idx;
+      }
+    } else if (typeof p.answer === "string") {
+      const n = Number(p.answer);
+      problem.answer = Number.isFinite(n) ? n : p.answer;
+    }
+
+    return problem;
+  });
 }
 
 async function main() {
@@ -106,7 +170,8 @@ async function main() {
     try {
       const problems = await generateForTopic(topicId);
       results.push(...problems);
-      console.log(`${problems.length} generated`);
+      const flagged = problems.filter((p) => p._needsReview).length;
+      console.log(`${problems.length} generated${flagged ? ` (${flagged} flagged for review)` : ""}`);
     } catch (err) {
       console.log(`FAILED (${err.message})`);
     }
