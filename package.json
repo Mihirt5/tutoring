@@ -7,6 +7,12 @@
     "build": "next build",
     "start": "next start",
     "test": "vitest run",
+    "typecheck": "tsc --noEmit --incremental false",
+    "format": "node scripts/courses/quality.mjs format",
+    "format:check": "node scripts/courses/quality.mjs format:check",
+    "lint": "node scripts/courses/quality.mjs lint",
+    "courses:validate": "node scripts/courses/check.mjs",
+    "test:e2e": "playwright test",
     "db:migrate": "node --env-file=.env.local scripts/migrate.mjs",
     "problems:generate": "node --env-file=.env.local scripts/generate-problems.mjs"
   },
@@ -25,11 +31,16 @@
     "zod": "^4.6.2"
   },
   "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@playwright/test": "^1.63.0",
     "@types/katex": "^0.16.7",
     "@types/node": "^24.0.0",
     "@types/react": "^19.2.0",
     "@types/react-dom": "^19.2.0",
+    "eslint": "^10.10.0",
+    "prettier": "^3.9.6",
     "typescript": "^5.9.0",
+    "typescript-eslint": "^8.70.0",
     "vitest": "^3.2.0"
   }
 }

@@ -58,7 +58,13 @@ export type Block =
   | { type: "intro"; body: string }
   | { type: "intuition"; title: string; body: string }
   | { type: "diagram"; kind: DiagramKind; caption: string }
-  | { type: "example"; title: string; problem: string; steps: string[]; takeaway?: string }
+  | {
+      type: "example";
+      title: string;
+      problem: string;
+      steps: string[];
+      takeaway?: string;
+    }
   | { type: "insight"; body: string }
   | { type: "pitfall"; body: string }
   | {
@@ -173,6 +179,7 @@ export interface LessonProgress {
   blocksDone: number;
   completed: boolean;
   ts: number;
+  course?: import("./courses/types").CourseLessonState;
 }
 
 export interface Progress {

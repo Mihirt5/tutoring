@@ -2,17 +2,30 @@
 
 import { useSyncExternalStore } from "react";
 import type {
-  Attempt, AttemptContext, ContestRun, Problem, Progress, SrsItem,
+  Attempt,
+  AttemptContext,
+  ContestRun,
+  Problem,
+  Progress,
 } from "@/lib/types";
 import { attemptScore, freshMastery, updateMastery } from "./engine/mastery";
 import { enqueueCards, enqueueMiss, reviewOutcome } from "./engine/srs";
 import {
-  XP_CONTEST, XP_LESSON, XP_QUIZ, XP_REVIEW,
-  _bindDifficultyLookup, bumpStreak, dayKey, newBadges, xpForProblem,
+  XP_CONTEST,
+  XP_LESSON,
+  XP_QUIZ,
+  XP_REVIEW,
+  _bindDifficultyLookup,
+  bumpStreak,
+  dayKey,
+  newBadges,
+  xpForProblem,
 } from "./engine/xp";
 import { problemById } from "@/content/problems";
+import type { CourseLessonState } from "./courses/types";
+import { normalizeCourseState } from "./courses/state";
 
-_bindDifficultyLookup(id => problemById.get(id)?.difficulty ?? 0);
+_bindDifficultyLookup((id) => problemById.get(id)?.difficulty ?? 0);
 
 const KEY = "lucid-progress-v1";
 
@@ -41,19 +54,31 @@ function load(): Progress {
   if (cache) return cache;
   try {
     const raw = localStorage.getItem(KEY);
-    cache = raw ? { ...defaultProgress(), ...(JSON.parse(raw) as Progress) } : defaultProgress();
+    const parsed = raw ? JSON.parse(raw) : null;
+    cache =
+      parsed && typeof parsed === "object" && !Array.isArray(parsed)
+        ? { ...defaultProgress(), ...parsed }
+        : defaultProgress();
+    if (
+      !cache!.lessons ||
+      typeof cache!.lessons !== "object" ||
+      Array.isArray(cache!.lessons)
+    )
+      cache!.lessons = {};
   } catch {
     cache = defaultProgress();
   }
-  return cache;
+  return cache!;
 }
 
 function save(next: Progress) {
   cache = next;
   try {
     localStorage.setItem(KEY, JSON.stringify(next));
-  } catch { /* storage full or unavailable — keep in-memory */ }
-  listeners.forEach(fn => fn());
+  } catch {
+    /* storage full or unavailable — keep in-memory */
+  }
+  listeners.forEach((fn) => fn());
 }
 
 function mutate(fn: (p: Progress) => Progress) {
@@ -82,15 +107,23 @@ function addMinutes(p: Progress, seconds: number): Progress {
   const key = dayKey();
   return {
     ...p,
-    minutesByDay: { ...p.minutesByDay, [key]: (p.minutesByDay[key] ?? 0) + seconds / 60 },
+    minutesByDay: {
+      ...p.minutesByDay,
+      [key]: (p.minutesByDay[key] ?? 0) + seconds / 60,
+    },
   };
 }
 
 export function recordAttempt(
   problem: Problem,
-  result: { correct: boolean; seconds: number; hintsUsed: number; context: AttemptContext },
+  result: {
+    correct: boolean;
+    seconds: number;
+    hintsUsed: number;
+    context: AttemptContext;
+  },
 ) {
-  mutate(p => {
+  mutate((p) => {
     const attempt: Attempt = {
       problemId: problem.id,
       topicId: problem.topicId,
@@ -100,7 +133,12 @@ export function recordAttempt(
       context: result.context,
       ts: Date.now(),
     };
-    const score = attemptScore(result.correct, result.hintsUsed, result.seconds, problem.estMinutes);
+    const score = attemptScore(
+      result.correct,
+      result.hintsUsed,
+      result.seconds,
+      problem.estMinutes,
+    );
     const mastery = {
       ...p.mastery,
       [problem.topicId]: updateMastery(
@@ -112,16 +150,29 @@ export function recordAttempt(
     };
     let reviews = p.reviews;
     if (!result.correct) reviews = enqueueMiss(reviews, problem.id);
-    const xp = p.xp + (result.correct ? xpForProblem(problem.difficulty, result.hintsUsed) : 1);
+    const xp =
+      p.xp +
+      (result.correct ? xpForProblem(problem.difficulty, result.hintsUsed) : 1);
     return addMinutes(
-      { ...p, attempts: [...p.attempts, attempt], mastery, reviews, xp, streak: bumpStreak(p.streak) },
+      {
+        ...p,
+        attempts: [...p.attempts, attempt],
+        mastery,
+        reviews,
+        xp,
+        streak: bumpStreak(p.streak),
+      },
       result.seconds,
     );
   });
 }
 
-export function recordQuiz(topicId: string, difficulty: number, correct: boolean) {
-  mutate(p => {
+export function recordQuiz(
+  topicId: string,
+  difficulty: number,
+  correct: boolean,
+) {
+  mutate((p) => {
     const mastery = {
       ...p.mastery,
       [topicId]: updateMastery(
@@ -132,18 +183,24 @@ export function recordQuiz(topicId: string, difficulty: number, correct: boolean
       ),
     };
     return addMinutes(
-      { ...p, mastery, xp: p.xp + (correct ? XP_QUIZ : 2), streak: bumpStreak(p.streak) },
+      {
+        ...p,
+        mastery,
+        xp: p.xp + (correct ? XP_QUIZ : 2),
+        streak: bumpStreak(p.streak),
+      },
       60,
     );
   });
 }
 
 export function markBlockDone(slug: string, blocksDone: number) {
-  mutate(p => ({
+  mutate((p) => ({
     ...p,
     lessons: {
       ...p.lessons,
       [slug]: {
+        ...p.lessons[slug],
         blocksDone: Math.max(blocksDone, p.lessons[slug]?.blocksDone ?? 0),
         completed: p.lessons[slug]?.completed ?? false,
         ts: Date.now(),
@@ -152,24 +209,107 @@ export function markBlockDone(slug: string, blocksDone: number) {
   }));
 }
 
-export function completeLesson(slug: string, flashcards: { front: string; back: string }[]) {
-  mutate(p => {
+export function completeLesson(
+  slug: string,
+  flashcards: { front: string; back: string }[],
+) {
+  mutate((p) => {
     if (p.lessons[slug]?.completed) return p;
-    return addMinutes({
+    return addMinutes(
+      {
+        ...p,
+        xp: p.xp + XP_LESSON,
+        streak: bumpStreak(p.streak),
+        lessons: {
+          ...p.lessons,
+          [slug]: {
+            ...p.lessons[slug],
+            blocksDone: p.lessons[slug]?.blocksDone ?? 0,
+            completed: true,
+            ts: Date.now(),
+          },
+        },
+        reviews: enqueueCards(p.reviews, slug, flashcards),
+      },
+      5 * 60,
+    );
+  });
+}
+
+// Course practice stays local to its lesson; it does not enter the problem-bank review queue.
+export function updateCourseLessonProgress(
+  id: string,
+  update: (state: CourseLessonState) => CourseLessonState,
+  grade?: {
+    exerciseId: string;
+    topicId: string;
+    difficulty: number;
+    correct: boolean;
+  },
+) {
+  mutate((p) => {
+    const previous = p.lessons[id];
+    const before = normalizeCourseState(previous?.course);
+    const exercise = grade && before.exercises[grade.exerciseId];
+    const credit =
+      grade &&
+      !exercise?.attempts &&
+      !exercise?.answerRevealed &&
+      !exercise?.solutionRevealed;
+    const after = update(before);
+    return {
+      ...p,
+      ...(credit
+        ? {
+            xp: p.xp + (grade.correct ? XP_QUIZ : 2),
+            streak: bumpStreak(p.streak),
+            mastery: {
+              ...p.mastery,
+              [grade.topicId]: updateMastery(
+                p.mastery[grade.topicId] ?? freshMastery(),
+                grade.difficulty,
+                grade.correct ? 1 : 0,
+                45,
+              ),
+            },
+          }
+        : {}),
+      lessons: {
+        ...p.lessons,
+        [id]: {
+          ...previous,
+          blocksDone: previous?.blocksDone ?? 0,
+          completed: previous?.completed ?? false,
+          ts: Date.now(),
+          course: after,
+        },
+      },
+    };
+  });
+}
+
+export function completeCourseLessonProgress(id: string) {
+  mutate((p) => {
+    if (p.lessons[id]?.completed) return p;
+    return {
       ...p,
       xp: p.xp + XP_LESSON,
       streak: bumpStreak(p.streak),
       lessons: {
         ...p.lessons,
-        [slug]: { blocksDone: p.lessons[slug]?.blocksDone ?? 0, completed: true, ts: Date.now() },
+        [id]: {
+          ...p.lessons[id],
+          blocksDone: p.lessons[id]?.blocksDone ?? 0,
+          completed: true,
+          ts: Date.now(),
+        },
       },
-      reviews: enqueueCards(p.reviews, slug, flashcards),
-    }, 5 * 60);
+    };
   });
 }
 
 export function resolveReview(itemId: string, success: boolean) {
-  mutate(p => ({
+  mutate((p) => ({
     ...p,
     reviews: reviewOutcome(p.reviews, itemId, success),
     xp: p.xp + (success ? XP_REVIEW : 1),
@@ -178,19 +318,21 @@ export function resolveReview(itemId: string, success: boolean) {
 }
 
 export function recordContestRun(run: ContestRun) {
-  mutate(p => addMinutes(
-    {
-      ...p,
-      contests: [...p.contests, run],
-      xp: p.xp + XP_CONTEST + Math.round(run.score),
-      streak: bumpStreak(p.streak),
-    },
-    run.perProblemSeconds.reduce((a, b) => a + b, 0),
-  ));
+  mutate((p) =>
+    addMinutes(
+      {
+        ...p,
+        contests: [...p.contests, run],
+        xp: p.xp + XP_CONTEST + Math.round(run.score),
+        streak: bumpStreak(p.streak),
+      },
+      run.perProblemSeconds.reduce((a, b) => a + b, 0),
+    ),
+  );
 }
 
 export function setTrack(trackId: string) {
-  mutate(p => ({ ...p, track: trackId }));
+  mutate((p) => ({ ...p, track: trackId }));
 }
 
 export function resetProgress() {
@@ -202,15 +344,30 @@ export function resetProgress() {
 export function seedDemoData() {
   const now = Date.now();
   const DAY = 24 * 60 * 60 * 1000;
-  let p = defaultProgress();
+  const p = defaultProgress();
   p.createdAt = now - 45 * DAY;
   const topics = [
-    "counting-basics", "perms-combs", "casework", "probability",
-    "quadratics", "sequences", "similarity", "angles",
-    "divisibility", "modular", "expected-value", "linear-equations",
+    "counting-basics",
+    "perms-combs",
+    "casework",
+    "probability",
+    "quadratics",
+    "sequences",
+    "similarity",
+    "angles",
+    "divisibility",
+    "modular",
+    "expected-value",
+    "linear-equations",
   ];
   const problems = [...problemById.values()];
-  const rand = (() => { let s = 99; return () => { s = (s * 16807) % 2147483647; return s / 2147483647; }; })();
+  const rand = (() => {
+    let s = 99;
+    return () => {
+      s = (s * 16807) % 2147483647;
+      return s / 2147483647;
+    };
+  })();
 
   for (let day = 42; day >= 1; day--) {
     if (rand() < 0.28) continue; // rest days
@@ -220,24 +377,51 @@ export function seedDemoData() {
     p.minutesByDay[key] = 20 + Math.floor(rand() * 50);
     for (let i = 0; i < sessions; i++) {
       const topic = topics[Math.floor(rand() * topics.length)];
-      const pool = problems.filter(pr => pr.topicId === topic);
-      const prob = pool[Math.floor(rand() * pool.length)] ?? problems[Math.floor(rand() * problems.length)];
+      const pool = problems.filter((pr) => pr.topicId === topic);
+      const prob =
+        pool[Math.floor(rand() * pool.length)] ??
+        problems[Math.floor(rand() * problems.length)];
       const skill = 30 + (42 - day) * 0.5; // improves over time
-      const correct = rand() < 1 / (1 + Math.pow(10, (prob.difficulty * 10 - skill) / 25));
+      const correct =
+        rand() < 1 / (1 + Math.pow(10, (prob.difficulty * 10 - skill) / 25));
       const seconds = 60 + Math.floor(rand() * 240);
-      const score = attemptScore(correct, correct && rand() < 0.3 ? 1 : 0, seconds, prob.estMinutes);
+      const score = attemptScore(
+        correct,
+        correct && rand() < 0.3 ? 1 : 0,
+        seconds,
+        prob.estMinutes,
+      );
       p.mastery[prob.topicId] = updateMastery(
-        p.mastery[prob.topicId] ?? freshMastery(), prob.difficulty, score, seconds, ts,
+        p.mastery[prob.topicId] ?? freshMastery(),
+        prob.difficulty,
+        score,
+        seconds,
+        ts,
       );
       p.attempts.push({
-        problemId: prob.id, topicId: prob.topicId, correct, seconds,
-        hintsUsed: correct && rand() < 0.3 ? 1 : 0, context: "practice", ts,
+        problemId: prob.id,
+        topicId: prob.topicId,
+        correct,
+        seconds,
+        hintsUsed: correct && rand() < 0.3 ? 1 : 0,
+        context: "practice",
+        ts,
       });
       p.xp += correct ? xpForProblem(prob.difficulty, 0) : 1;
     }
   }
-  for (const slug of ["counting-fundamentals", "estimation-number-sense", "ratios-proportional-reasoning", "linear-equations-mastery", "angle-chasing"]) {
-    p.lessons[slug] = { blocksDone: 99, completed: true, ts: now - Math.floor(rand() * 30) * DAY };
+  for (const slug of [
+    "counting-fundamentals",
+    "estimation-number-sense",
+    "ratios-proportional-reasoning",
+    "linear-equations-mastery",
+    "angle-chasing",
+  ]) {
+    p.lessons[slug] = {
+      blocksDone: 99,
+      completed: true,
+      ts: now - Math.floor(rand() * 30) * DAY,
+    };
     p.xp += XP_LESSON;
   }
   p.streak = { count: 5, lastDay: dayKey(now - DAY) };

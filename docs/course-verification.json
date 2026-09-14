@@ -1,0 +1,1919 @@
+[
+  {
+    "id": "a1012-m02-l03-ex1",
+    "reviewer": "root",
+    "status": "pass",
+    "independentAnswer": "37/4",
+    "method": "Root sum7/2 andproduct3/2 give square sum49/4-3.",
+    "fingerprint": "204a779a052906e0d6c1eca695344d60152a4033e15136397be4036101c05611"
+  },
+  {
+    "id": "a1012-m02-l03-ex2",
+    "reviewer": "root",
+    "status": "pass",
+    "independentAnswer": "-8",
+    "method": "F(-1)=8; reversing three factors changes sign.",
+    "fingerprint": "958b993caecb36670f8f811694528b4d2270e3a7e6e3219ac3efbd9a8120e9a1"
+  },
+  {
+    "id": "a1012-m02-l03-ex3",
+    "reviewer": "root",
+    "status": "pass",
+    "independentAnswer": "7",
+    "method": "a²+b²=25 andab12 implypositive sum sqrt49=7.",
+    "fingerprint": "856df52aef0ee326f1283ad312e84e2902ec115c5617fefb64ed9c1b2f4fb4a4"
+  },
+  {
+    "id": "a1012-m02-l03-q1",
+    "reviewer": "root",
+    "status": "pass",
+    "independentAnswer": "351",
+    "method": "9³-3 times14 times9=351.",
+    "fingerprint": "d0231173f20eee008b3300fe87adc91222363a988eafd324c4e5b7f33c955c3c"
+  },
+  {
+    "id": "a1012-m02-l03-q2",
+    "reviewer": "root",
+    "status": "pass",
+    "independentAnswer": "66/25",
+    "method": "Square sum22/3 divided by squaredproduct25/9.",
+    "fingerprint": "ba723e1a96d93c7f80a6188ffb499ea7de15fa1e70e811843f6df0839c24c7be"
+  },
+  {
+    "id": "a1012-m02-l03-q3",
+    "reviewer": "root",
+    "status": "pass",
+    "independentAnswer": "-9/4",
+    "method": "Product7/4 minus sum5 plus1.",
+    "fingerprint": "987931faca9d435300c47591b4a745e04c7a2d769c2d91554f5c335b6136a162"
+  },
+  {
+    "id": "a1012-m02-l03-q4",
+    "reviewer": "root",
+    "status": "pass",
+    "independentAnswer": "1016",
+    "method": "Square sum32; fourthpower sum32²-2 times2².",
+    "fingerprint": "a70b2c86175a4052daec66476834847dd7af623e6f0ed0fd0d625c796bbc5b0d"
+  },
+  {
+    "id": "a1012-m02-l03-q5",
+    "reviewer": "root",
+    "status": "pass",
+    "independentAnswer": "96",
+    "method": "Rootsx,3x satisfyx²6; square ofsum16x²=96.",
+    "fingerprint": "fac4a0cd88eb3833246490015894387d4c98526dd058ee51a8596936590c1a34"
+  },
+  {
+    "id": "a1012-m02-l03-q6",
+    "reviewer": "root",
+    "status": "pass",
+    "independentAnswer": "choice1",
+    "method": "Reciprocal roots have sum5/3 andproduct1/3.",
+    "fingerprint": "0d1e76ababec34c7dcc7f8d5028f454a355a412d635267413dfb3b0403abf3d0"
+  },
+  {
+    "id": "a1012-m01-l03-ex1",
+    "independentAnswer": "6",
+    "method": "Complete the square: (x-5)^2+6; equality at x=5.",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "1101910fc698db354d7fd9114b093f9dcd7836931b3b9b13d55fd9aa213de992"
+  },
+  {
+    "id": "a1012-m01-l03-ex2",
+    "independentAnswer": "49",
+    "method": "Sides sum to 14. Product is 49-(a-7)^2, maximized by 7 and 7.",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "2c286ac3bd175a2d76dd98171e79ab318b51c6d5f0284e2681fb6fa82af3acba"
+  },
+  {
+    "id": "a1012-m01-l03-ex3",
+    "independentAnswer": "8",
+    "method": "t+16/t-8=(t-4)^2/t >=0 for t>0, with equality at t=4.",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "c9456f66f97fa9e4432a0a50271029333f9b53f4e2f1e995e30d326330614a72"
+  },
+  {
+    "id": "a1012-m01-l03-q1",
+    "independentAnswer": "7",
+    "method": "2x^2+12x+25=2(x+3)^2+7, attained at x=-3.",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "9d9b8be5cf3231cc604a19258a1af7a8446c0266d421a4f9812e1a343c506b34"
+  },
+  {
+    "id": "a1012-m01-l03-q2",
+    "independentAnswer": "81",
+    "method": "ab=(18^2-(a-b)^2)/4 <=81, attained at a=b=9.",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "7e906d88271288a65c5c659ad073c130199a7bba60163138addfb0afb72ba4d6"
+  },
+  {
+    "id": "a1012-m01-l03-q3",
+    "independentAnswer": "11",
+    "method": "Subtracting a nonnegative square times 3 cannot increase 11; x=2 gives equality.",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "c89c2ca68fe289dd5e6fde61390304ed153850dd6adb4c583e5f34479851a734"
+  },
+  {
+    "id": "a1012-m01-l03-q4",
+    "independentAnswer": "56",
+    "method": "Product a(15-a) is largest for nearest integers to 7.5: 7 and 8.",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "738091edc81dbb9c07e2a45b625089b34cd539d76a88cf190f84cdc61aecb815"
+  },
+  {
+    "id": "a1012-m01-l03-q5",
+    "independentAnswer": "12",
+    "method": "3x+12/x-12=3(x-2)^2/x >=0, with x=2 positive.",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "eb73aefad7d3952b2006e4fb2c750b0ef80a216f2c9bab31baa612e51396a6a4"
+  },
+  {
+    "id": "a1012-m01-l03-q6",
+    "independentAnswer": "10",
+    "method": "On [0,2], x is closest to 5 at x=2; squared distance 9 plus 1 is 10.",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "7776de89ae6aa68cd2d69fbcb43a36fb13bc9a960b2c31c9620f3b21de247e7e"
+  },
+  {
+    "id": "a1012-m01-l01-ex1",
+    "independentAnswer": "800",
+    "method": "Difference of squares gives (102-98)(102+98)=4*200.",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "a1c44bc0c51d6ce8c689953e8f7248936ea4dae8de8067ba385f9b88be0d579c"
+  },
+  {
+    "id": "a1012-m01-l01-ex2",
+    "independentAnswer": "8; forbidden x=3",
+    "method": "Factor numerator as (x-3)(x+3); x+3 evaluates to 8 at x=5 but original denominator excludes 3.",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "cef50f1dbc61e2c24c61d4a488a21f05530aa989c9e91dc57e3ebd2c6570e003"
+  },
+  {
+    "id": "a1012-m01-l01-ex3",
+    "independentAnswer": "3 sqrt(3)",
+    "method": "sqrt75=5sqrt3 and sqrt12=2sqrt3; their difference is 3sqrt3.",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "89c41c62bde2154fbdb1c31be941d893793985abbb918ec0d24071f63d2d7fbd"
+  },
+  {
+    "id": "a1012-m01-l01-q1",
+    "independentAnswer": "2496",
+    "method": "(50-2)(50+2)=2500-4.",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "2f6a171f63e8c3899fe026a52c6ce6bdff90a85ba2e5d020a527d3a26e45e455"
+  },
+  {
+    "id": "a1012-m01-l01-q2",
+    "independentAnswer": "-1",
+    "method": "Denominator (x+2)(x-1) vanishes at -2 and 1, whose sum is -1; cancellation cannot restore either input.",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "6042e5b7e948ccb346c3be98a9d676e66d66be44e98f8ff5eb20746fd7c297ad"
+  },
+  {
+    "id": "a1012-m01-l01-q3",
+    "independentAnswer": "50",
+    "method": "sqrt18+sqrt8=3sqrt2+2sqrt2=5sqrt2; squaring gives 50.",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "a9425f55c300d9b22387049e26a76737de51d928f826d840f40eb36f4058b7aa"
+  },
+  {
+    "id": "a1012-m01-l01-q4",
+    "independentAnswer": "133",
+    "method": "a^3+b^3=(a+b)^3-3ab(a+b)=343-210.",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "9b31894310def9ce82f481b8d07935ccca67124e8e84194b5a387f4c480edf14"
+  },
+  {
+    "id": "a1012-m01-l01-q5",
+    "independentAnswer": "4",
+    "method": "Conjugate product equals 7-3.",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "d899ca1488316510f03605c7e8742240db17679563b7e12a99b641a9be3571fa"
+  },
+  {
+    "id": "a1012-m01-l01-q6",
+    "independentAnswer": "80",
+    "method": "Group as a(b+c)+d(b+c)=(a+d)(b+c)=10*8.",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "805e0e7069826da0682172e51f9a8fb42d758f54dfb7c3c1328b662140832b88"
+  },
+  {
+    "id": "a1012-m01-l02-ex1",
+    "independentAnswer": "x=4, y=3; xy=12",
+    "method": "x=y+1 gives 2(y+1)+3y=17, hence y=3 and x=4.",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "6a37c831526f8ac09d019d03c1aeb72cc183898374364853b39cb4cb3f335745"
+  },
+  {
+    "id": "a1012-m01-l02-ex2",
+    "independentAnswer": "3",
+    "method": "The right side forces x>=0. Squaring gives (x-3)(x+1)=0; only 3 passes the original equation.",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "25f0cb54a5b8604f85b9a423097b6ec554feb450fa88b5f0b803fe6f4eb0f81f"
+  },
+  {
+    "id": "a1012-m01-l02-ex3",
+    "independentAnswer": "8/3",
+    "method": "For x != +/-1, combine fractions and clear denominators: 3x^2-8x-3=0, roots 3 and -1/3, both valid, sum 8/3.",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "7b554ff42884d0d8d09a5f90998e266b45442f79ee1076e52055cfea42f919e1"
+  },
+  {
+    "id": "a1012-m01-l02-q1",
+    "independentAnswer": "7",
+    "method": "a=b+1 gives 5b+3=18, so b=3,a=4 and sum 7.",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "145e300a7917b6e3259d71879d6411f8352007a72adfa1e2d331ab8e0f2356aa"
+  },
+  {
+    "id": "a1012-m01-l02-q2",
+    "independentAnswer": "10",
+    "method": "Require x>=6. Squaring yields (x-10)(x-3)=0; x=10 satisfies sqrt16=4 while x=3 violates the sign condition.",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "427b524c53b308015645dd925569cc3011a33e3f79ebd14caecedb0f56af5679"
+  },
+  {
+    "id": "a1012-m01-l02-q3",
+    "independentAnswer": "2",
+    "method": "Move right side left and factor to (x-2)(x+2)=0, giving distinct roots 2 and -2.",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "542094855741bc5a4acd840db7d246a50c5290a265fcc88bdd95cd1cfd237894"
+  },
+  {
+    "id": "a1012-m01-l02-q4",
+    "independentAnswer": "5",
+    "method": "Exclude x=2, multiply through and solve x+1=2x-4 to get valid x=5.",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "b0dd94157784968cff7a225923a98fcc7504e3bf953b33ce20a0a747ed883e05"
+  },
+  {
+    "id": "a1012-m01-l02-q5",
+    "independentAnswer": "3",
+    "method": "Factor u^2-v^2=(u-v)(u+v); divide 24 by the nonzero sum 8.",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "ef9276892b884a01771122af862d770be9c25de78456c1299058d9cbe4746079"
+  },
+  {
+    "id": "a1012-m01-l02-q6",
+    "independentAnswer": "0",
+    "method": "sqrt(x^2)=|x|>=x, whereas x-2<x, so equality is impossible for every real x.",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "7d6d38015cf4162285f66612e261af2d497a951321e5928158eec0bba438e6e6"
+  },
+  {
+    "id": "a1012-m02-l01-ex1",
+    "independentAnswer": "11/2; excluded input 3",
+    "method": "At x=5 numerator is 11 and denominator 2. Denominator x-3 vanishes only at 3.",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "reconciliation": "Authored answer and solution agree with the independent calculation; problem domain and uniqueness checked.",
+    "fingerprint": "994c2722f6a48d5e693d7bd3774e93eccf7287c0204f79e19114247b4cfca9b3"
+  },
+  {
+    "id": "a1012-m02-l01-ex2",
+    "independentAnswer": "13 and 12, respectively",
+    "method": "g(2)=7 and f(7)=13; f(2)=3 and g(3)=12. Composition order differs.",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "reconciliation": "Authored answer and solution agree with the independent calculation; problem domain and uniqueness checked.",
+    "fingerprint": "d0730e0a4ea03f4d16e9824bdda10a0761ffe9adca5735094f9f62894a816ea7"
+  },
+  {
+    "id": "a1012-m02-l01-ex3",
+    "independentAnswer": "6",
+    "method": "Solve (3x+4)/2=11: 3x=18, so x=6.",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "reconciliation": "Authored answer and solution agree with the independent calculation; problem domain and uniqueness checked.",
+    "fingerprint": "9601731abf4051b57989361488931814fdb94e2e0ab51dfc775d8e9cb7126152"
+  },
+  {
+    "id": "a1012-m02-l01-q1",
+    "independentAnswer": "9/2",
+    "method": "Require 9-2x>=0, equivalently x<=9/2, with equality permitted.",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "reconciliation": "Authored answer and solution agree with the independent calculation; problem domain and uniqueness checked.",
+    "fingerprint": "ecb27aab18c8bd4bf636854a96652c8911e55b48d6c9b66983a236794bf1b284"
+  },
+  {
+    "id": "a1012-m02-l01-q2",
+    "independentAnswer": "4",
+    "method": "First g(5)=2; then f(2)=4.",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "reconciliation": "Authored answer and solution agree with the independent calculation; problem domain and uniqueness checked.",
+    "fingerprint": "5e413e8a23a0b5c742c80bfe89aaa73cf6946d7820d32b4628e80518d980ee8b"
+  },
+  {
+    "id": "a1012-m02-l01-q3",
+    "independentAnswer": "5",
+    "method": "The x<1 branch gives f(0)=2; the x>=1 branch gives f(1)=3; sum5.",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "reconciliation": "Authored answer and solution agree with the independent calculation; problem domain and uniqueness checked.",
+    "fingerprint": "934fe87631b677d43f5854907dfbf1aad9c12d44d860f39f245e5b5cdd105e45"
+  },
+  {
+    "id": "a1012-m02-l01-q4",
+    "independentAnswer": "17",
+    "method": "Solve (x-5)/4=3, giving x-5=12 and x=17.",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "reconciliation": "Authored answer and solution agree with the independent calculation; problem domain and uniqueness checked.",
+    "fingerprint": "33cf98f3208cd696095f8c56373d0f2773600c0244b7f03c6a97b8d5f3c21a7e"
+  },
+  {
+    "id": "a1012-m02-l01-q5",
+    "independentAnswer": "8",
+    "method": "x-2=4 at x=6; g(6)=f(4)+3=-1+3=2; a+b=6+2=8.",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "reconciliation": "Authored answer and solution agree with the independent calculation; problem domain and uniqueness checked.",
+    "fingerprint": "a86b52ff8091ca9a49b6df90934c76d9399cc9a7d4d4fd3b5fe6232e2fa82ac6"
+  },
+  {
+    "id": "a1012-m02-l01-q6",
+    "independentAnswer": "4",
+    "method": "Composition is f(f(x))=3(3x-8)-8=9x-32. Equate to x to get 8x=32.",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "reconciliation": "Authored answer and solution agree with the independent calculation; problem domain and uniqueness checked.",
+    "fingerprint": "f955a4b55ccf0aefb5f4174acb949d9003872de5a60abfd7ca68fdb85daca5df"
+  },
+  {
+    "id": "a1012-m02-l02-ex1",
+    "independentAnswer": "0",
+    "method": "Discriminant 64-72=-8<0, equivalently polynomial (x-4)^2+2 is always positive.",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "reconciliation": "Authored answer and solution agree with the independent calculation; problem domain and uniqueness checked.",
+    "fingerprint": "8fc52f19592cc676866dcc9eeede14b256d36c53cf824073e00c2f021fa12c2f"
+  },
+  {
+    "id": "a1012-m02-l02-ex2",
+    "independentAnswer": "4",
+    "method": "Equating y values gives x^2-4x+3=0 with roots1,3, whose sum is4.",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "reconciliation": "Authored answer and solution agree with the independent calculation; problem domain and uniqueness checked.",
+    "fingerprint": "99a3cc98c21335ad4627dbef234c5fba89551b04618937ac4524215b77fd77ff"
+  },
+  {
+    "id": "a1012-m02-l02-ex3",
+    "independentAnswer": "8",
+    "method": "Unique real root requires discriminant k^2-64=0; positivity selects k=8.",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "reconciliation": "Authored answer and solution agree with the independent calculation; problem domain and uniqueness checked.",
+    "fingerprint": "47c4c3261ba7c2045026f641bd7c19d99780470a6f003dfb3b1c3f953fc88ff4"
+  },
+  {
+    "id": "a1012-m02-l02-q1",
+    "independentAnswer": "0",
+    "method": "Discriminant4^2-4*2*5=-24 is negative.",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "reconciliation": "Authored answer and solution agree with the independent calculation; problem domain and uniqueness checked.",
+    "fingerprint": "b264e6a73de2846bf59b7fdf24ed0719cae0e1e3b81504cab91a3354c772fee1"
+  },
+  {
+    "id": "a1012-m02-l02-q2",
+    "independentAnswer": "4",
+    "method": "Complete square: y=(x-1)^2+4. Horizontal tangent at vertex has height4.",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "reconciliation": "Authored answer and solution agree with the independent calculation; problem domain and uniqueness checked.",
+    "fingerprint": "c3cddc0a59284b29e24fbaf6732f0b159b327c3f795d893a95c4afd61366ec28"
+  },
+  {
+    "id": "a1012-m02-l02-q3",
+    "independentAnswer": "73",
+    "method": "Discriminant equals b^2-48=25, hence b^2=73.",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "reconciliation": "Authored answer and solution agree with the independent calculation; problem domain and uniqueness checked.",
+    "fingerprint": "0200ac5fa44758b77eaf2df36df98e768e252dc46f6b513720c8e3a056258a68"
+  },
+  {
+    "id": "a1012-m02-l02-q4",
+    "independentAnswer": "36",
+    "method": "Intersection roots satisfy x^2-mx+9=0; exactly one requires m^2-36=0.",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "reconciliation": "Authored answer and solution agree with the independent calculation; problem domain and uniqueness checked.",
+    "fingerprint": "07b83fdacd65447a4b69aaf90dd7efee372fc48f6063fb0089bcefcbbbf7dd59"
+  },
+  {
+    "id": "a1012-m02-l02-q5",
+    "independentAnswer": "7",
+    "method": "x-4=+/-3 gives roots1,7; larger7.",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "reconciliation": "Authored answer and solution agree with the independent calculation; problem domain and uniqueness checked.",
+    "fingerprint": "25969d4c98a26575b9914d785efa00b66b996da5230a16991789307065e5a9a0"
+  },
+  {
+    "id": "a1012-m02-l02-q6",
+    "independentAnswer": "5",
+    "method": "Putting x=1 yields3-t=0, so t=3. Then x^2-6x+5=(x-1)(x-5), with other root5.",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "reconciliation": "Authored answer and solution agree with the independent calculation; problem domain and uniqueness checked.",
+    "fingerprint": "0d7a24fb17e660a1970d57257d71ae7bb58dafaa6268773ba82ddf5d571e35bd"
+  },
+  {
+    "id": "a1012-m03-l02-ex1",
+    "independentAnswer": "3",
+    "method": "Last-digit cycle 7,9,3,1; 103 mod 4 is 3, giving the third entry 3.",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "f85973e98edb6add92ab0050f6ce20e9f2d0ee576f2c1d95f973a4a0d07311dd"
+  },
+  {
+    "id": "a1012-m03-l02-ex2",
+    "independentAnswer": "2",
+    "method": "Inverse of 5 mod 7 is 3; x=3*3=9 which is 2 mod 7.",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "3ff9393f63424189d4e6183f834dd2114e9c7cd241bf66b7f267061b03d50c58"
+  },
+  {
+    "id": "a1012-m03-l02-ex3",
+    "independentAnswer": "9",
+    "method": "n=1,5,9,... mod6 gives 1,5,3; 9 is least meeting both conditions.",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "bbb3283614fb66c510667121b3477d77bd64c05054095f7423396ae67a4e8cbc"
+  },
+  {
+    "id": "a1012-m03-l02-q1",
+    "independentAnswer": "0",
+    "method": "2*3+4=10, which is 0 mod 5.",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "2f1580dec738d5407bff8d2f6c8d170ad344e81baa4bc0e1599d891500f554a2"
+  },
+  {
+    "id": "a1012-m03-l02-q2",
+    "independentAnswer": "1",
+    "method": "3^2=9 is 1 mod 8; 2026 is even so 3^2026 is 1 mod 8.",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "54550ee2a9882f4abd216ff20c13b6a7dbdeed0d90c39e6bb3c50def0bdf2511"
+  },
+  {
+    "id": "a1012-m03-l02-q3",
+    "independentAnswer": "2",
+    "method": "Even squares are 0 mod4, odd squares are 1 mod4; two residues.",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "f207ac647c7ab9f820764720a2de3e173849c741339aa60040af135c83320045"
+  },
+  {
+    "id": "a1012-m03-l02-q4",
+    "independentAnswer": "3",
+    "method": "Sum 1..100 is 5050; 5050=7*721+3.",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "7e90f8752f58790e85ab6c1f7e9272cbee3e7ea137d96a9406530b755fd42f0c"
+  },
+  {
+    "id": "a1012-m03-l02-q5",
+    "independentAnswer": "7",
+    "method": "Candidates 2,7,... in the mod5 class; 7 is 1 mod3.",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "8d9187c7418575f65aabcef9f65a95379d9282ef51d2815a69aad5704717c2fe"
+  },
+  {
+    "id": "a1012-m03-l02-q6",
+    "independentAnswer": "3",
+    "method": "2^1=2,2^2=4,2^3=8 which is 1 mod7.",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "a51017900030e87a6a6a076a27ecb3f9e70246995fa7e19bfdef376e244be8e4"
+  },
+  {
+    "id": "a1012-m03-l03-ex1",
+    "independentAnswer": "(8,3) and (1,7)",
+    "method": "3y=1 mod4 gives y=3 or 7 within the bound; corresponding x=8 or 1.",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "95e9bb2583384799be90c84419be3a551f5f2868135b104bc6b068802a8b22e0"
+  },
+  {
+    "id": "a1012-m03-l03-ex2",
+    "independentAnswer": "6",
+    "method": "(x+1)(y+1)=24 with factors at least 2 gives 6 ordered pairs.",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "0b851ff837ceff6ba6b06cfe1a69cf0884e2117637502989b2e891773a2c9e40"
+  },
+  {
+    "id": "a1012-m03-l03-ex3",
+    "independentAnswer": "6",
+    "method": "b^2+3b-54=0 factors as (b+9)(b-6); positive base is 6.",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "379f0ea1c00713493ad94a654de931e1eea91d0e2b89dee6c4d054af0d967b2c"
+  },
+  {
+    "id": "a1012-m03-l03-q1",
+    "independentAnswer": "2",
+    "method": "y=3 or 8 satisfy y=3 mod5 with 0<=y<=8, giving (3,3) and (0,8).",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "34847db0d621c0727941a83d872ac3d645feded951d3c669cf7c8d11786c7c76"
+  },
+  {
+    "id": "a1012-m03-l03-q2",
+    "independentAnswer": "5",
+    "method": "(x+3)(y+2)=25 with both factors small forces (5,5); x+y=5.",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "578dc53c3d0867f1f4653d9c3ca2089eb2b75a437ef741546e74dd48f89546d9"
+  },
+  {
+    "id": "a1012-m03-l03-q3",
+    "independentAnswer": "3",
+    "method": "Odd factor pairs of 45 give three valid (x,y): (23,22),(9,6),(7,2).",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "9604e894ff075f2bd7c201450cb786f209945a0f5360f54da088f467ad47c44e"
+  },
+  {
+    "id": "a1012-m03-l03-q4",
+    "independentAnswer": "54",
+    "method": "2*25+0*5+4=54.",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "5371335828d78a0447ea5779bc55745b7b2cb7b7c9a8b374fd893949a00019b1"
+  },
+  {
+    "id": "a1012-m03-l03-q5",
+    "independentAnswer": "73",
+    "method": "a-b=4 and a+b=10 give a=7,b=3.",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "3f188d0987f81ebf5cc5bb9ffae3532d440b2f116488caca0de8826e917bb5bf"
+  },
+  {
+    "id": "a1012-m03-l03-q6",
+    "independentAnswer": "9",
+    "method": "(x-6)(y-6)=36=2^2*3^2 has 9 positive divisors, each giving one ordered pair.",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "e7e26a1a9d07f4ccfdad7315373892791ed72ea647396e9e6fa53ac44fffb50c"
+  },
+  {
+    "id": "a1012-m03-l01-ex1",
+    "independentAnswer": "24",
+    "method": "(3+1)(2+1)(1+1)=24.",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "2f4029d043db1eed4d3f337ecb88e2552d4a8882da0725acbfc2978c031af739"
+  },
+  {
+    "id": "a1012-m03-l01-ex2",
+    "independentAnswer": "9",
+    "method": "Even exponents of 2 and 3 give 3 times 3 times 1.",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "edf43ec596ceca2929684e9a0f058a034590764024481ddefabe9760d8582f1f"
+  },
+  {
+    "id": "a1012-m03-l01-ex3",
+    "independentAnswer": "18",
+    "method": "floor(40/3)+floor(40/9)+floor(40/27)=13+4+1.",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "b956bdee20e4e891af2a241935fafc968bbe5ae443f7775fe65677b929c4bb3b"
+  },
+  {
+    "id": "a1012-m03-l01-q1",
+    "independentAnswer": "15",
+    "method": "(4+1)(2+1)=15.",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "fc4485b0180af94ba7a0453dcc076c5c97daea9779817af62c9c7874252a2c8c"
+  },
+  {
+    "id": "a1012-m03-l01-q2",
+    "independentAnswer": "60",
+    "method": "Minimum exponents give 2^2*3*5=60.",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "0facb73bdf5849f7084a5580e8f06af7f81f316f2265044ba324379dfdadc415"
+  },
+  {
+    "id": "a1012-m03-l01-q3",
+    "independentAnswer": "16",
+    "method": "Restricted exponent ranges give 4*2*2=16.",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "c4d1c0711a31873c9f187a9c781420f554333e2a2444c414d2ae70517d2e9455"
+  },
+  {
+    "id": "a1012-m03-l01-q4",
+    "independentAnswer": "21",
+    "method": "756=2^2*3^3*7; supply 3*7=21 to make exponents even.",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "5c89fdf4e83b9028dca80dfb72e9fc210c598651f37db0fb1dd4f4961f893305"
+  },
+  {
+    "id": "a1012-m03-l01-q5",
+    "independentAnswer": "6",
+    "method": "floor(28/5)+floor(28/25)=5+1=6.",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "7d6b8bfc04acdee9ec66b9cc76410d5d1ec84c28f1b100c5ca3205e78746fa6f"
+  },
+  {
+    "id": "a1012-m03-l01-q6",
+    "independentAnswer": "20",
+    "method": "10 has 4 divisors; 20=2^2*5 has (2+1)(1+1)=6 divisors.",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "945252cd1db8b82751b8b3503630d2fe1f7b82cf8d31013d37bba022f43368e3"
+  },
+  {
+    "id": "a8-m01-l05-ex1",
+    "independentAnswer": "24",
+    "method": "Fix one seat; remaining 4 people arrange in 4! = 24 ways.",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "9100f261133a8c320280acc93d751384f8a3eaf440697fa56558b8a4f6312c0e"
+  },
+  {
+    "id": "a8-m01-l05-ex2",
+    "independentAnswer": "60",
+    "method": "(6-1)!/2 = 120/2 = 60 for a flippable bracelet.",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "59eb50b22993ec214cc992cbc28338ed21c3812ef73040d9d613965104fbf2c9"
+  },
+  {
+    "id": "a8-m01-l05-ex3",
+    "independentAnswer": "24",
+    "method": "Numbered chairs are distinguishable positions; ordinary 4! = 24.",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "a81afc108a695e877fdbe5e13cbc61cc74b207e181098e9b9adc0385e8246d09"
+  },
+  {
+    "id": "a8-m01-l05-q1",
+    "independentAnswer": "6",
+    "method": "(4-1)! = 3! = 6.",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "0fbcc1043a5e52fa12089dbd63db980e1054d01cadccbd7d5654c950c9d7be28"
+  },
+  {
+    "id": "a8-m01-l05-q2",
+    "independentAnswer": "120",
+    "method": "(6-1)! = 5! = 120.",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "01d5994971b27d3c944fdd321fdaf111231f18c2e41d7bd697c3f97b15e14109"
+  },
+  {
+    "id": "a8-m01-l05-q3",
+    "independentAnswer": "12",
+    "method": "(5-1)!/2 = 24/2 = 12 for a flippable bracelet.",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "25c32bbd68fb4011f9c67e6b6fc13329214774a2cc64d432d2efa74df88f7dc6"
+  },
+  {
+    "id": "a8-m01-l05-q4",
+    "independentAnswer": "720",
+    "method": "(7-1)! = 6! = 720.",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "16b30e82ad5ae070fd9fd0810555cb30c129c26dc04676fdffc3e550010fa4b8"
+  },
+  {
+    "id": "a8-m01-l05-q5",
+    "independentAnswer": "choice1",
+    "method": "Numbered chairs are the only distinguishable-position case, requiring ordinary n! instead of (n-1)!.",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "ed26fa74d5e408cdb39ed2165e3c1c3ed48f8a6d53e65c88961fc51996547c43"
+  },
+  {
+    "id": "a8-m01-l05-q6",
+    "independentAnswer": "2520",
+    "method": "(8-1)!/2 = 5040/2 = 2520 for a flippable keyring.",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "9e4785a17ed4b218602e8431c58f452a32c401995048a9e5dacd619b8a8056ab"
+  },
+  {
+    "id": "a8-m01-l04-ex1",
+    "independentAnswer": "60",
+    "method": "No zero present; P(5,3) = 5*4*3 = 60.",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "f2085f5ed790a5f61c117333b86fb3d63a89d62b7e3ef486c2962cb71a5b97d6"
+  },
+  {
+    "id": "a8-m01-l04-ex2",
+    "independentAnswer": "48",
+    "method": "Leading digit excludes 0: 4*4*3 = 48.",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "edec78d4897f5eba1eaea025e1da9c929c4b2ae4bb2acac65c3b8ad5d2ce75b9"
+  },
+  {
+    "id": "a8-m01-l04-ex3",
+    "independentAnswer": "24",
+    "method": "Units must be 2 or 4 (2 choices), then 4*3 for the remaining positions: 2*4*3 = 24.",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "7675ef52e93f0ea2193ce29a73c743a8c96197581d580aae3a7ba1ac84493399"
+  },
+  {
+    "id": "a8-m01-l04-q1",
+    "independentAnswer": "360",
+    "method": "No zero present; P(6,4) = 6*5*4*3 = 360.",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "c20ea620a1fc1233cfea3b485f96d8bd7b447a78619188da6c9d3af53e2ae744"
+  },
+  {
+    "id": "a8-m01-l04-q2",
+    "independentAnswer": "180",
+    "method": "Leading digit excludes 0: 6*6*5 = 180.",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "2be61561f5c407a67eed55a4f221747fd255c2ee563484b0bd0dd4372f1e8fb0"
+  },
+  {
+    "id": "a8-m01-l04-q3",
+    "independentAnswer": "16",
+    "method": "Leading digit excludes 0: 4*4 = 16.",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "85c9d183ea8500ba8a4ba686276ca9db46ca905972e6505d98c01a708fa29418"
+  },
+  {
+    "id": "a8-m01-l04-q4",
+    "independentAnswer": "36",
+    "method": "Units must be 1, 3, or 5 (3 choices), then 4*3 for the remaining positions: 3*4*3 = 36.",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "d5fbdd1dd8013de0413f189330b78d04bd0ddd4582ac70e8cd54602e78daf6c0"
+  },
+  {
+    "id": "a8-m01-l04-q5",
+    "independentAnswer": "choice0",
+    "method": "Leading digit excludes 0: 3*3*2, matching the first choice; value 18.",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "86fe4636f2d598a23fec3b5f31594a1e014836251077279ea72c1557150db110"
+  },
+  {
+    "id": "a8-m01-l04-q6",
+    "independentAnswer": "30",
+    "method": "Casework on the units digit: units=0 gives 4*3=12; units in {2,4} gives 2*3*3=18; total 12+18=30.",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "50010c592e0da7c74233c5256c1f282b706befb7119abc6acec2c44fb1ca1f00"
+  },
+  {
+    "id": "a8-m01-l02-ex1",
+    "independentAnswer": "720",
+    "method": "6*5*4*3*2*1 = 720.",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "8a39b1276fb77e31cab06f2775e892f66607c2ebc5d0bffc34f5b57e33de2825"
+  },
+  {
+    "id": "a8-m01-l02-ex2",
+    "independentAnswer": "56",
+    "method": "8!/6! = 8*7 = 56.",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "2a64cf127a42dbafe34a1ad35e20ad2f24b6424d918f4f457b1bcae7341472af"
+  },
+  {
+    "id": "a8-m01-l02-ex3",
+    "independentAnswer": "35",
+    "method": "7!/(4!*3!) = 5040/(24*6) = 5040/144 = 35.",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "75bfb8e3d07feb39670bf1e483bfc4ade8fc3b55f6fe0f2d0c46aeb240bb9f14"
+  },
+  {
+    "id": "a8-m01-l02-q1",
+    "independentAnswer": "24",
+    "method": "4*3*2*1 = 24.",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "27843c91bd18752fc7fcde88ce60bdbe31ab65e8377a56001a448694e2eef7f8"
+  },
+  {
+    "id": "a8-m01-l02-q2",
+    "independentAnswer": "72",
+    "method": "9!/7! = 9*8 = 72.",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "c3e1dd9626e9e4cb0ecbcf80ff8da626b9220dd19c30d19ab625d904aeb9e22b"
+  },
+  {
+    "id": "a8-m01-l02-q3",
+    "independentAnswer": "90",
+    "method": "10!/8! = 10*9 = 90.",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "683974564a2fdb1481d6f188601570475c5a31eb5ac39d00f384bcfd52c58428"
+  },
+  {
+    "id": "a8-m01-l02-q4",
+    "independentAnswer": "10",
+    "method": "0!+1!+2!+3! = 1+1+2+6 = 10.",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "e470d18035c9bb8f7c238a481481dab4dd1e15a2af6e9b931b37c65cc553be6a"
+  },
+  {
+    "id": "a8-m01-l02-q5",
+    "independentAnswer": "choice0",
+    "method": "6!/3! = 6*5*4, matching the first choice; value 120.",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "d19481df6ea5f7d6ce28090537af23fba7a2b0f2f202d0c502551a2c84cb8f70"
+  },
+  {
+    "id": "a8-m01-l02-q6",
+    "independentAnswer": "21",
+    "method": "7!/(2!*5!) = 5040/(2*120) = 5040/240 = 21.",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "2dc0d215dc3eebe917abd622a15a03c16d442570b84ee13b3c1e9038cdcd7152"
+  },
+  {
+    "id": "a8-m01-l01-ex1",
+    "independentAnswer": "6",
+    "method": "3! = 3*2*1 arrangements of three distinct people.",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "b4c306170fc79d429204964e732f6bef9545c2e1a8fbbfda95646f3bb83a6b81"
+  },
+  {
+    "id": "a8-m01-l01-ex2",
+    "independentAnswer": "60",
+    "method": "5*4*3 for a 3-digit no-repeat code from 5 digits.",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "d417e78917527324a6bceea6af3046ff192245985b19ac49df09f1ceef857860"
+  },
+  {
+    "id": "a8-m01-l01-ex3",
+    "independentAnswer": "24",
+    "method": "4! arrangements of four distinct letters.",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "c46cbe18bbe8d7829a5dee91acb6ebd72ad4576cd36d781b83dfa65ca4caaef5"
+  },
+  {
+    "id": "a8-m01-l01-q1",
+    "independentAnswer": "24",
+    "method": "4! finishing orders for 4 runners with no ties.",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "90f052523e0340f38619cac3768c992fb4427a755d860a0a8338f31be9c77ccd"
+  },
+  {
+    "id": "a8-m01-l01-q2",
+    "independentAnswer": "12",
+    "method": "4*3 for a 2-digit no-repeat code from 4 digits.",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "85d40fef44f8f0a5f60d9b9ff3249ece29a078f87a6159cb1076ee3fa41b0d96"
+  },
+  {
+    "id": "a8-m01-l01-q3",
+    "independentAnswer": "120",
+    "method": "5! arrangements of five distinct books.",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "bd833ff67bfbc3466a9bb762a3cb41ce1e8ea4deb7e980b0e11ac93581530444"
+  },
+  {
+    "id": "a8-m01-l01-q4",
+    "independentAnswer": "120",
+    "method": "6*5*4 for a 3-letter no-repeat code from 6 letters.",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "3a38d596e2e111c4dc9c4ef1bc19322b6735f83b9cc37b83df00c54f80165b5b"
+  },
+  {
+    "id": "a8-m01-l01-q5",
+    "independentAnswer": "choice1",
+    "method": "Arranging 3 trophies multiplies remaining choices 3*2*1, matching the second choice.",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "1d29babc32249f9d0e722755524b0396b6789277bb9c061d8d42467405fd576f"
+  },
+  {
+    "id": "a8-m01-l01-q6",
+    "independentAnswer": "720",
+    "method": "6! seatings of six people in six numbered chairs.",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "b709e9af9e220d8dbeffd297ee523c7a6ef511a2ec470c90bf2b0677b54c2995"
+  },
+  {
+    "id": "a8-m01-l03-ex1",
+    "independentAnswer": "210",
+    "method": "P(7,3) = 7*6*5 = 210.",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "3d452dd626603f86d285826b7b49a646cd9abf12dd9fa606630a0306d91f9b5f"
+  },
+  {
+    "id": "a8-m01-l03-ex2",
+    "independentAnswer": "30",
+    "method": "P(6,2) = 6*5 = 30.",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "e2b1c3664b4c6af321f27162f6efc1cf2ba18fb4f45ef94ec64282b53d8df852"
+  },
+  {
+    "id": "a8-m01-l03-ex3",
+    "independentAnswer": "72",
+    "method": "P(4,2)*P(3,2) = 12*6 = 72 for independent letter and digit groups.",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "acd33987cf4d8fe0df5560eb23a6b79e1f3c74a3d648b5914a9a854363fda6d6"
+  },
+  {
+    "id": "a8-m01-l03-q1",
+    "independentAnswer": "20",
+    "method": "P(5,2) = 5*4 = 20.",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "4731d02b8fd4c3890810242a6e5a37d97458e7d5de0a00d3002f4edc60459cfb"
+  },
+  {
+    "id": "a8-m01-l03-q2",
+    "independentAnswer": "336",
+    "method": "P(8,3) = 8*7*6 = 336.",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "fc74f74fce76ea72a441f72b1c7949bf8427e61aa58835b1bd384acbc6f3309d"
+  },
+  {
+    "id": "a8-m01-l03-q3",
+    "independentAnswer": "72",
+    "method": "P(9,2) = 9*8 = 72.",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "d78356550731832ccde4447bf735a657a79c4f55cf4a65805bf2302526eb173d"
+  },
+  {
+    "id": "a8-m01-l03-q4",
+    "independentAnswer": "5040",
+    "method": "P(10,4) = 10*9*8*7 = 5040.",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "6233d7733068432cc3b545044af7829592e2a12782888e42b40c96cc8559a68d"
+  },
+  {
+    "id": "a8-m01-l03-q5",
+    "independentAnswer": "choice0",
+    "method": "P(6,2) = 6*5, matching the first choice.",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "f02ec041d56fba002106010f8e575ef61d7060c4ac6bb621bc22b2af683cefe4"
+  },
+  {
+    "id": "a8-m01-l03-q6",
+    "independentAnswer": "240",
+    "method": "P(6,3)*2 = 120*2 = 240 for independent digit and letter groups.",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "3ad8392e5cbe1125edeb75ce948d7d22eed03eebb65bbfec03abed0d6a9ba5c2"
+  },
+  {
+    "id": "a8-m02-l01-ex1",
+    "reviewer": "root",
+    "status": "pass",
+    "independentAnswer": "6",
+    "method": "Listed all C(4,2) pairs from {A,B,C,D} by hand (AB,AC,AD,BC,BD,CD); cross-checked with math.comb(4,2)=6 in Python.",
+    "fingerprint": "e65e379e4b6663f894dc41f1b41c03d8ce1129bd32357a7699d7d1b6b4314b71"
+  },
+  {
+    "id": "a8-m02-l01-ex2",
+    "reviewer": "root",
+    "status": "pass",
+    "independentAnswer": "20",
+    "method": "Recomputed 6x5x4/3! by hand and independently with math.comb(6,3)=20 in Python.",
+    "fingerprint": "75fa08ba9aa38359c6102ec8d31fd4c667a06535f3aabe548ef69b1f3efa38a1"
+  },
+  {
+    "id": "a8-m02-l01-ex3",
+    "reviewer": "root",
+    "status": "pass",
+    "independentAnswer": "210",
+    "method": "Recomputed 10x9x8x7/4! by hand and independently with math.comb(10,4)=210 in Python.",
+    "fingerprint": "6cb50d26ac686ca733b822d01cb22897120bd3d7a9b475f715bb35c90aa4f8ba"
+  },
+  {
+    "id": "a8-m02-l01-q1",
+    "reviewer": "root",
+    "status": "pass",
+    "independentAnswer": "10",
+    "method": "Recomputed 5x4x3/3! by hand and independently with math.comb(5,3)=10 in Python.",
+    "fingerprint": "b6d9828c33d0ee0835b10fd8c350408cc0276de9d823cde66e5f4ff4e0c71ed6"
+  },
+  {
+    "id": "a8-m02-l01-q2",
+    "reviewer": "root",
+    "status": "pass",
+    "independentAnswer": "21",
+    "method": "Recomputed 7x6/2! by hand and independently with math.comb(7,2)=21 in Python.",
+    "fingerprint": "f27d8c6685209c37686f0ead37160eab396605e23a25a4f1aa89a5c317eec04b"
+  },
+  {
+    "id": "a8-m02-l01-q3",
+    "reviewer": "root",
+    "status": "pass",
+    "independentAnswer": "126",
+    "method": "Recomputed 9x8x7x6/4! by hand and independently with math.comb(9,4)=126 in Python.",
+    "fingerprint": "2d7343d1dd3bf39c30f3493360550ee74e72e608e32f6b561668d878afc39ca0"
+  },
+  {
+    "id": "a8-m02-l01-q4",
+    "reviewer": "root",
+    "status": "pass",
+    "independentAnswer": "56",
+    "method": "Recomputed 8x7x6/3! by hand and independently with math.comb(8,3)=56 in Python.",
+    "fingerprint": "ab2bba5af77461dfcd72f5ac09e11263d76a72150a26ba4e2e58861fe0e5ef86"
+  },
+  {
+    "id": "a8-m02-l01-q5",
+    "reviewer": "root",
+    "status": "pass",
+    "independentAnswer": "choice1",
+    "method": "MCQ index 1 (5x4/(2x1)=10) verified as the unique choice equal to math.comb(5,2)=10; other three choices evaluate to 20, 25, 9.",
+    "fingerprint": "9612431ba71d9a94a5676220153cca09f905bc2a46ad90c11373ab8b040b8403"
+  },
+  {
+    "id": "a8-m02-l01-q6",
+    "reviewer": "root",
+    "status": "pass",
+    "independentAnswer": "120",
+    "method": "Recomputed 10x9x8/3! by hand and independently with math.comb(10,3)=120 in Python.",
+    "fingerprint": "e4d26b59fc29b9291a9dd6af378e70f89e02414d88e022ab644939ffa8e339e1"
+  },
+  {
+    "id": "a8-m02-l02-ex1",
+    "reviewer": "root",
+    "status": "pass",
+    "independentAnswer": "10",
+    "method": "Verified C(5,2)=C(5,3)=10 both by hand and with math.comb in Python, confirming the symmetry identity numerically.",
+    "fingerprint": "9bd3747e42c1bdb051e9cce4411b7f1c7b6c08286739014f1aaceb6c77d93398"
+  },
+  {
+    "id": "a8-m02-l02-ex2",
+    "reviewer": "root",
+    "status": "pass",
+    "independentAnswer": "20",
+    "method": "Verified Pascal's rule C(6,3)=C(5,2)+C(5,3)=10+10=20 against direct math.comb(6,3)=20 in Python.",
+    "fingerprint": "09fa847b6f1dc942a81575c86ae9196f76d00c543aab98e612bdbf4576248151"
+  },
+  {
+    "id": "a8-m02-l02-ex3",
+    "reviewer": "root",
+    "status": "pass",
+    "independentAnswer": "190",
+    "method": "Verified C(20,18)=C(20,2)=190 via math.comb(20,18) and math.comb(20,2) in Python, both equal to 190.",
+    "fingerprint": "52a17e2eba693a6023b6ced8e2d7a51e9b985b510a11d0cfcc7042a785cba99b"
+  },
+  {
+    "id": "a8-m02-l02-q1",
+    "reviewer": "root",
+    "status": "pass",
+    "independentAnswer": "36",
+    "method": "Verified C(9,7)=C(9,2)=36 via math.comb(9,7) and math.comb(9,2) in Python, both equal to 36.",
+    "fingerprint": "03d6e2811a719b43875796a8f3d6e74101801f4e2ecc42c3cd3b7496ee888cf5"
+  },
+  {
+    "id": "a8-m02-l02-q2",
+    "reviewer": "root",
+    "status": "pass",
+    "independentAnswer": "35",
+    "method": "Verified Pascal's rule C(7,3)=C(6,2)+C(6,3)=15+20=35 against direct math.comb(7,3)=35 in Python.",
+    "fingerprint": "5a3e6a409814abda0b5085a380d293750377938c57b3162daa41685ac53daf33"
+  },
+  {
+    "id": "a8-m02-l02-q3",
+    "reviewer": "root",
+    "status": "pass",
+    "independentAnswer": "105",
+    "method": "Verified C(15,13)=C(15,2)=105 via math.comb in Python, both equal to 105.",
+    "fingerprint": "def5b48c19f996dd4048794a262531ba4440f76a7fa6f93c465f0e6253263abc"
+  },
+  {
+    "id": "a8-m02-l02-q4",
+    "reviewer": "root",
+    "status": "pass",
+    "independentAnswer": "126",
+    "method": "Verified Pascal's rule C(9,4)=C(8,3)+C(8,4)=56+70=126 against direct math.comb(9,4)=126 in Python.",
+    "fingerprint": "37b9eccab7cf5aca7888a7e79b78e033f31b4b509d6f615b5e9fe0ac2e7de303"
+  },
+  {
+    "id": "a8-m02-l02-q5",
+    "reviewer": "root",
+    "status": "pass",
+    "independentAnswer": "choice0",
+    "method": "MCQ index 0 verified as the only choice matching Pascal's rule C(n,r)=C(n-1,r)+C(n-1,r-1); the other three choices use wrong terms, an operator other than addition, or wrong indices.",
+    "fingerprint": "249640340e6952375310e5ee2d95064eed86a269678e728b278945f173dfabc9"
+  },
+  {
+    "id": "a8-m02-l02-q6",
+    "reviewer": "root",
+    "status": "pass",
+    "independentAnswer": "66",
+    "method": "Verified C(12,10)=C(12,2)=66 via math.comb in Python, both equal to 66.",
+    "fingerprint": "704921cfba6a7eaa591188b950e7e4e02e08683b0a2e349a01825b9a34fcf4fa"
+  },
+  {
+    "id": "a8-m02-l03-ex1",
+    "reviewer": "root",
+    "status": "pass",
+    "independentAnswer": "40",
+    "method": "Recomputed C(5,2)xC(4,3)=10x4=40 by hand and independently with math.comb(5,2)*math.comb(4,3) in Python.",
+    "fingerprint": "94669b7450a8833d2b116ff15d01a5531da38857b5d3e6cc0e39f59713d90151"
+  },
+  {
+    "id": "a8-m02-l03-ex2",
+    "reviewer": "root",
+    "status": "pass",
+    "independentAnswer": "35",
+    "method": "Fixed the required president, then verified C(7,3)=35 via math.comb(7,3) in Python.",
+    "fingerprint": "578d1814a2475c087291b2bc4cd621b0660dd4b14cade0f753ed69341a1d8ddb"
+  },
+  {
+    "id": "a8-m02-l03-ex3",
+    "reviewer": "root",
+    "status": "pass",
+    "independentAnswer": "70",
+    "method": "Removed the excluded member, then verified C(8,4)=70 via math.comb(8,4) in Python; cross-checked the reduction method on the smaller case C(3,2)=3, matching direct listing of 3 pairs.",
+    "fingerprint": "002ca0ffb1fc6cd567f0e7cb2bd1d114025a07815a8859c4de60ea40d651efd8"
+  },
+  {
+    "id": "a8-m02-l03-q1",
+    "reviewer": "root",
+    "status": "pass",
+    "independentAnswer": "60",
+    "method": "Recomputed C(4,2)xC(5,2)=6x10=60 by hand and independently with math.comb in Python.",
+    "fingerprint": "295281900a7cbcfd95946e4831b3dd24d3b7f71518dbbd9b1f8289710ffa3070"
+  },
+  {
+    "id": "a8-m02-l03-q2",
+    "reviewer": "root",
+    "status": "pass",
+    "independentAnswer": "10",
+    "method": "Fixed the required captain, then verified C(5,2)=10 via math.comb(5,2) in Python.",
+    "fingerprint": "f7de681555a0128940690f5778cb12079e3697940cd8d5cc84b6dc5b6d05cd05"
+  },
+  {
+    "id": "a8-m02-l03-q3",
+    "reviewer": "root",
+    "status": "pass",
+    "independentAnswer": "200",
+    "method": "Recomputed C(6,3)xC(5,2)=20x10=200 by hand and independently with math.comb in Python.",
+    "fingerprint": "b421bcf587388e9188a80d01806a7c82e5279cfa1d7fda86ebcef8001d01d91c"
+  },
+  {
+    "id": "a8-m02-l03-q4",
+    "reviewer": "root",
+    "status": "pass",
+    "independentAnswer": "126",
+    "method": "Removed the unavailable student, then verified C(9,4)=126 via math.comb(9,4) in Python.",
+    "fingerprint": "cd0a6a05e517895b7503a7dfa06a02f63c118a95bbf2062ee88a2f7575fc1ac1"
+  },
+  {
+    "id": "a8-m02-l03-q5",
+    "reviewer": "root",
+    "status": "pass",
+    "independentAnswer": "choice1",
+    "method": "MCQ index 1 (C(11,4)) verified as correct after fixing the required member's seat; the other three choices use the wrong pool size or wrong remaining-seat count.",
+    "fingerprint": "a1083b36aa97ea403f6f3563272ff12f81e0206d95ee4001447a191449dc806c"
+  },
+  {
+    "id": "a8-m02-l03-q6",
+    "reviewer": "root",
+    "status": "pass",
+    "independentAnswer": "150",
+    "method": "Recomputed C(5,3)xC(6,4)=10x15=150 by hand and independently with math.comb in Python.",
+    "fingerprint": "a8feea629daf71ec4960d90e1361ea2956ea5679bb8a85dc4afa784242b40970"
+  },
+  {
+    "id": "a8-m03-l01-ex1",
+    "reviewer": "root",
+    "status": "pass",
+    "independentAnswer": "120",
+    "method": "CRISP: 5 distinct letters, verified 5!=120 by hand and with a Python multinomial-count simulation.",
+    "fingerprint": "b7e52e39a1be4bf54ac7283a039e1f6ebb23f3a2f7cc248663a03726ce0265a5"
+  },
+  {
+    "id": "a8-m03-l01-ex2",
+    "reviewer": "root",
+    "status": "pass",
+    "independentAnswer": "30",
+    "method": "LEVEL: verified 5!/(2!x2!)=30 by hand and with a Python multinomial-count simulation over the letter multiset.",
+    "fingerprint": "7a4187561da217b47b714e7228bedfa3a1f1b92d855f17f43401d16ed19c591d"
+  },
+  {
+    "id": "a8-m03-l01-ex3",
+    "reviewer": "root",
+    "status": "pass",
+    "independentAnswer": "60",
+    "method": "PEPPER: verified 6!/(3!x2!x1!)=60 by hand and with a Python multinomial-count simulation.",
+    "fingerprint": "edc86a284bf8dd8c643108a3c0fe4d453d31040637bcf6913f9e420ea19f2986"
+  },
+  {
+    "id": "a8-m03-l01-q1",
+    "reviewer": "root",
+    "status": "pass",
+    "independentAnswer": "24",
+    "method": "DRUM: 4 distinct letters, verified 4!=24 by hand and with Python.",
+    "fingerprint": "d9a69134bf88e87b10d4fc7d823f143a938bf6d2679036968eff051f01f96baa"
+  },
+  {
+    "id": "a8-m03-l01-q2",
+    "reviewer": "root",
+    "status": "pass",
+    "independentAnswer": "30",
+    "method": "KAYAK: verified 5!/(2!x2!)=30 by hand and with Python (K and A each repeat twice).",
+    "fingerprint": "1e4d3d1ea9809a1882e369cc1cbb2687b86dccde5fe848bf9addc44c11f7ca76"
+  },
+  {
+    "id": "a8-m03-l01-q3",
+    "reviewer": "root",
+    "status": "pass",
+    "independentAnswer": "720",
+    "method": "PLANET: 6 distinct letters, verified 6!=720 by hand and with Python.",
+    "fingerprint": "4385219c1f89dd5a79eda6ebb2b047a2d5a01baa9a11df855796e31f984aadb0"
+  },
+  {
+    "id": "a8-m03-l01-q4",
+    "reviewer": "root",
+    "status": "pass",
+    "independentAnswer": "120",
+    "method": "BUBBLE: verified 6!/3!=120 by hand and with Python (B repeats 3 times).",
+    "fingerprint": "c8416f631420af5171ceece8d85b9051ab508cbfcf60e61a8779e117c2b55211"
+  },
+  {
+    "id": "a8-m03-l01-q5",
+    "reviewer": "root",
+    "status": "pass",
+    "independentAnswer": "choice1",
+    "method": "MOON: verified 4!/2!=12 via Python; only choice index 1 (4!/2!) equals 12, the other three evaluate to 24, 22, and 4.",
+    "fingerprint": "227596cff62d33b6f3dc4764ffb2062606e58c6ff2bca50c4545000b582f1dad"
+  },
+  {
+    "id": "a8-m03-l01-q6",
+    "reviewer": "root",
+    "status": "pass",
+    "independentAnswer": "420",
+    "method": "BANANAS: verified 7!/(3!x2!)=420 by hand and with Python (A repeats 3 times, N repeats twice).",
+    "fingerprint": "c79ececac93aacee1acd946242ce6a1602eeaf92ff36a7b3dd16083df1a073b6"
+  },
+  {
+    "id": "a8-m03-l02-ex1",
+    "reviewer": "root",
+    "status": "pass",
+    "independentAnswer": "48",
+    "method": "TRAIN with T,R glued: verified 4!x2!=48 by hand and with a Python glue-technique simulation.",
+    "fingerprint": "1d10859558fe3bf5a097e642d987ed0af512586bdeacbb26acef0ceb3f3bae87"
+  },
+  {
+    "id": "a8-m03-l02-ex2",
+    "reviewer": "root",
+    "status": "pass",
+    "independentAnswer": "72",
+    "method": "CHAIR with C,H apart: verified 5!-4!x2!=120-48=72 by hand and with Python (total minus together).",
+    "fingerprint": "816348893b38dfd5b067344c2dd04229a167ef5bf2755294cf144dd8665c7d4a"
+  },
+  {
+    "id": "a8-m03-l02-ex3",
+    "reviewer": "root",
+    "status": "pass",
+    "independentAnswer": "24",
+    "method": "APPLE with identical P,P glued: verified 4!=24 (no internal-order factor) by hand and with Python.",
+    "fingerprint": "6ba8e96fab4c4fdbf4bf4e43ce8738a94721d9948cd76166e3325d0ed2c3fe08"
+  },
+  {
+    "id": "a8-m03-l02-q1",
+    "reviewer": "root",
+    "status": "pass",
+    "independentAnswer": "48",
+    "method": "SPARK with S,P glued: verified 4!x2!=48 by hand and with Python.",
+    "fingerprint": "30742effcdff06ebb0924b277e0719454c9521585120b94c4c3ed0818158bdcd"
+  },
+  {
+    "id": "a8-m03-l02-q2",
+    "reviewer": "root",
+    "status": "pass",
+    "independentAnswer": "72",
+    "method": "CLOUD with C,L apart: verified 5!-4!x2!=120-48=72 by hand and with Python.",
+    "fingerprint": "7b2f0d51d7fe3d61ce635b83f629cd4194884486dfb7e9204616ce86d1129542"
+  },
+  {
+    "id": "a8-m03-l02-q3",
+    "reviewer": "root",
+    "status": "pass",
+    "independentAnswer": "240",
+    "method": "MARBLE with A,R glued: verified 5!x2!=240 by hand and with Python (6 letters, block reduces to 5 units).",
+    "fingerprint": "1e00b1829e9deae5160d3a2ba7d3577336dbb53238dfc0b5316307aea8350e1e"
+  },
+  {
+    "id": "a8-m03-l02-q4",
+    "reviewer": "root",
+    "status": "pass",
+    "independentAnswer": "480",
+    "method": "FLIGHT with F,L apart: verified 6!-5!x2!=720-240=480 by hand and with Python.",
+    "fingerprint": "c5b2a9aad7d98f72f7a74290dd823554becc21d2094ddff6a5e707433e1abfe5"
+  },
+  {
+    "id": "a8-m03-l02-q5",
+    "reviewer": "root",
+    "status": "pass",
+    "independentAnswer": "choice0",
+    "method": "ADDER with identical D,D glued: verified 4!=24 via Python; only choice index 0 (4!) equals 24, matching no internal-order factor for identical glued letters.",
+    "fingerprint": "d74231352ce288a83d9b4bc8653f10630d7f31566b35a17282295bcfa80af036"
+  },
+  {
+    "id": "a8-m03-l02-q6",
+    "reviewer": "root",
+    "status": "pass",
+    "independentAnswer": "24",
+    "method": "GIGGLE with all three identical G's glued: verified 4!=24 by hand and with Python (block has one internal order).",
+    "fingerprint": "7989d80290fd5452ae8e193bc65e76d62778d250252f26edc43536e042e75c87"
+  },
+  {
+    "id": "a8-m04-l01-ex1",
+    "reviewer": "root",
+    "status": "pass",
+    "independentAnswer": "1/3",
+    "method": "Die roll: favorable {5,6} of 6-outcome sample space {1..6}, reduced 2/6=1/3.",
+    "fingerprint": "352235f140c43a5b8cd6ce36a1aed9037c8f8affec34272a7941822ed8b41eae"
+  },
+  {
+    "id": "a8-m04-l01-ex2",
+    "reviewer": "root",
+    "status": "pass",
+    "independentAnswer": "1/6",
+    "method": "Two dice sum 7: listed all 6 ordered pairs (1,6)..(6,1) of 36, 6/36=1/6.",
+    "fingerprint": "e89c16000723b29628d1cd97a9d1ccabe5163de722c2c73e636387fc5f4fbc1f"
+  },
+  {
+    "id": "a8-m04-l01-ex3",
+    "reviewer": "root",
+    "status": "pass",
+    "independentAnswer": "1/4",
+    "method": "Spinner multiple of 3: favorable {3,6} of 8, reduced 2/8=1/4.",
+    "fingerprint": "f9ce6f3f76300ce11abf53f3abc4526000f91c247c08ba4f9bd14ec1a669beb7"
+  },
+  {
+    "id": "a8-m04-l01-q1",
+    "reviewer": "root",
+    "status": "pass",
+    "independentAnswer": "1/2",
+    "method": "Die roll even: favorable {2,4,6} of 6, reduced 3/6=1/2.",
+    "fingerprint": "24867ec5117be51cbf17c66cdf83a5574bac2de4ef08542302b3640e81b19603"
+  },
+  {
+    "id": "a8-m04-l01-q2",
+    "reviewer": "root",
+    "status": "pass",
+    "independentAnswer": "2/5",
+    "method": "Tile draw less than 3: favorable {1,2} of 5, 2/5.",
+    "fingerprint": "5a3ee0402d693c07d5842828d277c40f3982ec07ec34978fdf6e0ee2d893cf48"
+  },
+  {
+    "id": "a8-m04-l01-q3",
+    "reviewer": "root",
+    "status": "pass",
+    "independentAnswer": "2/3",
+    "method": "Die roll divisor of 6: favorable {1,2,3,6} of 6, reduced 4/6=2/3.",
+    "fingerprint": "034331726c56e885da34d6f9bc4b7ef4a33dac950a1f30ff00d4e37044492d7e"
+  },
+  {
+    "id": "a8-m04-l01-q4",
+    "reviewer": "root",
+    "status": "pass",
+    "independentAnswer": "1/5",
+    "method": "Spinner multiple of 4: favorable {4,8} of 10, reduced 2/10=1/5.",
+    "fingerprint": "021b1ffdad74182eed369a4604b6e3436e088c20774adee5cd5943a4438c0513"
+  },
+  {
+    "id": "a8-m04-l01-q5",
+    "reviewer": "root",
+    "status": "pass",
+    "independentAnswer": "choice1",
+    "method": "Two dice sum 4: 3 pairs (1,3)(2,2)(3,1) of 36, 3/36=1/12, matching choice index 1.",
+    "fingerprint": "b144956165fe6f55710e6770cb0e696af8ef64f2dc0014cfec7bb77225f5d480"
+  },
+  {
+    "id": "a8-m04-l01-q6",
+    "reviewer": "root",
+    "status": "pass",
+    "independentAnswer": "1/3",
+    "method": "Card 1-9 perfect square: favorable {1,4,9} of 9, reduced 3/9=1/3.",
+    "fingerprint": "5f108ca249dd23543fb69789c68f8aa188cbb21a40bd783854ed5651d62f41d1"
+  },
+  {
+    "id": "a8-m04-l02-ex1",
+    "reviewer": "root",
+    "status": "pass",
+    "independentAnswer": "1/6",
+    "method": "Labeled 4 balls R1R2B1B2: C(4,2)=6 pairs, C(2,2)=1 both-red pair, 1/6.",
+    "fingerprint": "d1f8474447c0fb56f2d91837045b7053837090f94a73ba5b56a0b82df76d0a2f"
+  },
+  {
+    "id": "a8-m04-l02-ex2",
+    "reviewer": "root",
+    "status": "pass",
+    "independentAnswer": "2/3",
+    "method": "From the same 6 labeled pairs, 4 are one-of-each (6-1-1), 4/6=2/3.",
+    "fingerprint": "1ee99465d4589af449f45c8847ba1bfdcd657f59deeb750c17cdbd4d3e4571e9"
+  },
+  {
+    "id": "a8-m04-l02-ex3",
+    "reviewer": "root",
+    "status": "pass",
+    "independentAnswer": "2/3",
+    "method": "3 equally likely seat pairs {1,2}{1,3}{2,3}; 2 contain seat 1, 2/3.",
+    "fingerprint": "481e22ca6ca8551723ec55adaa345d0d06b343f8899ed3b3de582b3085d42f5c"
+  },
+  {
+    "id": "a8-m04-l02-q1",
+    "reviewer": "root",
+    "status": "pass",
+    "independentAnswer": "1/4",
+    "method": "Labeled 3 green+1 yellow: 1 favorable of 4 labeled marbles, 1/4.",
+    "fingerprint": "c79e2d3513bc8ab82abc9b9201d053cbaffbc2efee788bbb03e3762ea563755c"
+  },
+  {
+    "id": "a8-m04-l02-q2",
+    "reviewer": "root",
+    "status": "pass",
+    "independentAnswer": "1/3",
+    "method": "Labeled 4 socks: C(4,2)=6 pairs, 1 all-black + 1 all-white = 2 favorable, 2/6=1/3.",
+    "fingerprint": "de0e65687996734810b7739bb71e309609404f98bc6bf25dce0fc041560b132d"
+  },
+  {
+    "id": "a8-m04-l02-q3",
+    "reviewer": "root",
+    "status": "pass",
+    "independentAnswer": "3/5",
+    "method": "Labeled 5 pens (3R,2B): 3x2=6 one-of-each pairs of C(5,2)=10, 6/10=3/5.",
+    "fingerprint": "bacae918d4fe5df253e6c25cff02c69c2a6ab98fa5176db683088e6e0108ecf5"
+  },
+  {
+    "id": "a8-m04-l02-q4",
+    "reviewer": "root",
+    "status": "pass",
+    "independentAnswer": "3/8",
+    "method": "Labeled 3 coins: C(3,2)=3 exactly-2-heads outcomes of 2^3=8, 3/8.",
+    "fingerprint": "ccf9f0c2605e8a1e910e2154a930896a4692856374558a795dcec24f7cba2b95"
+  },
+  {
+    "id": "a8-m04-l02-q5",
+    "reviewer": "root",
+    "status": "pass",
+    "independentAnswer": "choice0",
+    "method": "Labeled 5 chips (4B,1R): C(4,2)=6 all-blue pairs of C(5,2)=10, 6/10=3/5, matching choice index 0.",
+    "fingerprint": "cd0e93f7e0000e67bdbb9f4b3ddce800434989976ce81b15c3d9cd6f674d9adb"
+  },
+  {
+    "id": "a8-m04-l02-q6",
+    "reviewer": "root",
+    "status": "pass",
+    "independentAnswer": "3/5",
+    "method": "Labeled 5 books (2A,3B): 2x3=6 one-of-each pairs of C(5,2)=10, 6/10=3/5.",
+    "fingerprint": "2b4d5a14f560d181a5952cd5d235aa40928fd249868f2f5656ab0ba772572bc4"
+  },
+  {
+    "id": "a8-m04-l03-ex1",
+    "reviewer": "root",
+    "status": "pass",
+    "independentAnswer": "2/3",
+    "method": "Disjoint red/green cases: 3/6 + 1/6 = 4/6 = 2/3.",
+    "fingerprint": "7ff75bce1b1dbc88b87ab2ccebbce1794a6e599bffb61c6f5a53a56ce5154366"
+  },
+  {
+    "id": "a8-m04-l03-ex2",
+    "reviewer": "root",
+    "status": "pass",
+    "independentAnswer": "2/9",
+    "method": "Dice sum 7 or 11: (6+2)/36 = 8/36 = 2/9.",
+    "fingerprint": "98564de5bd4b332968fb3e7189f8f4103a625cca09fd14306008fa67db1bfe59"
+  },
+  {
+    "id": "a8-m04-l03-ex3",
+    "reviewer": "root",
+    "status": "pass",
+    "independentAnswer": "5/12",
+    "method": "Coin-die 12-outcome space: heads-even (3) + tails->4 (2) = 5/12.",
+    "fingerprint": "cb0362b0910086ce11103a6ed2db1fb8c9df55901ee272915378c40a32482e95"
+  },
+  {
+    "id": "a8-m04-l03-q1",
+    "reviewer": "root",
+    "status": "pass",
+    "independentAnswer": "5/9",
+    "method": "Marbles blue or yellow: 3/9 + 2/9 = 5/9.",
+    "fingerprint": "78ef1cf78ad5b9624a55937927a0e6451c2dab7a84a872534cacd5bc281ed52a"
+  },
+  {
+    "id": "a8-m04-l03-q2",
+    "reviewer": "root",
+    "status": "pass",
+    "independentAnswer": "1/18",
+    "method": "Dice sum 2 or 12: (1+1)/36 = 2/36 = 1/18.",
+    "fingerprint": "64af3d7e09c110345625e500414064c12214462ab6b272534bc8d6c591818688"
+  },
+  {
+    "id": "a8-m04-l03-q3",
+    "reviewer": "root",
+    "status": "pass",
+    "independentAnswer": "7/10",
+    "method": "Socks black or gray: 5/10 + 2/10 = 7/10.",
+    "fingerprint": "7ece7b4ebe35ce6a09a5f48ea10fb0fe44814fc2198024d4a2bb7843384fba02"
+  },
+  {
+    "id": "a8-m04-l03-q4",
+    "reviewer": "root",
+    "status": "pass",
+    "independentAnswer": "1/2",
+    "method": "Two flips same result: HH+TT = 1/4+1/4 = 1/2 of {HH,HT,TH,TT}.",
+    "fingerprint": "b5a875287e8ed8562809775fbd466dd47910d5827c300678525bb42eeb0affe6"
+  },
+  {
+    "id": "a8-m04-l03-q5",
+    "reviewer": "root",
+    "status": "pass",
+    "independentAnswer": "choice0",
+    "method": "Dice sum 5 or 9: (4+4)/36 = 8/36 = 2/9, matching choice index 0.",
+    "fingerprint": "ec2b6e5b60c9a586b2741753dd9ed276ff2d9f14361c77680cd75bd4c2494c02"
+  },
+  {
+    "id": "a8-m04-l03-q6",
+    "reviewer": "root",
+    "status": "pass",
+    "independentAnswer": "1/2",
+    "method": "Chip <3 or >5: (2+1)/6 = 3/6 = 1/2.",
+    "fingerprint": "f58072f19d2bb54491305922e9c82d4ba15a30674c80bbd9e69af4036e30c52a"
+  },
+  {
+    "id": "a8-m04-l04-ex1",
+    "reviewer": "root",
+    "status": "pass",
+    "independentAnswer": "1/4",
+    "method": "Two coins: 1/2x1/2=1/4, cross-checked against 1 of 4 outcomes {HH,HT,TH,TT}.",
+    "fingerprint": "d93570e63966473026c784135d2ea3fe982bc282de1c240c76ec759b38622ddd"
+  },
+  {
+    "id": "a8-m04-l04-ex2",
+    "reviewer": "root",
+    "status": "pass",
+    "independentAnswer": "1/12",
+    "method": "Dice first=5,second even: 1/6x1/2=1/12, cross-checked via 3 of 36 ordered outcomes.",
+    "fingerprint": "f79652dec828ba756eaa731878dedd95ff872f9a66b64e760f8f0a410f2483ef"
+  },
+  {
+    "id": "a8-m04-l04-ex3",
+    "reviewer": "root",
+    "status": "pass",
+    "independentAnswer": "6/25",
+    "method": "With replacement first red then blue: 2/5x3/5=6/25, cross-checked via 24 of 100 ordered pairs.",
+    "fingerprint": "6e4971a51c53dbce1fba231db8cd751bb9892bf399345da5dedb20f4f37e9f97"
+  },
+  {
+    "id": "a8-m04-l04-q1",
+    "reviewer": "root",
+    "status": "pass",
+    "independentAnswer": "1/12",
+    "method": "Coin heads and die 6: 1/2x1/6=1/12.",
+    "fingerprint": "f0005cb88941524b389dbecdcb20e49a06f068b5cc04ed3c77ac7c3edd94cd1b"
+  },
+  {
+    "id": "a8-m04-l04-q2",
+    "reviewer": "root",
+    "status": "pass",
+    "independentAnswer": "1/16",
+    "method": "Two spins both green: 1/4x1/4=1/16.",
+    "fingerprint": "ae1b462ead1bd585e95a5e6fffb4897266e8ad27251534aac4265fa3092dded9"
+  },
+  {
+    "id": "a8-m04-l04-q3",
+    "reviewer": "root",
+    "status": "pass",
+    "independentAnswer": "1/8",
+    "method": "Three coin flips all tails: (1/2)^3=1/8.",
+    "fingerprint": "9407a399651a76f311bed90baa52be87f4cfb7cd4df10f6013365f6db3c23d01"
+  },
+  {
+    "id": "a8-m04-l04-q4",
+    "reviewer": "root",
+    "status": "pass",
+    "independentAnswer": "3/8",
+    "method": "Two bags both red: 3/5x5/8=15/40=3/8.",
+    "fingerprint": "3aeb7dcdf1509761434a4cc4d1f58a86664d44bc525030c56c7719351beea58d"
+  },
+  {
+    "id": "a8-m04-l04-q5",
+    "reviewer": "root",
+    "status": "pass",
+    "independentAnswer": "choice1",
+    "method": "Die first=3, second>4 (2/6=1/3): correct expression 1/6x1/3, matching choice index 1.",
+    "fingerprint": "9fcb20aaea768a0c3395722e348e44eba02dce54afcc535060d617be98d29270"
+  },
+  {
+    "id": "a8-m04-l04-q6",
+    "reviewer": "root",
+    "status": "pass",
+    "independentAnswer": "1/26",
+    "method": "Coin heads and card king: 1/2x4/52=1/2x1/13=1/26.",
+    "fingerprint": "6658b324f8508770b0a2834814ca60826a3c5b42cfd65654a694c3bfc20d99cc"
+  },
+  {
+    "id": "a8-m04-l05-ex1",
+    "reviewer": "root",
+    "status": "pass",
+    "independentAnswer": "5/14",
+    "method": "Two red no replacement: 5/8x4/7=20/56=5/14, cross-checked via C(5,2)/C(8,2)=10/28=5/14.",
+    "fingerprint": "f8c958af5b1e8f567f7a043cf05b681f3452340e343321ccf21a744ad4e4cacf"
+  },
+  {
+    "id": "a8-m04-l05-ex2",
+    "reviewer": "root",
+    "status": "pass",
+    "independentAnswer": "4/15",
+    "method": "Black then white no replacement: 2/3x2/5=4/15, cross-checked via 8/30 ordered outcomes.",
+    "fingerprint": "501a87fc6c02b79c81a540502a69d35a275410c26fc0a977327d9b27daf9b6a5"
+  },
+  {
+    "id": "a8-m04-l05-ex3",
+    "reviewer": "root",
+    "status": "pass",
+    "independentAnswer": "1/20",
+    "method": "Red,green,yellow in order: 1/2x2/5x1/4=1/20, cross-checked via 6/120 distinguishable-marble sequences.",
+    "fingerprint": "8c4b573e10b2c5d06aa0c765852915325d3000cd267ef48331d3044c24dfd5a3"
+  },
+  {
+    "id": "a8-m04-l05-q1",
+    "reviewer": "root",
+    "status": "pass",
+    "independentAnswer": "3/14",
+    "method": "Both blue no replacement: 1/2x3/7=3/14.",
+    "fingerprint": "27ebb6905bf6c85541a17ddca0f8ab83c0f8fd4bd5cbc31a40bb10f2c934c9a3"
+  },
+  {
+    "id": "a8-m04-l05-q2",
+    "reviewer": "root",
+    "status": "pass",
+    "independentAnswer": "4/15",
+    "method": "Boy then girl no replacement: 2/5x2/3=4/15.",
+    "fingerprint": "52a0094668ce1ce893dbd04b04e68eaa34297c6a7dc68447c1027fef99ddd48a"
+  },
+  {
+    "id": "a8-m04-l05-q3",
+    "reviewer": "root",
+    "status": "pass",
+    "independentAnswer": "5/14",
+    "method": "Both black socks no replacement: 5/8x4/7=5/14.",
+    "fingerprint": "9eba8c59dd88f75473cef9a0cd61481fc900f6eee20aa6f589854932f47a63d1"
+  },
+  {
+    "id": "a8-m04-l05-q4",
+    "reviewer": "root",
+    "status": "pass",
+    "independentAnswer": "1/5",
+    "method": "Blue,blue,red in order: 2/3x3/5x1/2=1/5.",
+    "fingerprint": "8aa9d23bfddf7d2e7aa9e124fb833a43e86ceb7621fa10bd975d8ceeecd44edc"
+  },
+  {
+    "id": "a8-m04-l05-q5",
+    "reviewer": "root",
+    "status": "pass",
+    "independentAnswer": "choice1",
+    "method": "Both winning tickets no replacement: 3/10x2/9, matching choice index 1.",
+    "fingerprint": "3e5ef7c8ab02297b2000d49b647f1ad571808fb3706dd4eb52ba2c59c1b3176d"
+  },
+  {
+    "id": "a8-m04-l05-q6",
+    "reviewer": "root",
+    "status": "pass",
+    "independentAnswer": "4/15",
+    "method": "Nonfiction then fiction no replacement: 2/5x2/3=4/15.",
+    "fingerprint": "898e6fc9546576405796cbc9714dce925316ab379eda735a8d457104224e93a9"
+  },
+  {
+    "id": "a8-m04-l06-ex1",
+    "reviewer": "root",
+    "status": "pass",
+    "independentAnswer": "1/8",
+    "method": "Coin and separate deck (independent): 1/2x1/4=1/8, cross-checked via 13/104 ordered outcomes.",
+    "fingerprint": "15d383174d805c1e247d729adbcdeed04e9e5dc4f2970bb4d098e03d7bd72f63"
+  },
+  {
+    "id": "a8-m04-l06-ex2",
+    "reviewer": "root",
+    "status": "pass",
+    "independentAnswer": "15/56",
+    "method": "Candies not replaced (dependent): 5/8x3/7=15/56, cross-checked via 15/56 ordered outcomes.",
+    "fingerprint": "af87a0ee444e25ea4a8ab16000ef8a5c227466a02249b727a06d7ecf006619ab"
+  },
+  {
+    "id": "a8-m04-l06-ex3",
+    "reviewer": "root",
+    "status": "pass",
+    "independentAnswer": "4/15",
+    "method": "Two separate bags (independent): 2/5x2/3=4/15, cross-checked via 8/30 ordered outcomes.",
+    "fingerprint": "8a15e62cc54bf104359711ba85b1d22d9f5185ee420ef1dfc4c8fb9cc0a8af9e"
+  },
+  {
+    "id": "a8-m04-l06-q1",
+    "reviewer": "root",
+    "status": "pass",
+    "independentAnswer": "1/9",
+    "method": "Two separate dice (independent), both >4: 1/3x1/3=1/9.",
+    "fingerprint": "ce6d9fc90aecadd3affd7693831f56d1ade798a9de021417a656c3c2ad97e01f"
+  },
+  {
+    "id": "a8-m04-l06-q2",
+    "reviewer": "root",
+    "status": "pass",
+    "independentAnswer": "2/5",
+    "method": "Apples not put back (dependent), both green: 2/3x3/5=2/5.",
+    "fingerprint": "973481295de9b72778acd997dc57d5bde361188b93873c2a474eceb4ef653e17"
+  },
+  {
+    "id": "a8-m04-l06-q3",
+    "reviewer": "root",
+    "status": "pass",
+    "independentAnswer": "1/10",
+    "method": "Spinner and coin (independent): 1/5x1/2=1/10.",
+    "fingerprint": "035e2c65f1551cbbe51636d93f9969e0267cebfba74f607db1824ff2ef530566"
+  },
+  {
+    "id": "a8-m04-l06-q4",
+    "reviewer": "root",
+    "status": "pass",
+    "independentAnswer": "5/14",
+    "method": "Shirts not returned (dependent), both small: 5/8x4/7=5/14.",
+    "fingerprint": "70791bd8b90a0816ed3e0680a0f55338e73a02bc0b44ea314192fa06560eb261"
+  },
+  {
+    "id": "a8-m04-l06-q5",
+    "reviewer": "root",
+    "status": "pass",
+    "independentAnswer": "choice1",
+    "method": "Separate classes never share students: independent by non-interacting pools, matching choice index 1.",
+    "fingerprint": "b62a67fd7e31a47109824f52ed26b383f54adf2fdd7e0f4be48d735217291a09"
+  },
+  {
+    "id": "a8-m04-l06-q6",
+    "reviewer": "root",
+    "status": "pass",
+    "independentAnswer": "4/15",
+    "method": "Drinks not placed back (dependent), water then juice: 2/5x2/3=4/15.",
+    "fingerprint": "2e5985d62d6b8f82dc3a3a7490911861936c40071fb71714205dcb709703cfc7"
+  }
+]
