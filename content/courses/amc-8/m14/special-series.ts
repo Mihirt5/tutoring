@@ -2,7 +2,8 @@ import type { CourseLesson } from "@/lib/courses/types";
 
 export default {
   slug: "special-series",
-  intro: "Sums of consecutive integers, consecutive squares, and consecutive cubes appear so often in contest problems that each has earned its own compact formula, saving the work of adding many terms by hand. These formulas also combine with subtraction to handle sums that do not start at 1, and one of them hides a striking identity connecting sums of cubes back to sums of integers.",
+  intro:
+    "Sums of consecutive integers, consecutive squares, and consecutive cubes appear so often in contest problems that each has earned its own compact formula, saving the work of adding many terms by hand. These formulas also combine with subtraction to handle sums that do not start at 1, and one of them hides a striking identity connecting sums of cubes back to sums of integers.",
   sections: [
     {
       id: "a8-m14-l02-s1",
@@ -11,7 +12,8 @@ export default {
         "The pairing technique from the previous lesson gives the sum of the first $n$ positive integers as $1+2+3+\\cdots+n=\\frac{n(n+1)}{2}$. This is simply the arithmetic sum formula applied to the sequence $1,2,3,\\ldots,n$, where the first term is 1, the last term is $n$, and there are $n$ terms.",
         "This formula is worth memorizing on its own, since it is the building block that the sum-of-squares and sum-of-cubes formulas are built from and compared against.",
       ],
-      keyIdea: "$1+2+\\cdots+n=\\frac{n(n+1)}{2}$, the arithmetic sum formula applied to the first $n$ positive integers.",
+      keyIdea:
+        "$1+2+\\cdots+n=\\frac{n(n+1)}{2}$, the arithmetic sum formula applied to the first $n$ positive integers.",
     },
     {
       id: "a8-m14-l02-s2",
@@ -29,7 +31,8 @@ export default {
         "The sum of the first $n$ perfect cubes has a surprisingly elegant formula: $1^3+2^3+\\cdots+n^3=\\left(\\frac{n(n+1)}{2}\\right)^2$ — exactly the square of the sum-of-integers formula. This means the sum of the first $n$ cubes always equals $(1+2+\\cdots+n)^2$, a striking identity that is worth remembering on its own.",
         "Any of these three formulas can be adapted to a sum that does not start at 1 by subtracting: the sum from $a$ to $b$ equals the sum from 1 to $b$ minus the sum from 1 to $a-1$. For instance, $6^2+7^2+\\cdots+12^2$ equals $(1^2+\\cdots+12^2)-(1^2+\\cdots+5^2)$, using the sum-of-squares formula for each piece and subtracting.",
       ],
-      keyIdea: "$1^3+2^3+\\cdots+n^3=\\left(\\frac{n(n+1)}{2}\\right)^2$; for a sum from $a$ to $b$, subtract the sum up to $a-1$ from the sum up to $b$.",
+      keyIdea:
+        "$1^3+2^3+\\cdots+n^3=\\left(\\frac{n(n+1)}{2}\\right)^2$; for a sum from $a$ to $b$, subtract the sum up to $a-1$ from the sum up to $b$.",
     },
   ],
   examples: [
@@ -43,7 +46,8 @@ export default {
         "This equals $\\frac{2310}{6}=385$.",
       ],
       answer: "385",
-      takeaway: "Substitute directly into the sum-of-squares formula rather than adding ten separate squares by hand.",
+      takeaway:
+        "Substitute directly into the sum-of-squares formula rather than adding ten separate squares by hand.",
     },
     {
       id: "a8-m14-l02-ex2",
@@ -55,7 +59,8 @@ export default {
         "This equals $441$.",
       ],
       answer: "441",
-      takeaway: "The sum of the first $n$ cubes is the square of the sum of the first $n$ integers.",
+      takeaway:
+        "The sum of the first $n$ cubes is the square of the sum of the first $n$ integers.",
     },
     {
       id: "a8-m14-l02-ex3",
@@ -67,7 +72,8 @@ export default {
         "This equals $595$.",
       ],
       answer: "595",
-      takeaway: "A sum of squares that starts above 1 is the difference of two full sums, each computed with the standard formula.",
+      takeaway:
+        "A sum of squares that starts above 1 is the difference of two full sums, each computed with the standard formula.",
     },
   ],
   commonMistakes: [
@@ -77,7 +83,10 @@ export default {
   ],
   exercises: [
     {
-      id: "a8-m14-l02-q1", role: "guided", kind: "numeric", difficulty: 3,
+      id: "a8-m14-l02-q1",
+      role: "guided",
+      kind: "numeric",
+      difficulty: 3,
       question: "Find $1^2+2^2+3^2+4^2+5^2+6^2$.",
       answer: "91",
       hints: [
@@ -92,7 +101,10 @@ export default {
       ],
     },
     {
-      id: "a8-m14-l02-q2", role: "guided", kind: "numeric", difficulty: 3,
+      id: "a8-m14-l02-q2",
+      role: "guided",
+      kind: "numeric",
+      difficulty: 3,
       question: "Find $1^3+2^3+3^3+4^3$.",
       answer: "100",
       hints: [
@@ -107,7 +119,10 @@ export default {
       ],
     },
     {
-      id: "a8-m14-l02-q3", role: "independent", kind: "numeric", difficulty: 3,
+      id: "a8-m14-l02-q3",
+      role: "independent",
+      kind: "numeric",
+      difficulty: 3,
       question: "Find $8+9+10+\\cdots+20$.",
       answer: "182",
       hints: [
@@ -122,7 +137,10 @@ export default {
       ],
     },
     {
-      id: "a8-m14-l02-q4", role: "independent", kind: "numeric", difficulty: 4,
+      id: "a8-m14-l02-q4",
+      role: "independent",
+      kind: "numeric",
+      difficulty: 4,
       question: "Find $4^2+5^2+6^2+7^2$.",
       answer: "126",
       hints: [
@@ -137,9 +155,17 @@ export default {
       ],
     },
     {
-      id: "a8-m14-l02-q5", role: "independent", kind: "mcq", difficulty: 4,
+      id: "a8-m14-l02-q5",
+      role: "independent",
+      kind: "mcq",
+      difficulty: 4,
       question: "Which expression equals $1^3+2^3+\\cdots+n^3$?",
-      choices: ["$\\frac{n(n+1)}{2}$", "$\\left(\\frac{n(n+1)}{2}\\right)^2$", "$\\frac{n(n+1)(2n+1)}{6}$", "$n^2(n+1)^2$"],
+      choices: [
+        "$\\frac{n(n+1)}{2}$",
+        "$\\left(\\frac{n(n+1)}{2}\\right)^2$",
+        "$\\frac{n(n+1)(2n+1)}{6}$",
+        "$n^2(n+1)^2$",
+      ],
       answer: 1,
       hints: [
         "Recall that the sum of cubes has a special relationship to the sum of integers.",
@@ -153,8 +179,12 @@ export default {
       ],
     },
     {
-      id: "a8-m14-l02-q6", role: "independent", kind: "numeric", difficulty: 5,
-      question: "Find the value of $\\left(1^3+2^3+3^3+4^3+5^3\\right)-(1+2+3+4+5)^2$.",
+      id: "a8-m14-l02-q6",
+      role: "independent",
+      kind: "numeric",
+      difficulty: 5,
+      question:
+        "Find the value of $\\left(1^3+2^3+3^3+4^3+5^3\\right)-(1+2+3+4+5)^2$.",
       answer: "0",
       hints: [
         "Recall the identity relating the sum of the first $n$ cubes to the sum of the first $n$ integers.",
@@ -173,5 +203,6 @@ export default {
     "The sum of the first $n$ cubes is $\\left(\\frac{n(n+1)}{2}\\right)^2$, exactly the square of the sum of the first $n$ integers.",
     "A sum that starts above 1 is the difference of two full sums, computed with the same formula and subtracted.",
   ],
-  nextConnection: "Sequences that grow by multiplying a fixed factor, rather than adding one, behave very differently — the next lesson develops the matching formulas for geometric sequences.",
+  nextConnection:
+    "Sequences that grow by multiplying a fixed factor, rather than adding one, behave very differently — the next lesson develops the matching formulas for geometric sequences.",
 } satisfies CourseLesson;

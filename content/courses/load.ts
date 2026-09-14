@@ -3,37 +3,66 @@ import type { CourseLesson } from "@/lib/courses/types";
 import { getCourseLessonMeta } from "./manifest";
 
 const loaders: Record<string, () => Promise<{ default: CourseLesson }>> = {
-  "course:amc-8:permutations-definition": () =>
-    import("./amc-8/m01/permutations-definition"),
-  "course:amc-8:factorials": () => import("./amc-8/m01/factorials"),
-  "course:amc-8:permutations-fundamentals": () =>
-    import("./amc-8/m01/permutations-fundamentals"),
-  "course:amc-8:digit-permutations": () =>
-    import("./amc-8/m01/digit-permutations"),
   "course:amc-8:circular-arrangements": () =>
     import("./amc-8/m01/circular-arrangements"),
-  "course:amc-8:combinations-fundamentals": () =>
-    import("./amc-8/m02/combinations-fundamentals"),
+  "course:amc-8:digit-permutations": () =>
+    import("./amc-8/m01/digit-permutations"),
+  "course:amc-8:factorials": () => import("./amc-8/m01/factorials"),
+  "course:amc-8:permutations-definition": () =>
+    import("./amc-8/m01/permutations-definition"),
+  "course:amc-8:permutations-fundamentals": () =>
+    import("./amc-8/m01/permutations-fundamentals"),
   "course:amc-8:binomial-identity": () =>
     import("./amc-8/m02/binomial-identity"),
+  "course:amc-8:combinations-fundamentals": () =>
+    import("./amc-8/m02/combinations-fundamentals"),
   "course:amc-8:tricky-combinations": () =>
     import("./amc-8/m02/tricky-combinations"),
   "course:amc-8:word-rearrangements-fundamentals": () =>
     import("./amc-8/m03/word-rearrangements-fundamentals"),
   "course:amc-8:word-rearrangements-with-constraints": () =>
     import("./amc-8/m03/word-rearrangements-with-constraints"),
-  "course:amc-8:probability-fundamentals": () =>
-    import("./amc-8/m04/probability-fundamentals"),
-  "course:amc-8:distinguishability": () =>
-    import("./amc-8/m04/distinguishability"),
   "course:amc-8:casework-in-probability": () =>
     import("./amc-8/m04/casework-in-probability"),
-  "course:amc-8:independent-events-probability": () =>
-    import("./amc-8/m04/independent-events-probability"),
   "course:amc-8:dependent-events-probability": () =>
     import("./amc-8/m04/dependent-events-probability"),
   "course:amc-8:dependent-or-independent": () =>
     import("./amc-8/m04/dependent-or-independent"),
+  "course:amc-8:distinguishability": () =>
+    import("./amc-8/m04/distinguishability"),
+  "course:amc-8:independent-events-probability": () =>
+    import("./amc-8/m04/independent-events-probability"),
+  "course:amc-8:probability-fundamentals": () =>
+    import("./amc-8/m04/probability-fundamentals"),
+  "course:amc-8:rate-and-work": () => import("./amc-8/m11/rate-and-work"),
+  "course:amc-8:ratios-fundamentals": () =>
+    import("./amc-8/m11/ratios-fundamentals"),
+  "course:amc-8:advanced-equation-solving": () =>
+    import("./amc-8/m12/advanced-equation-solving"),
+  "course:amc-8:algebra-word-problems": () =>
+    import("./amc-8/m12/algebra-word-problems"),
+  "course:amc-8:systems-of-equations-basics": () =>
+    import("./amc-8/m12/systems-of-equations-basics"),
+  "course:amc-8:speed-distance-time": () =>
+    import("./amc-8/m13/speed-distance-time"),
+  "course:amc-8:arithmetic-sequences": () =>
+    import("./amc-8/m14/arithmetic-sequences"),
+  "course:amc-8:arithmetico-geometric-sequence": () =>
+    import("./amc-8/m14/arithmetico-geometric-sequence"),
+  "course:amc-8:geometric-sequences": () =>
+    import("./amc-8/m14/geometric-sequences"),
+  "course:amc-8:special-series": () => import("./amc-8/m14/special-series"),
+  "course:amc-8:mean-median-mode-conditions": () =>
+    import("./amc-8/m15/mean-median-mode-conditions"),
+  "course:amc-8:mean-median-mode-fundamentals": () =>
+    import("./amc-8/m15/mean-median-mode-fundamentals"),
+  "course:amc-8:telescoping-basics": () =>
+    import("./amc-8/m16/telescoping-basics"),
+  "course:amc-8:telescoping-equations": () =>
+    import("./amc-8/m16/telescoping-equations"),
+  "course:amc-8:telescoping-products": () =>
+    import("./amc-8/m16/telescoping-products"),
+  "course:amc-8:telescoping-sums": () => import("./amc-8/m16/telescoping-sums"),
   "course:amc-10-12:bounds-and-extrema": () =>
     import("./amc-10-12/m01/bounds-and-extrema"),
   "course:amc-10-12:factor-expressions-and-simplify-radicals": () =>
@@ -46,12 +75,12 @@ const loaders: Record<string, () => Promise<{ default: CourseLesson }>> = {
     import("./amc-10-12/m02/polynomial-roots-and-symmetric-relationships"),
   "course:amc-10-12:quadratics-discriminants-and-intersections": () =>
     import("./amc-10-12/m02/quadratics-discriminants-and-intersections"),
-  "course:amc-10-12:prime-powers-and-divisor-structure": () =>
-    import("./amc-10-12/m03/prime-powers-and-divisor-structure"),
   "course:amc-10-12:congruences-cycles-and-remainders": () =>
     import("./amc-10-12/m03/congruences-cycles-and-remainders"),
   "course:amc-10-12:integer-equations-and-place-value": () =>
     import("./amc-10-12/m03/integer-equations-and-place-value"),
+  "course:amc-10-12:prime-powers-and-divisor-structure": () =>
+    import("./amc-10-12/m03/prime-powers-and-divisor-structure"),
 };
 
 export async function loadCourseLesson(

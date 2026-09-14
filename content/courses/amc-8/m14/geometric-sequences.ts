@@ -2,7 +2,8 @@ import type { CourseLesson } from "@/lib/courses/types";
 
 export default {
   slug: "geometric-sequences",
-  intro: "A geometric sequence changes by a fixed multiplying factor from one term to the next, instead of a fixed added amount. This produces its own version of the position formula and sum formula, both built from powers of the common ratio rather than simple multiples of it.",
+  intro:
+    "A geometric sequence changes by a fixed multiplying factor from one term to the next, instead of a fixed added amount. This produces its own version of the position formula and sum formula, both built from powers of the common ratio rather than simple multiples of it.",
   sections: [
     {
       id: "a8-m14-l03-s1",
@@ -11,7 +12,8 @@ export default {
         "A sequence is geometric when every term is the previous term multiplied by the same fixed number, called the common ratio. In $2,6,18,54,\\ldots$, each term is 3 times the one before it, so the common ratio is $r=3$. Checking a sequence for this property means dividing each term by the one before it and confirming every result is identical.",
         "A common ratio between 0 and 1, such as $r=\\frac{1}{2}$, produces a decreasing sequence of shrinking positive terms, like $16,8,4,2,\\ldots$. A negative common ratio makes the terms alternate in sign. In every case, the defining test is the same: the ratio between consecutive terms must stay constant.",
       ],
-      keyIdea: "A sequence is geometric exactly when the same fixed common ratio $r$ multiplies each term to get the next.",
+      keyIdea:
+        "A sequence is geometric exactly when the same fixed common ratio $r$ multiplies each term to get the next.",
     },
     {
       id: "a8-m14-l03-s2",
@@ -20,7 +22,8 @@ export default {
         "Just as an arithmetic sequence has a position formula built from repeated addition, a geometric sequence has one built from repeated multiplication: the $n$th term is $a_n=a_1\\times r^{n-1}$. Reaching the $n$th term from the first term requires multiplying by $r$ exactly $n-1$ times, matching the same off-by-one pattern as the arithmetic case.",
         "This formula also runs in reverse: if two terms of a geometric sequence are known, dividing one by the other and taking the appropriate root recovers the common ratio. For instance, if the first term is 5 and the 4th term is 135, then $r^3=\\frac{135}{5}=27$, so $r=3$.",
       ],
-      keyIdea: "The $n$th term is $a_n=a_1\\times r^{n-1}$, using $n-1$ multiplications by $r$ from the first term.",
+      keyIdea:
+        "The $n$th term is $a_n=a_1\\times r^{n-1}$, using $n-1$ multiplications by $r$ from the first term.",
     },
     {
       id: "a8-m14-l03-s3",
@@ -29,21 +32,24 @@ export default {
         "The sum of a finite geometric sequence does not pair off as neatly as an arithmetic sum, but it has its own formula: $S_n=\\dfrac{a_1(r^n-1)}{r-1}$, valid whenever $r\\neq1$. This formula comes from multiplying the whole sum by $r$ and subtracting the original sum, which cancels every middle term and leaves only a first and a last piece — the same shift-and-subtract idea that the next lesson develops further.",
         "For example, the sum $1+2+4+8+16+32$ has $a_1=1$, $r=2$, and $n=6$ terms, giving $S_6=\\dfrac{1(2^6-1)}{2-1}=2^6-1=63$. As with arithmetic sequences, it is essential to count the number of terms $n$ correctly before substituting into the formula.",
       ],
-      keyIdea: "The sum of $n$ geometric terms is $S_n=\\dfrac{a_1(r^n-1)}{r-1}$ for $r\\neq1$, derived by multiplying the sum by $r$ and subtracting to cancel the middle terms.",
+      keyIdea:
+        "The sum of $n$ geometric terms is $S_n=\\dfrac{a_1(r^n-1)}{r-1}$ for $r\\neq1$, derived by multiplying the sum by $r$ and subtracting to cancel the middle terms.",
     },
   ],
   examples: [
     {
       id: "a8-m14-l03-ex1",
       title: "Finding a term from its position",
-      problem: "The first term of a geometric sequence is 3, and the common ratio is 2. What is the 6th term?",
+      problem:
+        "The first term of a geometric sequence is 3, and the common ratio is 2. What is the 6th term?",
       steps: [
         "Use the position formula $a_n=a_1\\times r^{n-1}$ with $a_1=3$, $r=2$, and $n=6$.",
         "Substituting gives $a_6=3\\times2^{6-1}=3\\times2^5$.",
         "This equals $3\\times32=96$.",
       ],
       answer: "96",
-      takeaway: "The exponent on the common ratio is always one less than the term's position.",
+      takeaway:
+        "The exponent on the common ratio is always one less than the term's position.",
     },
     {
       id: "a8-m14-l03-ex2",
@@ -55,19 +61,22 @@ export default {
         "This equals $\\dfrac{2\\times242}{2}=242$.",
       ],
       answer: "242",
-      takeaway: "The sum formula avoids adding every term by hand once the first term, ratio, and number of terms are known.",
+      takeaway:
+        "The sum formula avoids adding every term by hand once the first term, ratio, and number of terms are known.",
     },
     {
       id: "a8-m14-l03-ex3",
       title: "Finding the common ratio from two terms",
-      problem: "In a geometric sequence, the first term is 5 and the 4th term is 135. What is the common ratio?",
+      problem:
+        "In a geometric sequence, the first term is 5 and the 4th term is 135. What is the common ratio?",
       steps: [
         "Use the position formula: $a_4=a_1\\times r^{4-1}=5\\times r^3=135$.",
         "Dividing both sides by 5 gives $r^3=27$.",
         "Taking the cube root gives $r=3$.",
       ],
       answer: "3",
-      takeaway: "Two known terms of a geometric sequence determine the common ratio by dividing and taking the appropriate root.",
+      takeaway:
+        "Two known terms of a geometric sequence determine the common ratio by dividing and taking the appropriate root.",
     },
   ],
   commonMistakes: [
@@ -77,8 +86,12 @@ export default {
   ],
   exercises: [
     {
-      id: "a8-m14-l03-q1", role: "guided", kind: "numeric", difficulty: 3,
-      question: "The first term of a geometric sequence is 4, and the common ratio is 3. What is the 5th term?",
+      id: "a8-m14-l03-q1",
+      role: "guided",
+      kind: "numeric",
+      difficulty: 3,
+      question:
+        "The first term of a geometric sequence is 4, and the common ratio is 3. What is the 5th term?",
       answer: "324",
       hints: [
         "Use the position formula $a_n=a_1\\times r^{n-1}$ with $a_1=4$, $r=3$, and $n=5$.",
@@ -92,7 +105,10 @@ export default {
       ],
     },
     {
-      id: "a8-m14-l03-q2", role: "guided", kind: "numeric", difficulty: 3,
+      id: "a8-m14-l03-q2",
+      role: "guided",
+      kind: "numeric",
+      difficulty: 3,
       question: "Find the sum of the geometric sequence $1,2,4,8,16,32$.",
       answer: "63",
       hints: [
@@ -107,8 +123,12 @@ export default {
       ],
     },
     {
-      id: "a8-m14-l03-q3", role: "independent", kind: "numeric", difficulty: 4,
-      question: "In a geometric sequence with all positive terms, the first term is 2 and the 5th term is 162. What is the common ratio?",
+      id: "a8-m14-l03-q3",
+      role: "independent",
+      kind: "numeric",
+      difficulty: 4,
+      question:
+        "In a geometric sequence with all positive terms, the first term is 2 and the 5th term is 162. What is the common ratio?",
       answer: "3",
       hints: [
         "Use the position formula with $n=5$ to relate the first and 5th terms.",
@@ -122,8 +142,12 @@ export default {
       ],
     },
     {
-      id: "a8-m14-l03-q4", role: "independent", kind: "numeric", difficulty: 4,
-      question: "Find the sum of the first 4 terms of a geometric sequence with first term 16 and common ratio $\\frac{1}{2}$.",
+      id: "a8-m14-l03-q4",
+      role: "independent",
+      kind: "numeric",
+      difficulty: 4,
+      question:
+        "Find the sum of the first 4 terms of a geometric sequence with first term 16 and common ratio $\\frac{1}{2}$.",
       answer: "30",
       hints: [
         "Substitute $a_1=16$, $r=\\frac{1}{2}$, and $n=4$ into the sum formula.",
@@ -137,9 +161,17 @@ export default {
       ],
     },
     {
-      id: "a8-m14-l03-q5", role: "independent", kind: "mcq", difficulty: 3,
+      id: "a8-m14-l03-q5",
+      role: "independent",
+      kind: "mcq",
+      difficulty: 3,
       question: "Which of the following sequences is geometric?",
-      choices: ["$2, 5, 8, 11$", "$3, 6, 12, 24$", "$1, 4, 9, 16$", "$10, 7, 4, 1$"],
+      choices: [
+        "$2, 5, 8, 11$",
+        "$3, 6, 12, 24$",
+        "$1, 4, 9, 16$",
+        "$10, 7, 4, 1$",
+      ],
       answer: 1,
       hints: [
         "Check the ratio between each pair of consecutive terms in every sequence.",
@@ -153,8 +185,12 @@ export default {
       ],
     },
     {
-      id: "a8-m14-l03-q6", role: "independent", kind: "numeric", difficulty: 5,
-      question: "The sum of the first $n$ terms of a geometric sequence with first term 3 and common ratio 2 is 381. Find $n$.",
+      id: "a8-m14-l03-q6",
+      role: "independent",
+      kind: "numeric",
+      difficulty: 5,
+      question:
+        "The sum of the first $n$ terms of a geometric sequence with first term 3 and common ratio 2 is 381. Find $n$.",
       answer: "7",
       hints: [
         "Substitute the first term and common ratio into the sum formula, leaving $n$ unknown.",
@@ -173,5 +209,6 @@ export default {
     "The $n$th term is $a_n=a_1\\times r^{n-1}$, using $n-1$ multiplications from the first term.",
     "The sum of $n$ terms is $S_n=\\dfrac{a_1(r^n-1)}{r-1}$ for $r\\neq1$, derived by multiplying the sum by $r$ and subtracting to cancel the middle terms.",
   ],
-  nextConnection: "The subtraction trick behind the geometric sum formula extends to sequences formed by multiplying an arithmetic sequence and a geometric sequence together — the next lesson develops that shift-and-subtract technique in full.",
+  nextConnection:
+    "The subtraction trick behind the geometric sum formula extends to sequences formed by multiplying an arithmetic sequence and a geometric sequence together — the next lesson develops that shift-and-subtract technique in full.",
 } satisfies CourseLesson;

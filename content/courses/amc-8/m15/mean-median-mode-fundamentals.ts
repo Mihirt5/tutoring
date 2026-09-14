@@ -2,16 +2,18 @@ import type { CourseLesson } from "@/lib/courses/types";
 
 export default {
   slug: "mean-median-mode-fundamentals",
-  intro: "Mean, median, and mode are three different ways to describe a \"typical\" value in a data set, and they can give noticeably different answers for the same data. Knowing how each one is computed, and how each one reacts to an unusually large or small value, makes it possible to choose the right measure for a given question.",
+  intro:
+    'Mean, median, and mode are three different ways to describe a "typical" value in a data set, and they can give noticeably different answers for the same data. Knowing how each one is computed, and how each one reacts to an unusually large or small value, makes it possible to choose the right measure for a given question.',
   sections: [
     {
       id: "a8-m15-l01-s1",
       title: "Three measures, three definitions",
       body: [
-        "The mean is the sum of all the values divided by how many values there are — the familiar \"average.\" The median is the middle value once the data is sorted in order; with an odd number of values there is a single middle value, and with an even number of values the median is the average of the two middle values. The mode is the value (or values) that appears most often in the data set; a data set can have one mode, more than one mode if there is a tie, or no mode at all if every value appears the same number of times.",
+        'The mean is the sum of all the values divided by how many values there are — the familiar "average." The median is the middle value once the data is sorted in order; with an odd number of values there is a single middle value, and with an even number of values the median is the average of the two middle values. The mode is the value (or values) that appears most often in the data set; a data set can have one mode, more than one mode if there is a tie, or no mode at all if every value appears the same number of times.',
         "Computing the median always requires sorting the data first — reading off the middle of an unsorted list gives a meaningless answer. Computing the mode requires counting how many times each distinct value appears, not just looking for a value that seems common.",
       ],
-      keyIdea: "Mean is sum divided by count, median is the middle of the sorted data, and mode is the most frequent value.",
+      keyIdea:
+        "Mean is sum divided by count, median is the middle of the sorted data, and mode is the most frequent value.",
     },
     {
       id: "a8-m15-l01-s2",
@@ -20,16 +22,18 @@ export default {
         "An outlier — a value far larger or smaller than the rest of the data — pulls the mean noticeably toward itself, since every value contributes to the sum. In the data set $2,3,4,5,50$, the mean is $\\frac{2+3+4+5+50}{5}=12.8$, far above every value except the outlier itself, because the single value 50 dominates the sum.",
         "The median, by contrast, only depends on which value sits in the middle position once the data is sorted, so a single extreme value has no effect on it unless it changes which value occupies that middle spot. For the same data set, the median is just 4 — the middle of $2,3,4,5,50$ — completely unaffected by how large the outlier happens to be. The mode is similarly unaffected by a single outlier, unless that outlier happens to repeat often enough to become the most frequent value itself.",
       ],
-      keyIdea: "An outlier pulls the mean toward itself but leaves the median (and usually the mode) unchanged.",
+      keyIdea:
+        "An outlier pulls the mean toward itself but leaves the median (and usually the mode) unchanged.",
     },
     {
       id: "a8-m15-l01-s3",
       title: "Choosing the right measure",
       body: [
-        "Which measure best describes a \"typical\" value depends on what the data represents and what question is being asked. When a data set has an outlier or is heavily skewed — such as home prices in a neighborhood with one unusually expensive mansion — the median usually gives a more representative sense of a typical value, since it resists being dragged toward the extreme.",
-        "The mode is the right choice when the data represents categories rather than numerical quantities, such as favorite colors or shoe sizes sold, where \"most common\" is the natural notion of typical. The mean remains the standard choice whenever every value should contribute proportionally to the result, such as computing a total that will later be redistributed evenly.",
+        'Which measure best describes a "typical" value depends on what the data represents and what question is being asked. When a data set has an outlier or is heavily skewed — such as home prices in a neighborhood with one unusually expensive mansion — the median usually gives a more representative sense of a typical value, since it resists being dragged toward the extreme.',
+        'The mode is the right choice when the data represents categories rather than numerical quantities, such as favorite colors or shoe sizes sold, where "most common" is the natural notion of typical. The mean remains the standard choice whenever every value should contribute proportionally to the result, such as computing a total that will later be redistributed evenly.',
       ],
-      keyIdea: "Use the median when outliers or skew are present, the mode for categorical \"most common\" questions, and the mean when every value should count proportionally.",
+      keyIdea:
+        'Use the median when outliers or skew are present, the mode for categorical "most common" questions, and the mean when every value should count proportionally.',
     },
   ],
   examples: [
@@ -43,7 +47,8 @@ export default {
         "The mean is $45\\div5=9$.",
       ],
       answer: "9",
-      takeaway: "The mean is always the sum of the values divided by how many values there are.",
+      takeaway:
+        "The mean is always the sum of the values divided by how many values there are.",
     },
     {
       id: "a8-m15-l01-ex2",
@@ -55,19 +60,22 @@ export default {
         "The median is $\\frac{8+10}{2}=9$.",
       ],
       answer: "9",
-      takeaway: "With an even number of values, the median averages the two middle values rather than picking a single one.",
+      takeaway:
+        "With an even number of values, the median averages the two middle values rather than picking a single one.",
     },
     {
       id: "a8-m15-l01-ex3",
       title: "The gap between mean and median with an outlier",
-      problem: "The data set $2, 3, 4, 5, 50$ has a mean and a median. Find the positive difference between the mean and the median.",
+      problem:
+        "The data set $2, 3, 4, 5, 50$ has a mean and a median. Find the positive difference between the mean and the median.",
       steps: [
         "The mean is $\\frac{2+3+4+5+50}{5}=\\frac{64}{5}=12.8$.",
         "The median, the middle value of the sorted data, is 4.",
         "The positive difference is $12.8-4=8.8$.",
       ],
       answer: "44/5",
-      takeaway: "A single large outlier can pull the mean far above the median, revealing how differently the two measures respond to extreme values.",
+      takeaway:
+        "A single large outlier can pull the mean far above the median, revealing how differently the two measures respond to extreme values.",
     },
   ],
   commonMistakes: [
@@ -77,7 +85,10 @@ export default {
   ],
   exercises: [
     {
-      id: "a8-m15-l01-q1", role: "guided", kind: "numeric", difficulty: 1,
+      id: "a8-m15-l01-q1",
+      role: "guided",
+      kind: "numeric",
+      difficulty: 1,
       question: "Find the mean of the data set $6, 10, 11, 15, 18$.",
       answer: "12",
       hints: [
@@ -92,7 +103,10 @@ export default {
       ],
     },
     {
-      id: "a8-m15-l01-q2", role: "guided", kind: "numeric", difficulty: 2,
+      id: "a8-m15-l01-q2",
+      role: "guided",
+      kind: "numeric",
+      difficulty: 2,
       question: "Find the median of the data set $5, 9, 2, 8$.",
       answer: "13/2",
       hints: [
@@ -107,7 +121,10 @@ export default {
       ],
     },
     {
-      id: "a8-m15-l01-q3", role: "independent", kind: "numeric", difficulty: 2,
+      id: "a8-m15-l01-q3",
+      role: "independent",
+      kind: "numeric",
+      difficulty: 2,
       question: "Find the mode of the data set $3, 7, 7, 9, 12, 7, 9$.",
       answer: "7",
       hints: [
@@ -122,8 +139,12 @@ export default {
       ],
     },
     {
-      id: "a8-m15-l01-q4", role: "independent", kind: "numeric", difficulty: 3,
-      question: "The data set $10, 12, 14, 16, 88$ has mean $M$ and median $m$. Find $M-m$.",
+      id: "a8-m15-l01-q4",
+      role: "independent",
+      kind: "numeric",
+      difficulty: 3,
+      question:
+        "The data set $10, 12, 14, 16, 88$ has mean $M$ and median $m$. Find $M-m$.",
       answer: "14",
       hints: [
         "Compute the mean by summing all five values and dividing by 5.",
@@ -137,8 +158,12 @@ export default {
       ],
     },
     {
-      id: "a8-m15-l01-q5", role: "independent", kind: "mcq", difficulty: 2,
-      question: "A real estate report wants to describe a \"typical\" home price in a neighborhood where one mansion sells for far more than every other home. Which measure of center best avoids being skewed by that one expensive sale?",
+      id: "a8-m15-l01-q5",
+      role: "independent",
+      kind: "mcq",
+      difficulty: 2,
+      question:
+        'A real estate report wants to describe a "typical" home price in a neighborhood where one mansion sells for far more than every other home. Which measure of center best avoids being skewed by that one expensive sale?',
       choices: ["Mean", "Median", "Mode", "Range"],
       answer: 1,
       hints: [
@@ -153,8 +178,12 @@ export default {
       ],
     },
     {
-      id: "a8-m15-l01-q6", role: "independent", kind: "numeric", difficulty: 4,
-      question: "A data set has five values: $4, 6, 6, x, 10$, and its mean is 7. Find the mode of the data set.",
+      id: "a8-m15-l01-q6",
+      role: "independent",
+      kind: "numeric",
+      difficulty: 4,
+      question:
+        "A data set has five values: $4, 6, 6, x, 10$, and its mean is 7. Find the mode of the data set.",
       answer: "6",
       hints: [
         "Use the mean to write an equation for the sum of all five values.",
@@ -171,7 +200,8 @@ export default {
   summary: [
     "The mean is the sum of the values divided by the count, the median is the middle of the sorted data, and the mode is the most frequent value.",
     "An outlier pulls the mean toward itself, but leaves the median — and usually the mode — unaffected.",
-    "Choose the median for skewed data with outliers, the mode for categorical \"most common\" questions, and the mean when every value should count proportionally.",
+    'Choose the median for skewed data with outliers, the mode for categorical "most common" questions, and the mean when every value should count proportionally.',
   ],
-  nextConnection: "The next lesson works backward from a stated mean, median, or mode to reconstruct missing values in a data set, often combining several such conditions in a single problem.",
+  nextConnection:
+    "The next lesson works backward from a stated mean, median, or mode to reconstruct missing values in a data set, often combining several such conditions in a single problem.",
 } satisfies CourseLesson;

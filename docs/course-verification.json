@@ -1915,5 +1915,1301 @@
     "independentAnswer": "4/15",
     "method": "Drinks not placed back (dependent), water then juice: 2/5x2/3=4/15.",
     "fingerprint": "2e5985d62d6b8f82dc3a3a7490911861936c40071fb71714205dcb709703cfc7"
+  },
+  {
+    "id": "a8-m11-l01-ex1",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "independentAnswer": "12",
+    "method": "3:5 ratio over 32 total = 8 parts; 32/8=4 per part; 3*4=12 apples.",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "0b11d908495c0f5f29738deea0cbc68fbce103e04460704a61d94d3ce1235ecf"
+  },
+  {
+    "id": "a8-m11-l01-ex2",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "independentAnswer": "70",
+    "method": "7:3 ratio, whole=10 parts; 7/10=0.7=70%.",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "38fbeda2fbee35d5fa387d044d9f67b02a19b38aa9b1d45930cac2169fce43c3"
+  },
+  {
+    "id": "a8-m11-l01-ex3",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "independentAnswer": "6",
+    "method": "2:15 ratio, 15 parts=45ft => 1 part=3ft; 2*3=6ft model.",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "977372f91c61476f9ddaf80089dc6467cdc3409710796a110f3ca3e99d8fa0fa"
+  },
+  {
+    "id": "a8-m11-l01-q1",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "independentAnswer": "28",
+    "method": "4:7 ratio, 11 parts=44 candies => 1 part=4; 7*4=28 green.",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "e47ba8013f4c80bc1629624bcbc4096dc1bdc4f75232c17cb67771dc5ce0e9d1"
+  },
+  {
+    "id": "a8-m11-l01-q2",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "independentAnswer": "50",
+    "method": "5:2 ratio, 20 tulips=2 parts => 1 part=10; 5*10=50 roses.",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "9b2688a75744581da2ca115ca21b62da07b8d57280c828d62b7db77b5ab1d83c"
+  },
+  {
+    "id": "a8-m11-l01-q3",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "independentAnswer": "42",
+    "method": "3:4 ratio, diff=1 part=6 students => total 7 parts*6=42.",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "f7a446dc1794120813049a46252575f824a1d521bf1aed9e6bf5af4c29ff2539"
+  },
+  {
+    "id": "a8-m11-l01-q4",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "independentAnswer": "55",
+    "method": "9:11 ratio, 20 parts total; 11/20=0.55=55%.",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "ad234607b3229c1828dbea481484e9a6dd756826e5bf183d18f1c678f873b9c2"
+  },
+  {
+    "id": "a8-m11-l01-q5",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "independentAnswer": "choice2",
+    "method": "8:5 ratio needs total divisible by 13; only 78=13*6 among choices.",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "5d4ae11544d44aa6bbf0505ed58a712e475a5443c64f6c20ad649c8858bdd106"
+  },
+  {
+    "id": "a8-m11-l01-q6",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "independentAnswer": "27",
+    "method": "5:3 ratio, diff=2 parts=18 => 1 part=9; brownies=3*9=27.",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "a572d5b407a2ad63c6a1a6e551bd9d9c81204e02b18b362b659ef2be1f71e918"
+  },
+  {
+    "id": "a8-m11-l02-ex1",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "independentAnswer": "250",
+    "method": "rate=150/6=25 pages/min; 25*10=250.",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "d76506a0b4a542247292a583e2d7afc1d7096de5ad821501d1618ec75b7f1746"
+  },
+  {
+    "id": "a8-m11-l02-ex2",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "independentAnswer": "2",
+    "method": "rates 1/6+1/3=1/2 combined; time=1/(1/2)=2h.",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "436000a06e540d2796f9bbc293e8c00cabfac47d911039f85182b6f922d095a1"
+  },
+  {
+    "id": "a8-m11-l02-ex3",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "independentAnswer": "5/8",
+    "method": "filled=1/8*3=3/8; remaining=1-3/8=5/8.",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "6269f77082c9dd62c11e778328b07d540014e413b6764e26f3b0330907c36d2f"
+  },
+  {
+    "id": "a8-m11-l02-q1",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "independentAnswer": "147",
+    "method": "rate=84/4=21 toys/hr; 21*7=147.",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "2dc68ba09db43f3907a5122d3603b5aa64caaeae7fafcc034b0eca4777d01501"
+  },
+  {
+    "id": "a8-m11-l02-q2",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "independentAnswer": "6",
+    "method": "rates 1/10+1/15=1/6 combined; time=6h.",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "dfa0bff1af15b0616c076c831a1f8374f6207817d9da04bed9370e26f5fab9df"
+  },
+  {
+    "id": "a8-m11-l02-q3",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "independentAnswer": "12/5",
+    "method": "rates 1/4+1/6=5/12 combined; time=12/5h.",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "33a271b099d7fdbb29ab4f45c38b9848c971994e57119f595b5e6714e395be34"
+  },
+  {
+    "id": "a8-m11-l02-q4",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "independentAnswer": "9",
+    "method": "time=(3/4)/(1/12)=(3/4)*12=9h.",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "199eeedb62923a73652703693c1dcf2f15af7e7eae6ffcc8a1f1f42f8aa5e884"
+  },
+  {
+    "id": "a8-m11-l02-q5",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "independentAnswer": "choice1",
+    "method": "amount=rate*time=50t matches distance=50t.",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "d524fd4e1120d6cce9ca4b1dea20c524796eaa641078731aa2f53fc4ba35f587"
+  },
+  {
+    "id": "a8-m11-l02-q6",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "independentAnswer": "15/2",
+    "method": "combined 1/5, A=1/15; B=1/5-1/15=2/15; B time=15/2h.",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "53df0a94a1f563d0669399a28f270a806eb9ee5d4191d93e1554e0f1f9bff6a7"
+  },
+  {
+    "id": "a8-m12-l01-ex1",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "independentAnswer": "10",
+    "method": "x+y=15,x=2y => y=5,x=10.",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "7553698b98a281feff54465eee36cd8e8d234e0f12b461022c443a1b235a07e9"
+  },
+  {
+    "id": "a8-m12-l01-ex2",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "independentAnswer": "8",
+    "method": "x+y=22,x-y=6 => x=14,y=8 (smaller).",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "5a52584e3621a6aebb9714a57a6c5c3a47306e3dae0282c255acdca162db6b07"
+  },
+  {
+    "id": "a8-m12-l01-ex3",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "independentAnswer": "5",
+    "method": "a+c=10,8a+5c=65 => 80-3c=65,c=5.",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "7ee2b939ba57ef8433ca0b0ec26335c953d34519a26357012fb6608c8c244fec"
+  },
+  {
+    "id": "a8-m12-l01-q1",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "independentAnswer": "12",
+    "method": "y+(y+4)=20 => y=8, larger=12.",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "82c8da40bea7a6d7664834737bac387c19d6befa3d24b99cd31dd9ebb2354abb"
+  },
+  {
+    "id": "a8-m12-l01-q2",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "independentAnswer": "12",
+    "method": "2x+3y=76,2x+y=52 => subtract: 2y=24,y=12 (soccer ball).",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "d0af7ebb9ef5e76868dc173012d9df887ca30e891af4ae57eb6a3b1d765d4f75"
+  },
+  {
+    "id": "a8-m12-l01-q3",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "independentAnswer": "21",
+    "method": "r=2s+3,r+s=30 => s=9,r=21.",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "5cf0739897b4a2a07e5d1cd8627afd8021f9f312056e42917ecba8a0f875ca66"
+  },
+  {
+    "id": "a8-m12-l01-q4",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "independentAnswer": "6",
+    "method": "3x+2y=26,x+y=10 => elimination gives x=6.",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "13440f3d4d98a30ca4184926e1ba64627215d75ebe94b975d10b87da723c2fd3"
+  },
+  {
+    "id": "a8-m12-l01-q5",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "independentAnswer": "choice1",
+    "method": "2x+3y=12,2x-y=4 share x-coefficient 2, subtract directly.",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "c34caba6dc1bdcf9f509ca88e3bc2929fca0d6b93014861ab1330c59cf60384a"
+  },
+  {
+    "id": "a8-m12-l01-q6",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "independentAnswer": "12",
+    "method": "s+L=50,3s=L-2 => 4s=48,s=12.",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "2c7026a6786d812f42a35ca420c2bd0f2eb202433b36bd262fb7d06e30fc6a2c"
+  },
+  {
+    "id": "a8-m12-l02-ex1",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "independentAnswer": "5",
+    "method": "add eqs: 5x+5y=25 => x+y=5.",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "f2c84fb7a6ff08918e93dfb6dba66f18fa37e26b556c614366573c676718bc4a"
+  },
+  {
+    "id": "a8-m12-l02-ex2",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "independentAnswer": "18",
+    "method": "3s=2s+18 => s=18.",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "1c0d411505d0a09046e9fc3a4ac0cccb3d3c8de60d51a73a7039584ebd808237"
+  },
+  {
+    "id": "a8-m12-l02-ex3",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "independentAnswer": "2",
+    "method": "(x-y)^2=12^2-4*35=4 => diff=2 (numbers 5,7).",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "981b7adf925833dc819240e363ae1c4acfe12469f9f8a1732e95c7eb44ee2622"
+  },
+  {
+    "id": "a8-m12-l02-q1",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "independentAnswer": "8",
+    "method": "add eqs: 9x+9y=72 => x+y=8 (x=1,y=7).",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "fc890ce84bb2ac4771f406a2533bfb9d6e20da4314ee946612c2f5a2f3521271"
+  },
+  {
+    "id": "a8-m12-l02-q2",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "independentAnswer": "7",
+    "method": "4s=s+21 => s=7.",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "af5de363bfd147bdc7fd6a7d23240a5535dae926242ab247041ca9c2d614e612"
+  },
+  {
+    "id": "a8-m12-l02-q3",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "independentAnswer": "7",
+    "method": "(x-y)^2=15^2-4*44=49 => diff=7 (numbers 4,11).",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "fdc9676633f7c02a5f07a824d9d959a349fe8103f265876cdecd93a7f4b71ea0"
+  },
+  {
+    "id": "a8-m12-l02-q4",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "independentAnswer": "11",
+    "method": "add eqs: 5a+5b=55 => a+b=11 (a=5,b=6).",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "c8a132af2a3ba18bd5f24abe5a587b480829cef4848477562d12d21cf7734674"
+  },
+  {
+    "id": "a8-m12-l02-q5",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "independentAnswer": "choice1",
+    "method": "let s=x+y, solve 3s-2=16 directly for s.",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "fc109525e59b6b85a94fba4ccaa47f632773dfbf7b7f6644837ebe076d68b056"
+  },
+  {
+    "id": "a8-m12-l02-q6",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "independentAnswer": "20",
+    "method": "sum all three eqs: 2(x+y+z)=40 => x+y+z=20 (x=5,y=6,z=9).",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "199f33f828ab14c8927547c2bd07bebb40e063cc27f9bad2a0c2e363e3e1615d"
+  },
+  {
+    "id": "a8-m12-l03-ex1",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "independentAnswer": "52",
+    "method": "p+(p+20)=84 => p=32,Sam=52.",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "8f28ec0ae04eadd8353de4bf68ddb400054770b99da6ea43558a14836bd0b5d8"
+  },
+  {
+    "id": "a8-m12-l03-ex2",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "independentAnswer": "24",
+    "method": "T/2+3=15 => T=24.",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "fb458c1b30da840b26ebf87031e84bdd7f47ed11cc1af989c86238d1978f9099"
+  },
+  {
+    "id": "a8-m12-l03-ex3",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "independentAnswer": "6",
+    "method": "4p-6=18 => p=6 packs.",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "b20fbd1592f2b6c390f2f2ec4ed4f9f835e600801eaa72750d6c8e0b6a50fef4"
+  },
+  {
+    "id": "a8-m12-l03-q1",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "independentAnswer": "11",
+    "method": "m+5=2(m-3) => m=11.",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "53727b8ac7353ab6d1665628b58c0e5d6462d0b428051196031a8e1306a63871"
+  },
+  {
+    "id": "a8-m12-l03-q2",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "independentAnswer": "6",
+    "method": "2((w+5)+w)=34 => w=6.",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "8a9c588d3df813e4008d1dc8cdc0d0d6b4e3a0385db03b013af6b19e52905f7c"
+  },
+  {
+    "id": "a8-m12-l03-q3",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "independentAnswer": "30",
+    "method": "T/3-4=6 => T=30.",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "817d9dbfa9956ae7158f3ddb653ddd18bbd48d86f125a260e2516b3509c4db20"
+  },
+  {
+    "id": "a8-m12-l03-q4",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "independentAnswer": "30",
+    "method": "r+(r+8)=52 => r=22, blue=30.",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "9873d03c3c7e9d2244f94be184f1651d294e2668a8922c662f60ada9ff363249"
+  },
+  {
+    "id": "a8-m12-l03-q5",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "independentAnswer": "choice1",
+    "method": "let c=child tickets, a=2c-7 is fraction-free.",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "49a786f4c1c602c7424807317eb9ef6808fdb28d8047b413440a3baf0e3d3dd5"
+  },
+  {
+    "id": "a8-m12-l03-q6",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "independentAnswer": "24",
+    "method": "3(n+6)=2(n-4)+50 => n=24.",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "c51eac0c6a8114bc7e4ab4108f2182e8e5740bbcd89e79c854f29cb3a865c7fc"
+  },
+  {
+    "id": "a8-m13-l01-ex1",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "independentAnswer": "45",
+    "method": "d=15*3=45.",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "6c96e004d43b95c9470a63ebd71b3ea9e687103fe9179d2427aa4dcfddc5a011"
+  },
+  {
+    "id": "a8-m13-l01-ex2",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "independentAnswer": "40",
+    "method": "t1=2h,t2=1h; avg=120/3=40mph.",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "f164c4a6494b2900b8cc3aeb598ad9962ecfd125dcf2186497d2cae51929c267"
+  },
+  {
+    "id": "a8-m13-l01-ex3",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "independentAnswer": "3",
+    "method": "combined speed 100mph; t=300/100=3h.",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "ca1fa84cd8658348afa3ffec9f72567eadea859ff87f842ceb68e39bb27c1639"
+  },
+  {
+    "id": "a8-m13-l01-q1",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "independentAnswer": "1",
+    "method": "relative speed 20mph; gap 20mi; t=1h.",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "9f124106343ae9939a69e881539145bc126b351df4adc62271e91e5de434024a"
+  },
+  {
+    "id": "a8-m13-l01-q2",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "independentAnswer": "5/4",
+    "method": "t=10/8=5/4h.",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "087db9388c58e6aee7ea2fd909743907fa9645f758c43f4718128d05cf7ff11e"
+  },
+  {
+    "id": "a8-m13-l01-q3",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "independentAnswer": "17/3",
+    "method": "total dist17, total time3; avg=17/3mph.",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "89c33cf2b38784c6fa6e831190a114c5de6d45b733c018f782a475eadddd34ae"
+  },
+  {
+    "id": "a8-m13-l01-q4",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "independentAnswer": "5/2",
+    "method": "combined speed60mph; t=150/60=5/2h.",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "ef8c42f8eee0df7786ad144fd4360a3cce3461db650c2729d16c477a1826b8c2"
+  },
+  {
+    "id": "a8-m13-l01-q5",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "independentAnswer": "choice1",
+    "method": "sample calc gives 48mph<50mph: more time at slower speed.",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "06d9466208f69c9b030e94e9f0febd0e18c467ad28eb5aba93a1f66ad6835bfd"
+  },
+  {
+    "id": "a8-m13-l01-q6",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "independentAnswer": "5/2",
+    "method": "head start 50mi, relative speed 20mph; t=5/2h after B leaves.",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "dbbac2ea3a18fca0d9a63901c48c9078d44053cf936d8641748ac8eb33f3cd07"
+  },
+  {
+    "id": "a8-m14-l01-ex1",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "independentAnswer": "63",
+    "method": "a15=7+14*4=63.",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "d6b27c798bcb95e1c8ad6166e77dca7b72ebd41ceb6b6dfb46227ccf52f1ed1b"
+  },
+  {
+    "id": "a8-m14-l01-ex2",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "independentAnswer": "210",
+    "method": "pairing sum: 10*21=210.",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "ae930dbeb84c8c60266e151f209267853daeaf99565fd1519fa06e8a12157362"
+  },
+  {
+    "id": "a8-m14-l01-ex3",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "independentAnswer": "16",
+    "method": "5+(n-1)*3=50 => n=16.",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "4ef6346b4e2297bfe6fbafbcea8389dc3d919347ed0e83d7a79b0d5e4c80fdb4"
+  },
+  {
+    "id": "a8-m14-l01-q1",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "independentAnswer": "-15",
+    "method": "a10=12+9*(-3)=-15.",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "6fde691a6bfb963d1013d989983d919c031998e842e2a1149371779db19e483d"
+  },
+  {
+    "id": "a8-m14-l01-q2",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "independentAnswer": "210",
+    "method": "n=(39-3)/4+1=10; S=10*42/2=210.",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "cbc5c20fca7897460701cae49b33f118927c4c2115025696b548e8582c2b1611"
+  },
+  {
+    "id": "a8-m14-l01-q3",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "independentAnswer": "5",
+    "method": "d=(61-6)/11=5.",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "4e043cb3a0c5c67acd27051f9076680cc3c0371739aa1f172b64011007f5893b"
+  },
+  {
+    "id": "a8-m14-l01-q4",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "independentAnswer": "1050",
+    "method": "n=20;S=20*105/2=1050.",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "3070d4b022c5800aebb851aab44c045e6865e37ac9d8e64a2c171bf5b30606ca"
+  },
+  {
+    "id": "a8-m14-l01-q5",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "independentAnswer": "choice1",
+    "method": "5,8,11,14 has constant difference 3.",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "a6e7b3dfdee56a6b2a9688619c8e17a3d2451fac3faa96037e37eb0ce82d223f"
+  },
+  {
+    "id": "a8-m14-l01-q6",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "independentAnswer": "10",
+    "method": "3n^2+7n-370=0 => n=10 (discriminant 4489=67^2).",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "af5fc143a63c0a437243f7d7ea4ae9801ecd1d9ba15b550ae038912a46ea3100"
+  },
+  {
+    "id": "a8-m14-l02-ex1",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "independentAnswer": "385",
+    "method": "10*11*21/6=385.",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "bfc16585494ce2059cafad6c7887cc6601d398f4d89146171f45adb08899bf3e"
+  },
+  {
+    "id": "a8-m14-l02-ex2",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "independentAnswer": "441",
+    "method": "[6*7/2]^2=441.",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "42a16d38f0f27e60bfd5be34e120760e57b7905c77f53d232fb8d6e74f0c707d"
+  },
+  {
+    "id": "a8-m14-l02-ex3",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "independentAnswer": "595",
+    "method": "sumSq(12)-sumSq(5)=650-55=595.",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "b773d9e55f35bea0f651cde0cbe1a25d6c1d369ba558cf84cc96ccbce1f4af16"
+  },
+  {
+    "id": "a8-m14-l02-q1",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "independentAnswer": "91",
+    "method": "6*7*13/6=91.",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "2eb2829c9d05001ba11b21785087e60cc6ed628eea7219fc2d3f360d91a645a5"
+  },
+  {
+    "id": "a8-m14-l02-q2",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "independentAnswer": "100",
+    "method": "[4*5/2]^2=100.",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "cfa38029d8332cd6fd7e5f2db11eed839bbfd34a64de2791e2c8d91a3929b2b4"
+  },
+  {
+    "id": "a8-m14-l02-q3",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "independentAnswer": "182",
+    "method": "sum(20)-sum(7)=210-28=182.",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "460285172f18185e19cbeecf0364a81bf9ce9d6051c920d771237a62ecb3d5f2"
+  },
+  {
+    "id": "a8-m14-l02-q4",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "independentAnswer": "126",
+    "method": "sumSq(7)-sumSq(3)=140-14=126 (direct check 16+25+36+49=126).",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "ca87c94e4c5e5902294f5287d09383b33669276d961a690fdf8babecdb2cc057"
+  },
+  {
+    "id": "a8-m14-l02-q5",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "independentAnswer": "choice1",
+    "method": "cube-sum identity equals (n(n+1)/2)^2.",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "adc81d0e01b3d373c0b9dbe9ffb701cad143077e4afc7ef95e8fe62dc1fe573b"
+  },
+  {
+    "id": "a8-m14-l02-q6",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "independentAnswer": "0",
+    "method": "cube sum(5)=15^2; integer sum(5)^2=15^2; difference=0.",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "ef1901854c81c7f1c6c54a198308a50a787ef4f5c1b0950455ca011e4dbc42b8"
+  },
+  {
+    "id": "a8-m14-l03-ex1",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "independentAnswer": "96",
+    "method": "3*2^5=96.",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "7c41b2d1d109e4a76a547510c6dfc543c7cad3d872cfc9ca82338e24e1886e09"
+  },
+  {
+    "id": "a8-m14-l03-ex2",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "independentAnswer": "242",
+    "method": "2*(3^5-1)/2=242.",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "46d569424bbe037d3d145507d2c39b3bf5961619cc332cdbaaca85905cf612a8"
+  },
+  {
+    "id": "a8-m14-l03-ex3",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "independentAnswer": "3",
+    "method": "5r^3=135 => r^3=27 => r=3.",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "3f8f0454324671ac2b00d3bea85f3a5ad263d32eeff8490fadb8a8554e8ae17e"
+  },
+  {
+    "id": "a8-m14-l03-q1",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "independentAnswer": "324",
+    "method": "4*3^4=324.",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "05a138ab6e0a946e93b5d054d42c29da7566583967cfa9000a65cfeb48b690d5"
+  },
+  {
+    "id": "a8-m14-l03-q2",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "independentAnswer": "63",
+    "method": "1*(2^6-1)=63.",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "5ae79a4937e0179666d21c73304bed062aa673120f3ac6ba2387f29ee8c27fec"
+  },
+  {
+    "id": "a8-m14-l03-q3",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "independentAnswer": "3",
+    "method": "2r^4=162 => r^4=81 => r=3.",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "4b4eafa53c1878fe611591d793026a4895e533e08f8df6b9fc381191598ef2e6"
+  },
+  {
+    "id": "a8-m14-l03-q4",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "independentAnswer": "30",
+    "method": "16*(1-1/16)/(1/2)=30.",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "ec7c919fbae6fccd64e826213ce5ad5bc81119421b470434bc1ce5dfbeae36bd"
+  },
+  {
+    "id": "a8-m14-l03-q5",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "independentAnswer": "choice1",
+    "method": "3,6,12,24 has constant ratio 2.",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "f7742f2477700597c6b011c5dfde1ab352b3d9bf9db5abedcad4d3215af177da"
+  },
+  {
+    "id": "a8-m14-l03-q6",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "independentAnswer": "7",
+    "method": "3*(2^n-1)=381 => 2^n=128 => n=7.",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "d4fcd017ede8e23e15a55ac3d60a181de5dba475c74b998635564a6823786569"
+  },
+  {
+    "id": "a8-m14-l04-ex1",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "independentAnswer": "13/4",
+    "method": "(1-r)S=(15/8)-(1/4)=13/8; S=13/4 (n=4,r=1/2).",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "431734edb73b716c8ebd4f47db24fe2b587d79eb997c6c7df2b0553f9ed7e53d"
+  },
+  {
+    "id": "a8-m14-l04-ex2",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "independentAnswer": "2",
+    "method": "(1-r)S=(13/9)-(1/9)=4/3; S=2 (n=3,r=1/3).",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "8ca69f134a7077a297c05c37d3f6085c9ac83020db934258b358b04c3b139116"
+  },
+  {
+    "id": "a8-m14-l04-ex3",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "independentAnswer": "15/4",
+    "method": "(1-r)S=(63/32)-(3/32); S=15/4 (n=6,r=1/2).",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "9353a65bc3377f00e2bcb3644a67f39621ed84814295b8724a9aaf68a28c0543"
+  },
+  {
+    "id": "a8-m14-l04-q1",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "independentAnswer": "11/4",
+    "method": "n=3,r=1/2 shift-subtract gives S=11/4.",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "3179c007933facb066c8af43e04276e532028aabdc64349e523b22f866ff9eaf"
+  },
+  {
+    "id": "a8-m14-l04-q2",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "independentAnswer": "58/27",
+    "method": "n=4,r=1/3 shift-subtract gives S=58/27.",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "1c26ec71230eb985fd1772faac74da12e19e55dc0b3b390d804cff25e06ea51c"
+  },
+  {
+    "id": "a8-m14-l04-q3",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "independentAnswer": "57/16",
+    "method": "n=5,r=1/2 shift-subtract gives S=57/16.",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "abc57b1e375f2303adefcb4ee845d4479f4688bc093a9f58badcb8c37c093673"
+  },
+  {
+    "id": "a8-m14-l04-q4",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "independentAnswer": "7/4",
+    "method": "n=4,r=1/4 shift-subtract gives S=7/4.",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "33ee6a616ba0c5ba88c47bf6c6743715841545b331fc69d6a3d99c7a47e92596"
+  },
+  {
+    "id": "a8-m14-l04-q5",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "independentAnswer": "choice1",
+    "method": "shift-subtract leaves geometric series minus nr^n boundary term.",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "f6a5c6627a78c23e9038bbb3b3023cc5d4a8418fb7319c6bc3c7f127d2fe7e4c"
+  },
+  {
+    "id": "a8-m14-l04-q6",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "independentAnswer": "247/64",
+    "method": "n=7,r=1/2 shift-subtract gives S=247/64.",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "2ae64e3d28830b56ba04e5eabdbc062db0b59adbd4024259ac29ee1f595ccf4c"
+  },
+  {
+    "id": "a8-m15-l01-ex1",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "independentAnswer": "9",
+    "method": "mean=45/5=9.",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "47d996fa51659d4c32b4e8747a8c63b5f9680cf67044df21699c5f3be5dad7b9"
+  },
+  {
+    "id": "a8-m15-l01-ex2",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "independentAnswer": "9",
+    "method": "median=(8+10)/2=9.",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "31e62e3319f5555a6fdc8b1fcd35c08659a7bd9ab977f58e4ef84efdc8647c7b"
+  },
+  {
+    "id": "a8-m15-l01-ex3",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "independentAnswer": "44/5",
+    "method": "mean=64/5=12.8, median=4, diff=44/5=8.8.",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "d6eea204ceb6464c2dde6e9535e80fa25858b2cbd2b987cb2bc9d5346dc94a12"
+  },
+  {
+    "id": "a8-m15-l01-q1",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "independentAnswer": "12",
+    "method": "mean=60/5=12.",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "5be815cf79828040ec0d227d2e00ee397929bf2c8f76588403629bb8f0be97c1"
+  },
+  {
+    "id": "a8-m15-l01-q2",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "independentAnswer": "13/2",
+    "method": "median=(5+8)/2=13/2.",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "87950ced58e76896065044b4bc299f8412aaf1bf48ef35299a58c39a51a9a635"
+  },
+  {
+    "id": "a8-m15-l01-q3",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "independentAnswer": "7",
+    "method": "mode: 7 appears 3 times, most of any value.",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "9bccd8d5d2ba131152889882b95eae36e96af092f9a1f7d9f917087314b80e07"
+  },
+  {
+    "id": "a8-m15-l01-q4",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "independentAnswer": "14",
+    "method": "mean28 minus median14 = 14.",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "de2331e429abba2fd441332df6bd547396a71789d446447b209d3351777d8fab"
+  },
+  {
+    "id": "a8-m15-l01-q5",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "independentAnswer": "choice1",
+    "method": "median resists the outlier mansion price.",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "63e2eba573a41c91f1d0d8be9e0ebe932aead16aed59163501750d605282845a"
+  },
+  {
+    "id": "a8-m15-l01-q6",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "independentAnswer": "6",
+    "method": "sum=35 => x=9; data {4,6,6,9,10}, mode=6.",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "9ec35e46bdb7fdfb7d6ed9290b92fcf72b5d6d20fe7d650a8f3ef9c7a76383de"
+  },
+  {
+    "id": "a8-m15-l02-ex1",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "independentAnswer": "20",
+    "method": "sum=100-80=20.",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "b263bdc066a6bf6932a80100fa93ddb97965c84c08e8a8efbb2d05478bc64073"
+  },
+  {
+    "id": "a8-m15-l02-ex2",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "independentAnswer": "13",
+    "method": "(9+x)/2=11 => x=13, checked 9<13<15.",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "90a70775486bae71d1b4e4b16094e2581bd0d98ebe4fcbca305915cddc54efa5"
+  },
+  {
+    "id": "a8-m15-l02-ex3",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "independentAnswer": "9",
+    "method": "sum=42-33=9, mode 5 unaffected by x=9.",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "47ea211426f0691fd36a980a145c6019b8aea241367af2e09f0e55e386e0a055"
+  },
+  {
+    "id": "a8-m15-l02-q1",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "independentAnswer": "16",
+    "method": "sum=60-44=16.",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "555e3baa729c1c3d2f85a9465fd2747af29b4ce52fc9b81a9b14c50da771ba42"
+  },
+  {
+    "id": "a8-m15-l02-q2",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "independentAnswer": "12",
+    "method": "(6+x)/2=9 => x=12.",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "c9dec6e73bd2aee068d721f99c6b79836c35aa1fd47e1ba0fa37f375b0c7847d"
+  },
+  {
+    "id": "a8-m15-l02-q3",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "independentAnswer": "15",
+    "method": "(11+z)/2=13 => z=15, checked 11<15<20.",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "918883a1e595b1d4c58d6ad41302152bc1dd5bd57de1b07a254e01ec600088e1"
+  },
+  {
+    "id": "a8-m15-l02-q4",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "independentAnswer": "7",
+    "method": "sum=48-41=7, mode 6 unaffected by w=7.",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "800eca5684dcc0e79f40ead28ee0f3932ff4b5ad624773c0dcf31cdb1f9129fa"
+  },
+  {
+    "id": "a8-m15-l02-q5",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "independentAnswer": "choice1",
+    "method": "sum increases by 15, mean increases by 15/5=3.",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "327bf659ad3a0601fade9285e7ca3e9784380eb7b33e32161be2882647ab0570"
+  },
+  {
+    "id": "a8-m15-l02-q6",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "independentAnswer": "5",
+    "method": "median=x=8 (middle of 5 sorted); sum=45 => y=13; y-x=5.",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "755df27fa7559328a4aa6bf3bcb7f338887190d746b560e8af257e3be9165f97"
+  },
+  {
+    "id": "a8-m16-l01-ex1",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "independentAnswer": "5",
+    "method": "telescopes to 6-1=5.",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "91a12d138ac604d118345724e46f20a038b8ce7fe6ef41a81f5b17959fb78228"
+  },
+  {
+    "id": "a8-m16-l01-ex2",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "independentAnswer": "36",
+    "method": "sum of odds 1..6 = 6^2-0^2=36.",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "86456994c671ee265473dd2b358f83a349f665d6cdb755501e1bcb1c351d9efa"
+  },
+  {
+    "id": "a8-m16-l01-ex3",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "independentAnswer": "54",
+    "method": "f(10)-f(0)=57-3=54.",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "1ce847ce5292cc64006bfadfb07880edb72a346f2f211e80b5be1d4f683ff8e5"
+  },
+  {
+    "id": "a8-m16-l01-q1",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "independentAnswer": "8",
+    "method": "telescopes to 10-2=8.",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "b330005ed1e4596757d555a450c2788791e508e10bdb85cd6e24f2972babc03e"
+  },
+  {
+    "id": "a8-m16-l01-q2",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "independentAnswer": "16",
+    "method": "sum of odds 1..4 = 4^2=16.",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "f9d3b2f63ba8842e0ebdde736c1e65dac12aa1e6de178358c6c9c730690ee2af"
+  },
+  {
+    "id": "a8-m16-l01-q3",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "independentAnswer": "35",
+    "method": "g(5)-g(0)=42-7=35.",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "40e1ca98956b6a88cfd7e96fa13818ad2079929ef63c279ed806149e4c49d9d3"
+  },
+  {
+    "id": "a8-m16-l01-q4",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "independentAnswer": "49",
+    "method": "sum of odds 1..7 = 7^2=49.",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "6efe01854e7b46089c0e095d0d3795adb766eb819b33e737910c68afc5cb9a89"
+  },
+  {
+    "id": "a8-m16-l01-q5",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "independentAnswer": "choice1",
+    "method": "sum_{k=1}^n(a_{k+1}-a_k)=a_{n+1}-a_1.",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "a1b05a3448a4dda63fc413b1e0d917743a3e57f43e353f54dc0d1b22518fd412"
+  },
+  {
+    "id": "a8-m16-l01-q6",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "independentAnswer": "42",
+    "method": "sum of evens via k(k+1) telescoping: 6*7-0=42.",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "09b21c663376a0d7f5c3d81ec5ea485d4d100ba5951c8fe0dbbb4c9cccf4e479"
+  },
+  {
+    "id": "a8-m16-l02-ex1",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "independentAnswer": "5/6",
+    "method": "1-1/6=5/6.",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "3ef0a4f1748154fb30e58a38670a082318793b7d617c9776f7d09114a9a3fc8e"
+  },
+  {
+    "id": "a8-m16-l02-ex2",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "independentAnswer": "2/9",
+    "method": "1/3-1/9=2/9.",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "e4a357faba614ce973bfc5f4913c6e2a5e1e5c77706f3a3abb905b883fc459ae"
+  },
+  {
+    "id": "a8-m16-l02-ex3",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "independentAnswer": "69/112",
+    "method": "(1/2)[(3/2)-(15/56)]=69/112.",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "e7a9528bf5f1fe16b9ae33d3a7915c94f2177856deb26aeaf534621bfbda0f5d"
+  },
+  {
+    "id": "a8-m16-l02-q1",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "independentAnswer": "4/5",
+    "method": "1-1/5=4/5.",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "0fde085c0192bd27659c222f2b4716c448657b9c939dfcc8550c4d60c7ffed58"
+  },
+  {
+    "id": "a8-m16-l02-q2",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "independentAnswer": "5/14",
+    "method": "1/2-1/7=5/14.",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "a1321b90651572c310f523ae59c93e0397b4052f253b7c39b03b9532649e657f"
+  },
+  {
+    "id": "a8-m16-l02-q3",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "independentAnswer": "9/10",
+    "method": "1-1/10=9/10.",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "48f254c3d0305b4edd4c18bdd51aa47f1e2c3d8d170dc171581256f9b303abf9"
+  },
+  {
+    "id": "a8-m16-l02-q4",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "independentAnswer": "25/42",
+    "method": "(1/2)[(3/2)-(13/42)]=25/42.",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "b755c1ca6e1fee50d17c3b2fb39b611c6636a8fbdf162136f5c5248a95d21b15"
+  },
+  {
+    "id": "a8-m16-l02-q5",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "independentAnswer": "choice1",
+    "method": "split 1/(k(k+3))=(1/3)(1/k-1/(k+3)).",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "0d578e2b9ccee878d9d8b88eec557441cc657c36b0c0ca450b8d4ec99a6304df"
+  },
+  {
+    "id": "a8-m16-l02-q6",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "independentAnswer": "29/45",
+    "method": "(1/2)[(3/2)-(19/90)]=29/45.",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "0225ee52d34c80552f3d89e3ae612fedfd766e1f5882665f49842b6eb925fbc5"
+  },
+  {
+    "id": "a8-m16-l03-ex1",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "independentAnswer": "1/6",
+    "method": "chain 1..5 of k/(k+1) telescopes to 1/6.",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "8c459d8ed0cbfd33ca5f05c8226ed9fcdecd22c280d178cbab6300f0170605c1"
+  },
+  {
+    "id": "a8-m16-l03-ex2",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "independentAnswer": "6",
+    "method": "increasing chain telescopes to 6/1=6.",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "c21a9f4ebd251f34b5478a0ba5322c19e8fca67a4951128f0ba020ed75a4a7e5"
+  },
+  {
+    "id": "a8-m16-l03-ex3",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "independentAnswer": "3/5",
+    "method": "(k-1)/k chain(k=2..5)=1/5; (k+1)/k chain=3; product=3/5.",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "4667d33aba7d78c8c01387d823412a01e9460e9141686da2004bcc3cd5dbea09"
+  },
+  {
+    "id": "a8-m16-l03-q1",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "independentAnswer": "1/3",
+    "method": "chain 2..5 telescopes to 2/6=1/3.",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "7c9f4af57f6011ddfcc1e63c538c81ef92f15a500fddeca4acb17a3e9daaee43"
+  },
+  {
+    "id": "a8-m16-l03-q2",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "independentAnswer": "7/2",
+    "method": "increasing chain 2..6 telescopes to 7/2.",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "60b6461cde9ca06428bb52156bb8bce7bfecbb4ae0167ea8bbfd63b26be37d44"
+  },
+  {
+    "id": "a8-m16-l03-q3",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "independentAnswer": "1/10",
+    "method": "chain 1..9 telescopes to 1/10.",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "1606e9bd26ff190fa70ff06bfa292816133835937dc289a21f3eecd6928e96af"
+  },
+  {
+    "id": "a8-m16-l03-q4",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "independentAnswer": "7/9",
+    "method": "(k-1)/k chain(3..6)=1/3; (k+1)/k chain=7/3; product=7/9.",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "b193163f0383ee8d3ca0c4f3de1f710128a39b4acb2fc6afaffe53c9ed51971c"
+  },
+  {
+    "id": "a8-m16-l03-q5",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "independentAnswer": "choice1",
+    "method": "1-1/k^2=(k-1)/k * (k+1)/k via difference of squares.",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "e9eeae9eed2e4112925bd207fde04cd2dab96effdef0e134da5596063c7bc05f"
+  },
+  {
+    "id": "a8-m16-l03-q6",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "independentAnswer": "11",
+    "method": "1/(n+1)=1/12 => n=11.",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "2eb913cc949d59209b0d71646c37adcc0070a364bd8f8090c6cf9b27c36369fa"
+  },
+  {
+    "id": "a8-m16-l04-ex1",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "independentAnswer": "15",
+    "method": "n^2=225 => n=15.",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "a2d394240b779c85fb4e49d5d05d9e4a43e487d82032fc848deccc72ffd2d24d"
+  },
+  {
+    "id": "a8-m16-l04-ex2",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "independentAnswer": "15",
+    "method": "n/(n+1)=15/16 => n=15.",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "f308a5a927c52669aaf8ef625456e9471821652d622802bad03cd85f289d61e0"
+  },
+  {
+    "id": "a8-m16-l04-ex3",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "independentAnswer": "7",
+    "method": "n+1=8 => n=7.",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "048d1cbfcabe891bcd1608e73c3ba72cda2e1c0e00a2ac0ed740cc57c51ae015"
+  },
+  {
+    "id": "a8-m16-l04-q1",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "independentAnswer": "11",
+    "method": "n^2=121 => n=11.",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "8427872182ddd4873764719f08b1d3784e2bbe7b26d8f5d09f07d68bb1b08061"
+  },
+  {
+    "id": "a8-m16-l04-q2",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "independentAnswer": "9",
+    "method": "n/(n+1)=9/10 => n=9.",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "6df2321652aa044540f093ec09d87f3ca9e178df74cd3a1649a7823680fd8496"
+  },
+  {
+    "id": "a8-m16-l04-q3",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "independentAnswer": "14",
+    "method": "n+1=15 => n=14.",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "1afa478b1180759fdad038ae84a2f232fdc489745fe29c9ff1a6f49c3a6c9896"
+  },
+  {
+    "id": "a8-m16-l04-q4",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "independentAnswer": "1",
+    "method": "3n/(n+1)=3/2 => n=1.",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "767350cfd5cf413421d4b3a1de092755711539f28d1f00ed543c66ad84947a09"
+  },
+  {
+    "id": "a8-m16-l04-q5",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "independentAnswer": "choice1",
+    "method": "simplify the telescoping product before any other algebra.",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "20eeda9ff3e794bda6434f1489671e2c2c951b69265452a7c85e64c19dac2630"
+  },
+  {
+    "id": "a8-m16-l04-q6",
+    "reviewer": "course_architecture",
+    "status": "pass",
+    "independentAnswer": "12",
+    "method": "2n^2-14=274 => n^2=144 => n=12.",
+    "reconciliation": "Authored answer and every solution step agree with the independent calculation; stated problem domain is sufficient.",
+    "fingerprint": "e78245996c6c6b0e513b99280864f5a571809e2e9fd16e69ef5e789d91d1830a"
   }
 ]

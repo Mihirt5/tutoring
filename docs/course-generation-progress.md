@@ -12,7 +12,7 @@ Published means the body is complete and mathematical tasks have independent ver
 
 ### AMC 8 Preparation
 
-Published: **16/98 lessons, 640/3920 minutes**.
+Published: **32/98 lessons, 1280/3920 minutes**.
 
 | Module                                | Topic coverage and planned lessons                                                                                                                                   | Authored | Published | Independent math review |
 | ------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------- | --------- | ----------------------- |
@@ -26,12 +26,12 @@ Published: **16/98 lessons, 640/3920 minutes**.
 | Stars and Bars                        | Stars and Bars Fundamentals; Stars and Bars with Constraints                                                                                                         | 0/2      | 0/2       | 0/0 tasks               |
 | Geometric Counting                    | Geometric Counting Fundamentals; Number of Squares in a Grid; Number of Rectangles in a Grid; Path Counting                                                          | 0/4      | 0/4       | 0/0 tasks               |
 | Recursion                             | Recursion Fundamentals; Recursion with Constraints; Probability Recursions                                                                                           | 0/3      | 0/3       | 0/0 tasks               |
-| Ratios and Percentages                | Ratios Fundamentals; Rate and Work                                                                                                                                   | 0/2      | 0/2       | 0/0 tasks               |
-| Algebraic Manipulations and Equations | System of Equations Basics; Advanced Equation Solving Techniques; Word Problems                                                                                      | 0/3      | 0/3       | 0/0 tasks               |
-| Speed, Distance, and Time             | Speed, Distance, and Time                                                                                                                                            | 0/1      | 0/1       | 0/0 tasks               |
-| Sequences and Series                  | Arithmetic Sequences; Special Series; Geometric Sequences; Arithmetico-Geometric Sequence                                                                            | 0/4      | 0/4       | 0/0 tasks               |
-| Mean, Median, Mode                    | Mean, Median, Mode Fundamentals; Mean Median Mode Conditions Examples                                                                                                | 0/2      | 0/2       | 0/0 tasks               |
-| Telescoping                           | Telescoping Basics; Telescoping Sums; Telescoping Products; Telescoping Equation                                                                                     | 0/4      | 0/4       | 0/0 tasks               |
+| Ratios and Percentages                | Ratios Fundamentals; Rate and Work                                                                                                                                   | 2/2      | 2/2       | 18/18 tasks             |
+| Algebraic Manipulations and Equations | System of Equations Basics; Advanced Equation Solving Techniques; Word Problems                                                                                      | 3/3      | 3/3       | 27/27 tasks             |
+| Speed, Distance, and Time             | Speed, Distance, and Time                                                                                                                                            | 1/1      | 1/1       | 9/9 tasks               |
+| Sequences and Series                  | Arithmetic Sequences; Special Series; Geometric Sequences; Arithmetico-Geometric Sequence                                                                            | 4/4      | 4/4       | 36/36 tasks             |
+| Mean, Median, Mode                    | Mean, Median, Mode Fundamentals; Mean Median Mode Conditions Examples                                                                                                | 2/2      | 2/2       | 18/18 tasks             |
+| Telescoping                           | Telescoping Basics; Telescoping Sums; Telescoping Products; Telescoping Equation                                                                                     | 4/4      | 4/4       | 36/36 tasks             |
 | Primes and Divisibility               | Primes; Divisibility Rules; Prime Factorization; Legendre's Formula                                                                                                  | 0/4      | 0/4       | 0/0 tasks               |
 | Factors                               | Number of Factors; Sum of Factors; Product of Factors                                                                                                                | 0/3      | 0/3       | 0/0 tasks               |
 | GCD and LCM                           | GCD and LCM Fundamentals; GCD and LCM Product; More GCD/LCM Properties; Euclidean Algorithm                                                                          | 0/4      | 0/4       | 0/0 tasks               |
@@ -88,4 +88,4 @@ Three PDFs processed page by page with Poppler: AMC 8 425 pages, AMC 10/12 689 p
 
 ## Remaining work
 
-Complete authoring and independent review for all 103 unpublished lessons. Run and document final validation.
+Complete authoring and independent review for all 87 unpublished lessons. Run and document final validation.
