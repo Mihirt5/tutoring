@@ -1,0 +1,132 @@
+{
+  "about": "Distractor review for the Spot the Concept seed bank. For each problem, every distractor was tried as a first move; anything that actually leads to a solution was moved to also_valid. 'borderline' marks a judgment call worth a second look. Answers are checked separately by scripts/spot/verify_answers.py. Reviewed by Claude in the authoring session, not an independent reviewer.",
+  "reviewed": "2026-11-01",
+  "problems": {
+    "alg-0001": {
+      "distractors": {
+        "polynomial-remainder": "fails: evaluating P gives values, never root sums",
+        "quadratics": "fails: no rational root, so no reduction to a quadratic",
+        "systems-of-equations": "fails: would require the three irrational roots"
+      },
+      "moved_to_also_valid": {
+        "newton-sums": "p2 = e1*p1 - 2*e2 solves it directly"
+      },
+      "excluded": {
+        "symmetric-sums": "the follow-up step after Vieta, not an alternative; kept out of the choices"
+      }
+    },
+    "alg-0002": {
+      "distractors": {
+        "quadratics": "fails: floor term is not constant until n is fixed",
+        "algebraic-manipulation": "fails: no rearrangement removes the floor",
+        "polynomial-remainder": "fails: not a polynomial"
+      }
+    },
+    "alg-0003": {
+      "distractors": {
+        "sequences": "fails: factors are not arithmetic or geometric",
+        "polynomial-remainder": "fails: factor theorem helps factor k^3-1 but does not collapse the product",
+        "vieta": "fails: no fixed polynomial's roots are involved",
+        "logarithms": "fails: turns the product into a sum with no new structure"
+      },
+      "borderline": "algebraic-manipulation would arguably also be a correct label (the factoring), so it was left out of the choices entirely"
+    },
+    "geo-0001": {
+      "distractors": {
+        "pythagorean-theorem": "fails: no right angle, radius unknown",
+        "angle-bisector-theorem": "fails: nothing is bisected",
+        "law-of-cosines": "fails: no known angle at E"
+      },
+      "moved_to_also_valid": {
+        "similar-triangles": "AEC ~ DEB gives the same equation"
+      },
+      "excluded": {
+        "circle-angles": "inscribed angles are the first step of the similarity route, so it is not a clean distractor"
+      }
+    },
+    "geo-0002": {
+      "distractors": {
+        "pythagorean-theorem": "fails as a first move: gives the cut triangle's sides but not the tetrahedron's height to it",
+        "heron-formula": "fails: area of the slanted face without its height gives no volume",
+        "similar-triangles": "fails: no scaled copies in the figure"
+      }
+    },
+    "geo-0003": {
+      "distractors": {
+        "power-of-a-point": "fails: P is on the circle, power zero, no chord pair through P",
+        "pythagorean-theorem": "fails: no right angle without adding a diameter",
+        "angle-bisector-theorem": "fails on its own: PA bisects angle BPC but where it meets BC adds an unknown",
+        "similar-triangles": "borderline: Ptolemy has a similarity proof, but it needs a constructed point; nothing in the given figure is similar"
+      },
+      "moved_to_also_valid": {
+        "law-of-cosines": "angle APB = angle APC = 60 degrees gives a quadratic with roots 5 and 8; works but needs the extra case check"
+      }
+    },
+    "comb-0001": {
+      "distractors": {
+        "pigeonhole": "fails: 5 dice, 6 faces, so no repeat is guaranteed (the intended trap)",
+        "linearity-of-expectation": "fails: gives an expected number of matches, not a probability",
+        "geometric-probability": "fails: discrete outcomes"
+      },
+      "moved_to_also_valid": {
+        "casework": "six repetition patterns can be counted directly"
+      },
+      "excluded": {
+        "inclusion-exclusion": "over the 10 pairs it technically works, so it was kept out rather than used as a distractor"
+      }
+    },
+    "comb-0002": {
+      "distractors": {
+        "linearity-of-expectation": "fails: the stopping time does not split into usable indicators",
+        "geometric-probability": "fails: discrete process",
+        "complementary-counting": "fails: no count to complement"
+      }
+    },
+    "comb-0003": {
+      "distractors": {
+        "overcounting": "fails: rotations are counted as different, so dividing is wrong (the intended trap)",
+        "stars-and-bars": "fails: positions are distinct with adjacency rules",
+        "binomial-coefficients": "fails: ignores the adjacency condition",
+        "pigeonhole": "fails: nothing is guaranteed"
+      },
+      "moved_to_also_valid": {
+        "states-recursion": "transfer around the ring works"
+      },
+      "borderline": "casework (on how many colors appear, or on the opposite pairs) also works, so it was left out of the choices"
+    },
+    "nt-0001": {
+      "distractors": {
+        "modular-arithmetic": "fails: mod 9 shows both numbers agree, not which number",
+        "divisor-counting": "fails: no divisors involved",
+        "diophantine-factoring": "fails: equations are linear once written in digits"
+      },
+      "excluded": {
+        "systems-of-equations": "the follow-up step, not an alternative"
+      }
+    },
+    "nt-0002": {
+      "distractors": {
+        "gcd-lcm": "fails: one number only",
+        "modular-arithmetic": "fails: remainders do not count divisors",
+        "digits": "fails: decimal digits are irrelevant"
+      },
+      "excluded": {
+        "legendre-formula": "used to factor 12!, a sub-step rather than an alternative"
+      }
+    },
+    "nt-0003": {
+      "distractors": {
+        "modular-arithmetic": "fails: can rule pairs out, cannot count them",
+        "pell-equations": "fails: the equation is a product after clearing denominators, not x^2 - dy^2 = 1 (surface trap: integer pairs)",
+        "chinese-remainder": "fails: no simultaneous congruences",
+        "fermat-euler": "fails: no large powers"
+      },
+      "excluded": {
+        "divisor-counting": "the follow-up step (count divisors of 144), not an alternative"
+      },
+      "moved_to_also_valid": {
+        "gcd-lcm": "parametrizing x = da, y = db works but is slow"
+      }
+    }
+  }
+}

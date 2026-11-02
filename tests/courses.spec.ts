@@ -64,13 +64,17 @@ test("catalog, module order, course routes, and navigation are accessible", asyn
     const mobileNav = page.getByRole("navigation", {
       name: "Platform (mobile)",
     });
-    await expect(mobileNav.getByRole("link")).toHaveCount(7);
+    await expect(mobileNav.getByRole("link")).toHaveCount(9);
     await mobileNav
       .getByRole("link", { name: "AI Coach" })
       .scrollIntoViewIfNeeded();
     await expect(
       mobileNav.getByRole("link", { name: "AI Coach" }),
     ).toBeVisible();
+    // toBeVisible passes for off-screen links; the last one must be reachable.
+    await expect(
+      mobileNav.getByRole("link", { name: "AI Coach" }),
+    ).toBeInViewport();
   }
 });
 

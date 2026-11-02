@@ -1,0 +1,81 @@
+[
+  {
+    "id": "comb-0001",
+    "problem": "Five fair six-sided dice are rolled. What is the probability that at least two of them show the same number?",
+    "level": "10",
+    "difficulty": 2,
+    "primary_concept": "complementary-counting",
+    "also_valid": [
+      "casework"
+    ],
+    "also_valid_notes": {
+      "casework": "Casework works in principle, but you'd count six repetition patterns (a pair, two pairs, three of a kind, and so on). The complement, all five different, is one product."
+    },
+    "distractors": [
+      "pigeonhole",
+      "linearity-of-expectation",
+      "geometric-probability"
+    ],
+    "trigger_explanation": "At least two the same is the opposite of all different, and all different is a single, simple count.",
+    "why_not": {
+      "pigeonhole": "Pigeonhole would force a repeat only with $7$ dice. With $5$ dice and $6$ faces, a repeat isn't guaranteed; you need its probability.",
+      "linearity-of-expectation": "Expected values count matches on average; they don't give the probability that at least one match happens.",
+      "geometric-probability": "The outcomes are discrete die faces, not points in a continuous region."
+    },
+    "first_move": "Count rolls with all five numbers different: $6\\cdot5\\cdot4\\cdot3\\cdot2$.",
+    "answer": "49/54",
+    "solution_sketch": "$P(\\text{all different}) = \\frac{720}{7776} = \\frac{5}{54}$, so the answer is $1 - \\frac{5}{54} = \\frac{49}{54}$."
+  },
+  {
+    "id": "comb-0002",
+    "problem": "A fair coin is flipped repeatedly until three heads in a row appear. What is the expected number of flips?",
+    "level": "12",
+    "difficulty": 3,
+    "primary_concept": "states-recursion",
+    "also_valid": [],
+    "also_valid_notes": {},
+    "distractors": [
+      "linearity-of-expectation",
+      "geometric-probability",
+      "complementary-counting"
+    ],
+    "trigger_explanation": "The process repeats until a pattern appears, and what matters is how much of the pattern you've built so far. That's a small set of states with equations between them.",
+    "why_not": {
+      "linearity-of-expectation": "There's no natural way to split the stopping time into indicator pieces; the flips depend on each other through the current run.",
+      "geometric-probability": "Coin flips are discrete; there's no length or area to measure.",
+      "complementary-counting": "There's no count to complement here; the answer is an expected value of a process that stops."
+    },
+    "first_move": "Let $E_k$ be the expected remaining flips with a current run of $k$ heads, so $E_k = 1 + \\tfrac12E_{k+1} + \\tfrac12E_0$ and $E_3 = 0$.",
+    "answer": "14",
+    "solution_sketch": "From $E_2 = 1 + \\frac12E_0$, $E_1 = 1 + \\frac12E_2 + \\frac12E_0$, and $E_0 = 1 + \\frac12E_1 + \\frac12E_0$, solving gives $E_0 = 14$."
+  },
+  {
+    "id": "comb-0003",
+    "problem": "Each vertex of a regular hexagon is colored red, green, or blue so that every two vertices joined by a side have different colors. Colorings that differ by a rotation are counted as different. How many colorings are possible?",
+    "level": "AIME",
+    "difficulty": 2,
+    "primary_concept": "graph-structure-counting",
+    "also_valid": [
+      "states-recursion"
+    ],
+    "also_valid_notes": {
+      "states-recursion": "Walking around the hexagon and tracking whether the current color matches the first works too. That is the same cycle structure in recursive form; seeing the hexagon as a cycle graph gives the count at once."
+    },
+    "distractors": [
+      "overcounting",
+      "stars-and-bars",
+      "binomial-coefficients",
+      "pigeonhole"
+    ],
+    "trigger_explanation": "Neighbors must differ and the neighbors form a closed ring. The ring structure (a cycle graph) is what you count around.",
+    "why_not": {
+      "overcounting": "Rotations are explicitly counted as different, so there's nothing to divide out. That's the trap.",
+      "stars-and-bars": "Colors are assigned to specific positions with adjacency rules, not distributed as identical objects.",
+      "binomial-coefficients": "Choosing which vertices get a color ignores the requirement that neighbors differ.",
+      "pigeonhole": "Nothing is being guaranteed; the question asks for an exact count."
+    },
+    "first_move": "Count proper $3$-colorings of a $6$-cycle: color around the ring and correct for the last vertex having to differ from the first.",
+    "answer": "66",
+    "solution_sketch": "An $n$-cycle has $(k-1)^n + (-1)^n(k-1)$ proper $k$-colorings, here $2^6 + 2 = 66$."
+  }
+]

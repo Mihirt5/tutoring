@@ -1,0 +1,77 @@
+[
+  {
+    "id": "nt-0001",
+    "problem": "A two-digit number is $27$ more than the number formed by reversing its digits, and its digits add up to $9$. What is the number?",
+    "level": "10",
+    "difficulty": 2,
+    "primary_concept": "digits",
+    "also_valid": [],
+    "also_valid_notes": {},
+    "distractors": [
+      "modular-arithmetic",
+      "divisor-counting",
+      "diophantine-factoring"
+    ],
+    "trigger_explanation": "Reversing digits is the signal: write the number as $10a + b$ so that the reversal is $10b + a$.",
+    "why_not": {
+      "modular-arithmetic": "Working mod $9$ tells you that both numbers have the same remainder, but not which number it is.",
+      "divisor-counting": "Nothing asks about divisors of a number.",
+      "diophantine-factoring": "Once written in digits, the equations are linear; there's no product to factor."
+    },
+    "first_move": "Write the number as $10a + b$, so $(10a+b) - (10b+a) = 9(a-b) = 27$.",
+    "answer": "63",
+    "solution_sketch": "$a - b = 3$ and $a + b = 9$ give $a = 6$, $b = 3$, so the number is $63$."
+  },
+  {
+    "id": "nt-0002",
+    "problem": "How many perfect squares are divisors of $12!$?",
+    "level": "12",
+    "difficulty": 2,
+    "primary_concept": "divisor-counting",
+    "also_valid": [],
+    "also_valid_notes": {},
+    "distractors": [
+      "gcd-lcm",
+      "modular-arithmetic",
+      "digits"
+    ],
+    "trigger_explanation": "How many divisors have a property is a divisor count: write the prime factorization and count allowed exponents for each prime.",
+    "why_not": {
+      "gcd-lcm": "There's only one number here; nothing is being compared through gcds or lcms.",
+      "modular-arithmetic": "Remainders don't count divisors. You need the exponents in the factorization.",
+      "digits": "The decimal digits of $12!$ say nothing about which squares divide it."
+    },
+    "first_move": "Factor $12! = 2^{10}\\cdot3^5\\cdot5^2\\cdot7\\cdot11$, then count even exponents for each prime.",
+    "answer": "36",
+    "solution_sketch": "The exponent choices are $\\{0,2,\\dots,10\\}$ for $2$ (6 choices), $\\{0,2,4\\}$ for $3$ (3 choices), $\\{0,2\\}$ for $5$ (2 choices), and only $0$ for $7$ and $11$. That's $6\\cdot3\\cdot2 = 36$."
+  },
+  {
+    "id": "nt-0003",
+    "problem": "Find the number of ordered pairs of positive integers $(x, y)$ such that $\\dfrac{1}{x} + \\dfrac{1}{y} = \\dfrac{1}{12}$.",
+    "level": "AIME",
+    "difficulty": 2,
+    "primary_concept": "diophantine-factoring",
+    "also_valid": [
+      "gcd-lcm"
+    ],
+    "also_valid_notes": {
+      "gcd-lcm": "Writing $x = da$, $y = db$ with $\\gcd(a,b) = 1$ does lead to a count, but only after a page of work. Adding $144$ to factor gives the answer in one line."
+    },
+    "distractors": [
+      "modular-arithmetic",
+      "pell-equations",
+      "chinese-remainder",
+      "fermat-euler"
+    ],
+    "trigger_explanation": "Reciprocals summing to a constant in positive integers: clear denominators and you get a product term $xy$ that factors after adding a constant.",
+    "why_not": {
+      "modular-arithmetic": "Reducing mod a small number can rule some pairs out but can't count the solutions.",
+      "pell-equations": "It asks for integer pairs, but the equation isn't of the form $x^2 - dy^2 = 1$; clearing denominators gives a product, not a difference of squares.",
+      "chinese-remainder": "There are no simultaneous congruence conditions to combine.",
+      "fermat-euler": "No large powers appear, so there's nothing to reduce."
+    },
+    "first_move": "Clear denominators to $xy - 12x - 12y = 0$, then add $144$: $(x-12)(y-12) = 144$.",
+    "answer": "15",
+    "solution_sketch": "If $x < 12$, both factors are negative but at least $-11$, so their product is at most $121 < 144$. So both factors are positive divisors of $144 = 2^4\\cdot3^2$, which has $5\\cdot3 = 15$ divisors."
+  }
+]

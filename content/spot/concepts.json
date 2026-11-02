@@ -1,0 +1,1285 @@
+[
+  {
+    "id": "algebraic-manipulation",
+    "name": "Algebraic Manipulation",
+    "area": "algebra",
+    "subarea": "expressions",
+    "level": [
+      "10",
+      "12",
+      "AIME"
+    ],
+    "statement": "Factor, expand, or substitute to expose structure instead of solving for each variable.",
+    "frequency": "core",
+    "triggers": [
+      "the question asks for a combined expression, not the individual variables",
+      "an expression that looks messy but has repeated pieces",
+      "nested fractions or reciprocals that should collapse"
+    ],
+    "confusable_with": [
+      "symmetric-sums",
+      "systems-of-equations",
+      "quadratics"
+    ],
+    "example_refs": []
+  },
+  {
+    "id": "systems-of-equations",
+    "name": "Systems of Equations",
+    "area": "algebra",
+    "subarea": "equations",
+    "level": [
+      "10",
+      "12",
+      "AIME"
+    ],
+    "statement": "Add, subtract, multiply, or divide whole equations to eliminate unknowns.",
+    "frequency": "core",
+    "triggers": [
+      "several equations sharing the same unknowns",
+      "equations that are cyclic or symmetric in the variables",
+      "the target is a sum or product of the unknowns"
+    ],
+    "confusable_with": [
+      "algebraic-manipulation",
+      "symmetric-sums",
+      "vieta"
+    ],
+    "example_refs": []
+  },
+  {
+    "id": "quadratics",
+    "name": "Quadratics",
+    "area": "algebra",
+    "subarea": "polynomials",
+    "level": [
+      "10",
+      "12",
+      "AIME"
+    ],
+    "statement": "Complete the square: $ax^2+bx+c = a(x-h)^2+k$; the discriminant $b^2-4ac$ counts real roots.",
+    "frequency": "core",
+    "triggers": [
+      "minimum or maximum of a degree-2 expression",
+      "exactly one solution, or no real solutions",
+      "a parameter that controls whether roots exist"
+    ],
+    "confusable_with": [
+      "vieta",
+      "am-gm",
+      "algebraic-manipulation"
+    ],
+    "example_refs": []
+  },
+  {
+    "id": "vieta",
+    "name": "Vieta's Formulas",
+    "area": "algebra",
+    "subarea": "polynomials",
+    "level": [
+      "10",
+      "12",
+      "AIME"
+    ],
+    "statement": "For $x^2+bx+c$ with roots $r,s$: $r+s=-b$ and $rs=c$; for higher degree, the elementary symmetric sums of the roots are read off the coefficients.",
+    "frequency": "core",
+    "triggers": [
+      "a symmetric expression in roots you are never asked to find",
+      "a polynomial whose roots are not nice numbers",
+      "roots described by a relationship such as being in arithmetic progression"
+    ],
+    "confusable_with": [
+      "quadratics",
+      "symmetric-sums",
+      "newton-sums",
+      "polynomial-remainder"
+    ],
+    "example_refs": []
+  },
+  {
+    "id": "symmetric-sums",
+    "name": "Symmetric-Sum Identities",
+    "area": "algebra",
+    "subarea": "expressions",
+    "level": [
+      "10",
+      "12",
+      "AIME"
+    ],
+    "statement": "Rewrite power sums using $x+y$ and $xy$, e.g. $x^2+y^2=(x+y)^2-2xy$.",
+    "frequency": "common",
+    "triggers": [
+      "given $x+y$ and $xy$ (or $x+\\tfrac{1}{x}$)",
+      "asked for $x^2+y^2$, $x^3+y^3$, or similar",
+      "solving for $x$ and $y$ individually would mean radicals"
+    ],
+    "confusable_with": [
+      "vieta",
+      "algebraic-manipulation",
+      "newton-sums"
+    ],
+    "example_refs": []
+  },
+  {
+    "id": "sequences",
+    "name": "Arithmetic and Geometric Sequences",
+    "area": "algebra",
+    "subarea": "sequences",
+    "level": [
+      "10",
+      "12",
+      "AIME"
+    ],
+    "statement": "Arithmetic: $a_n=a_1+(n-1)d$. Geometric: $a_n=a_1r^{n-1}$, and $\\sum a_1r^{k} = \\tfrac{a_1}{1-r}$ for $|r|<1$.",
+    "frequency": "core",
+    "triggers": [
+      "terms that increase by a constant difference or ratio",
+      "three numbers in arithmetic or geometric progression",
+      "an infinite sum of shrinking terms"
+    ],
+    "confusable_with": [
+      "telescoping",
+      "states-recursion",
+      "algebraic-manipulation"
+    ],
+    "example_refs": []
+  },
+  {
+    "id": "telescoping",
+    "name": "Telescoping",
+    "area": "algebra",
+    "subarea": "sequences",
+    "level": [
+      "10",
+      "12",
+      "AIME"
+    ],
+    "statement": "Split each term into a difference $f(k)-f(k+1)$ (or a ratio $\\tfrac{g(k)}{g(k+1)}$) so that the sum or product collapses.",
+    "frequency": "common",
+    "triggers": [
+      "a long sum or product indexed by consecutive integers",
+      "fractions whose denominators factor into consecutive pieces",
+      "a product of terms like $1+\\tfrac{1}{k}$"
+    ],
+    "confusable_with": [
+      "sequences",
+      "algebraic-manipulation",
+      "logarithms"
+    ],
+    "example_refs": []
+  },
+  {
+    "id": "floor-functions",
+    "name": "Floor Functions",
+    "area": "algebra",
+    "subarea": "functions",
+    "level": [
+      "10",
+      "12",
+      "AIME"
+    ],
+    "statement": "Write $x=\\lfloor x\\rfloor+\\{x\\}$ with $0\\le\\{x\\}<1$, then use $n\\le x<n+1$.",
+    "frequency": "core",
+    "triggers": [
+      "floor or ceiling brackets around an expression",
+      "an equation mixing $x$ with its integer part",
+      "counting integers $n$ for which a floor expression behaves a certain way"
+    ],
+    "confusable_with": [
+      "algebraic-manipulation",
+      "quadratics",
+      "hermite-identity"
+    ],
+    "example_refs": []
+  },
+  {
+    "id": "logarithms",
+    "name": "Logarithms",
+    "area": "algebra",
+    "subarea": "functions",
+    "level": [
+      "10",
+      "12",
+      "AIME"
+    ],
+    "statement": "$\\log_b(xy)=\\log_b x+\\log_b y$ and change of base $\\log_b a=\\tfrac{\\log a}{\\log b}$.",
+    "frequency": "core",
+    "triggers": [
+      "logarithms with different bases in one equation",
+      "unknown exponents",
+      "a product or chain of logarithms"
+    ],
+    "confusable_with": [
+      "algebraic-manipulation",
+      "systems-of-equations",
+      "sequences"
+    ],
+    "example_refs": []
+  },
+  {
+    "id": "complex-numbers",
+    "name": "Complex Numbers and Roots of Unity",
+    "area": "algebra",
+    "subarea": "complex",
+    "level": [
+      "12",
+      "AIME"
+    ],
+    "statement": "Write $z=re^{i\\theta}$; the $n$th roots of unity are $e^{2\\pi ik/n}$ and sum to $0$.",
+    "frequency": "common",
+    "triggers": [
+      "powers like $z^n=1$ or $z^n=-1$",
+      "rotations of points in the plane",
+      "$|z|$ or the argument of a complex number"
+    ],
+    "confusable_with": [
+      "vieta",
+      "trig-identities",
+      "coordinate-geometry"
+    ],
+    "example_refs": []
+  },
+  {
+    "id": "trig-identities",
+    "name": "Trigonometric Identities",
+    "area": "algebra",
+    "subarea": "trigonometry",
+    "level": [
+      "12",
+      "AIME"
+    ],
+    "statement": "Angle addition, double angle, and $\\sin^2\\theta+\\cos^2\\theta=1$.",
+    "frequency": "common",
+    "triggers": [
+      "sums or products of sines and cosines",
+      "angles that are multiples of one another",
+      "a trig expression to be evaluated exactly"
+    ],
+    "confusable_with": [
+      "complex-numbers",
+      "law-of-cosines",
+      "algebraic-manipulation"
+    ],
+    "example_refs": []
+  },
+  {
+    "id": "am-gm",
+    "name": "AM-GM Inequality",
+    "area": "algebra",
+    "subarea": "inequalities",
+    "level": [
+      "10",
+      "12",
+      "AIME"
+    ],
+    "statement": "For nonnegative reals, $\\tfrac{a+b}{2}\\ge\\sqrt{ab}$, with equality when $a=b$.",
+    "frequency": "common",
+    "triggers": [
+      "minimize a sum of positive terms whose product is fixed",
+      "maximize a product given a fixed sum",
+      "an optimization over positive reals with no calculus expected"
+    ],
+    "confusable_with": [
+      "quadratics",
+      "cauchy-schwarz",
+      "algebraic-manipulation"
+    ],
+    "example_refs": []
+  },
+  {
+    "id": "cauchy-schwarz",
+    "name": "Cauchy-Schwarz Inequality",
+    "area": "algebra",
+    "subarea": "inequalities",
+    "level": [
+      "AIME",
+      "Beyond"
+    ],
+    "statement": "$\\left(\\sum a_i^2\\right)\\left(\\sum b_i^2\\right)\\ge\\left(\\sum a_ib_i\\right)^2$.",
+    "frequency": "rare",
+    "triggers": [
+      "a sum of squares bounded by a linear constraint",
+      "minimizing a sum of fractions with squared numerators",
+      "a dot product of two lists of numbers"
+    ],
+    "confusable_with": [
+      "am-gm",
+      "quadratics"
+    ],
+    "example_refs": []
+  },
+  {
+    "id": "newton-sums",
+    "name": "Newton's Sums",
+    "area": "algebra",
+    "subarea": "polynomials",
+    "level": [
+      "12",
+      "AIME"
+    ],
+    "statement": "Power sums of roots $p_k=\\sum r_i^k$ satisfy a recursion in the polynomial's coefficients.",
+    "frequency": "rare",
+    "triggers": [
+      "the sum of cubes or higher powers of the roots",
+      "a polynomial with roots too ugly to find",
+      "repeated use of symmetric sums would be long"
+    ],
+    "confusable_with": [
+      "vieta",
+      "symmetric-sums"
+    ],
+    "example_refs": []
+  },
+  {
+    "id": "functional-equations",
+    "name": "Functional Equations",
+    "area": "algebra",
+    "subarea": "functions",
+    "level": [
+      "12",
+      "AIME"
+    ],
+    "statement": "Substitute well-chosen values (often $0$, $1$, $x$ and $\\tfrac{1}{x}$, or $-x$) to pin the function down.",
+    "frequency": "common",
+    "triggers": [
+      "an equation that must hold for all $x$",
+      "$f$ evaluated at related inputs like $x$ and $\\tfrac{1}{x}$",
+      "only one or two values of $f$ are asked for"
+    ],
+    "confusable_with": [
+      "systems-of-equations",
+      "states-recursion",
+      "polynomial-remainder"
+    ],
+    "example_refs": []
+  },
+  {
+    "id": "polynomial-remainder",
+    "name": "Remainder and Factor Theorems",
+    "area": "algebra",
+    "subarea": "polynomials",
+    "level": [
+      "10",
+      "12",
+      "AIME"
+    ],
+    "statement": "The remainder of $P(x)$ on division by $x-a$ is $P(a)$; the sum of the coefficients is $P(1)$.",
+    "frequency": "common",
+    "triggers": [
+      "a remainder after dividing by a linear or quadratic factor",
+      "values of a polynomial at specific points",
+      "the sum of the coefficients of an expanded power"
+    ],
+    "confusable_with": [
+      "vieta",
+      "algebraic-manipulation",
+      "functional-equations"
+    ],
+    "example_refs": []
+  },
+  {
+    "id": "hermite-identity",
+    "name": "Hermite's Identity",
+    "area": "algebra",
+    "subarea": "functions",
+    "level": [
+      "AIME",
+      "Beyond"
+    ],
+    "statement": "$\\sum_{k=0}^{n-1}\\lfloor x+\\tfrac{k}{n}\\rfloor=\\lfloor nx\\rfloor$.",
+    "frequency": "rare",
+    "triggers": [
+      "a sum of floors of $x$ plus evenly spaced fractions",
+      "floors of $x$, $2x$, $3x$ appearing together"
+    ],
+    "confusable_with": [
+      "floor-functions",
+      "telescoping"
+    ],
+    "example_refs": []
+  },
+  {
+    "id": "similar-triangles",
+    "name": "Similarity and Area Ratios",
+    "area": "geometry",
+    "subarea": "triangles",
+    "level": [
+      "10",
+      "12",
+      "AIME"
+    ],
+    "statement": "Similar figures with ratio $k$ have lengths in ratio $k$ and areas in ratio $k^2$.",
+    "frequency": "core",
+    "triggers": [
+      "a line parallel to one side of a triangle",
+      "two triangles sharing an angle",
+      "a ratio of areas asked from a ratio of lengths, or the reverse"
+    ],
+    "confusable_with": [
+      "power-of-a-point",
+      "angle-bisector-theorem",
+      "mass-points",
+      "area-methods"
+    ],
+    "example_refs": []
+  },
+  {
+    "id": "pythagorean-theorem",
+    "name": "Pythagorean Theorem",
+    "area": "geometry",
+    "subarea": "triangles",
+    "level": [
+      "10",
+      "12",
+      "AIME"
+    ],
+    "statement": "In a right triangle, $a^2+b^2=c^2$.",
+    "frequency": "core",
+    "triggers": [
+      "a right angle or perpendicular segments",
+      "a distance from a point to a line or chord",
+      "an altitude splitting a triangle into two right triangles"
+    ],
+    "confusable_with": [
+      "law-of-cosines",
+      "coordinate-geometry",
+      "similar-triangles"
+    ],
+    "example_refs": []
+  },
+  {
+    "id": "circle-angles",
+    "name": "Inscribed Angles and Cyclic Quadrilaterals",
+    "area": "geometry",
+    "subarea": "circles",
+    "level": [
+      "10",
+      "12",
+      "AIME"
+    ],
+    "statement": "An inscribed angle is half its intercepted arc; opposite angles of a cyclic quadrilateral sum to $180^\\circ$.",
+    "frequency": "core",
+    "triggers": [
+      "points on a circle with angle measures asked",
+      "a quadrilateral inscribed in a circle",
+      "an angle subtending a diameter"
+    ],
+    "confusable_with": [
+      "similar-triangles",
+      "power-of-a-point",
+      "ptolemy"
+    ],
+    "example_refs": []
+  },
+  {
+    "id": "power-of-a-point",
+    "name": "Power of a Point",
+    "area": "geometry",
+    "subarea": "circles",
+    "level": [
+      "10",
+      "12",
+      "AIME"
+    ],
+    "statement": "$PA\\cdot PB=PC\\cdot PD$ for lines through $P$ meeting the circle at $A,B$ and $C,D$; for a tangent, $PT^2=PA\\cdot PB$.",
+    "frequency": "core",
+    "triggers": [
+      "two chords crossing inside a circle",
+      "a tangent and a secant from one external point",
+      "products of segment lengths along lines through one point"
+    ],
+    "confusable_with": [
+      "similar-triangles",
+      "pythagorean-theorem",
+      "circle-angles"
+    ],
+    "example_refs": []
+  },
+  {
+    "id": "coordinate-geometry",
+    "name": "Coordinates",
+    "area": "geometry",
+    "subarea": "analytic",
+    "level": [
+      "10",
+      "12",
+      "AIME"
+    ],
+    "statement": "Place the figure on axes so that key points have simple coordinates, then compute.",
+    "frequency": "core",
+    "triggers": [
+      "a figure with right angles that sits naturally on axes",
+      "explicit coordinates or slopes",
+      "many lengths and intersections that synthetic methods juggle awkwardly"
+    ],
+    "confusable_with": [
+      "pythagorean-theorem",
+      "shoelace-formula",
+      "similar-triangles"
+    ],
+    "example_refs": []
+  },
+  {
+    "id": "shoelace-formula",
+    "name": "Shoelace Formula",
+    "area": "geometry",
+    "subarea": "analytic",
+    "level": [
+      "10",
+      "12",
+      "AIME"
+    ],
+    "statement": "Area $=\\tfrac12\\left|\\sum (x_iy_{i+1}-x_{i+1}y_i)\\right|$.",
+    "frequency": "common",
+    "triggers": [
+      "a polygon given by vertex coordinates",
+      "an irregular region with no convenient base or height"
+    ],
+    "confusable_with": [
+      "coordinate-geometry",
+      "area-methods",
+      "pythagorean-theorem"
+    ],
+    "example_refs": []
+  },
+  {
+    "id": "area-methods",
+    "name": "Area Ratios and Area Two Ways",
+    "area": "geometry",
+    "subarea": "area",
+    "level": [
+      "10",
+      "12",
+      "AIME"
+    ],
+    "statement": "Triangles with equal heights have areas proportional to their bases; computing one area two ways yields a length.",
+    "frequency": "common",
+    "triggers": [
+      "cevians dividing a triangle into smaller regions",
+      "an altitude or inradius you can't reach directly",
+      "areas of triangles sharing a vertex"
+    ],
+    "confusable_with": [
+      "similar-triangles",
+      "mass-points",
+      "heron-formula"
+    ],
+    "example_refs": []
+  },
+  {
+    "id": "angle-bisector-theorem",
+    "name": "Angle Bisector Theorem",
+    "area": "geometry",
+    "subarea": "triangles",
+    "level": [
+      "10",
+      "12",
+      "AIME"
+    ],
+    "statement": "The bisector from $A$ meets $BC$ at $D$ with $\\tfrac{BD}{DC}=\\tfrac{AB}{AC}$.",
+    "frequency": "common",
+    "triggers": [
+      "a segment that bisects an angle of a triangle",
+      "the ratio in which a side is divided"
+    ],
+    "confusable_with": [
+      "similar-triangles",
+      "mass-points",
+      "area-methods"
+    ],
+    "example_refs": []
+  },
+  {
+    "id": "law-of-cosines",
+    "name": "Law of Cosines",
+    "area": "geometry",
+    "subarea": "trigonometry",
+    "level": [
+      "10",
+      "12",
+      "AIME"
+    ],
+    "statement": "$c^2=a^2+b^2-2ab\\cos C$.",
+    "frequency": "common",
+    "triggers": [
+      "two sides and the included angle known",
+      "a triangle with a $60^\\circ$ or $120^\\circ$ angle",
+      "side lengths of a non-right triangle"
+    ],
+    "confusable_with": [
+      "pythagorean-theorem",
+      "trig-identities",
+      "heron-formula"
+    ],
+    "example_refs": []
+  },
+  {
+    "id": "heron-formula",
+    "name": "Heron's Formula",
+    "area": "geometry",
+    "subarea": "area",
+    "level": [
+      "10",
+      "12",
+      "AIME"
+    ],
+    "statement": "Area $=\\sqrt{s(s-a)(s-b)(s-c)}$ with semiperimeter $s$.",
+    "frequency": "common",
+    "triggers": [
+      "all three side lengths given and nothing else",
+      "integer sides like $13,14,15$"
+    ],
+    "confusable_with": [
+      "pythagorean-theorem",
+      "area-methods",
+      "law-of-cosines"
+    ],
+    "example_refs": []
+  },
+  {
+    "id": "three-d-volume",
+    "name": "Right-Angle 3D Volume",
+    "area": "geometry",
+    "subarea": "solids",
+    "level": [
+      "10",
+      "12",
+      "AIME"
+    ],
+    "statement": "In solids with mutually perpendicular edges, use base times height; a corner tetrahedron with legs $a,b,c$ has volume $\\tfrac{abc}{6}$.",
+    "frequency": "core",
+    "triggers": [
+      "a corner cut off a box or cube",
+      "three edges meeting at right angles",
+      "a pyramid or prism whose height is an edge"
+    ],
+    "confusable_with": [
+      "pythagorean-theorem",
+      "similar-triangles",
+      "heron-formula"
+    ],
+    "example_refs": []
+  },
+  {
+    "id": "mass-points",
+    "name": "Mass Points",
+    "area": "geometry",
+    "subarea": "triangles",
+    "level": [
+      "10",
+      "12"
+    ],
+    "statement": "Assign masses at vertices so that each cevian balances; segment ratios follow from the masses.",
+    "frequency": "common",
+    "triggers": [
+      "two or more cevians with given division ratios",
+      "the ratio in which cevians cut each other"
+    ],
+    "confusable_with": [
+      "similar-triangles",
+      "area-methods",
+      "angle-bisector-theorem"
+    ],
+    "example_refs": []
+  },
+  {
+    "id": "ptolemy",
+    "name": "Ptolemy's Theorem",
+    "area": "geometry",
+    "subarea": "circles",
+    "level": [
+      "12",
+      "AIME"
+    ],
+    "statement": "In cyclic quadrilateral $ABCD$: $AC\\cdot BD=AB\\cdot CD+AD\\cdot BC$.",
+    "frequency": "common",
+    "triggers": [
+      "a quadrilateral inscribed in a circle with side and diagonal lengths",
+      "a point on the circumcircle of an equilateral triangle or square"
+    ],
+    "confusable_with": [
+      "circle-angles",
+      "law-of-cosines",
+      "power-of-a-point"
+    ],
+    "example_refs": []
+  },
+  {
+    "id": "triangle-inequality",
+    "name": "Triangle Inequality",
+    "area": "geometry",
+    "subarea": "triangles",
+    "level": [
+      "10",
+      "12"
+    ],
+    "statement": "Each side of a triangle is less than the sum of the other two.",
+    "frequency": "common",
+    "triggers": [
+      "which side lengths are possible",
+      "integer third sides",
+      "a degenerate or nearly flat triangle"
+    ],
+    "confusable_with": [
+      "pythagorean-theorem",
+      "law-of-cosines"
+    ],
+    "example_refs": []
+  },
+  {
+    "id": "complementary-counting",
+    "name": "Complementary Counting",
+    "area": "combinatorics",
+    "subarea": "counting",
+    "level": [
+      "10",
+      "12",
+      "AIME"
+    ],
+    "statement": "Count what you don't want and subtract from the total.",
+    "frequency": "core",
+    "triggers": [
+      "at least one",
+      "not all",
+      "the unwanted cases are fewer or simpler than the wanted ones"
+    ],
+    "confusable_with": [
+      "casework",
+      "inclusion-exclusion",
+      "pigeonhole"
+    ],
+    "example_refs": []
+  },
+  {
+    "id": "casework",
+    "name": "Casework",
+    "area": "combinatorics",
+    "subarea": "counting",
+    "level": [
+      "10",
+      "12",
+      "AIME"
+    ],
+    "statement": "Split into disjoint cases that together cover everything, count each, then add.",
+    "frequency": "common",
+    "triggers": [
+      "a condition that behaves differently for a few distinct values",
+      "small numbers where listing types is feasible"
+    ],
+    "confusable_with": [
+      "complementary-counting",
+      "inclusion-exclusion",
+      "graph-structure-counting"
+    ],
+    "example_refs": []
+  },
+  {
+    "id": "binomial-coefficients",
+    "name": "Choosing Positions",
+    "area": "combinatorics",
+    "subarea": "counting",
+    "level": [
+      "10",
+      "12",
+      "AIME"
+    ],
+    "statement": "Selecting $k$ of $n$ items without regard to order gives $\\binom{n}{k}$; lattice paths choose which steps go right.",
+    "frequency": "common",
+    "triggers": [
+      "order doesn't matter",
+      "committees, subsets, or lattice paths",
+      "strings with a fixed number of each symbol"
+    ],
+    "confusable_with": [
+      "overcounting",
+      "stars-and-bars",
+      "casework"
+    ],
+    "example_refs": []
+  },
+  {
+    "id": "overcounting",
+    "name": "Overcounting and Symmetry",
+    "area": "combinatorics",
+    "subarea": "counting",
+    "level": [
+      "10",
+      "12",
+      "AIME"
+    ],
+    "statement": "Count as if all objects are distinct, then divide by the number of times each arrangement was counted.",
+    "frequency": "common",
+    "triggers": [
+      "identical letters or objects",
+      "arrangements around a circle",
+      "arrangements considered the same up to rotation or reflection"
+    ],
+    "confusable_with": [
+      "binomial-coefficients",
+      "casework",
+      "stars-and-bars"
+    ],
+    "example_refs": []
+  },
+  {
+    "id": "stars-and-bars",
+    "name": "Stars and Bars",
+    "area": "combinatorics",
+    "subarea": "counting",
+    "level": [
+      "10",
+      "12",
+      "AIME"
+    ],
+    "statement": "Nonnegative integer solutions of $x_1+\\cdots+x_k=n$ number $\\binom{n+k-1}{k-1}$.",
+    "frequency": "common",
+    "triggers": [
+      "distributing identical objects into distinct boxes",
+      "digit sums or coin totals",
+      "nonnegative integer solutions of a linear equation"
+    ],
+    "confusable_with": [
+      "binomial-coefficients",
+      "casework",
+      "overcounting"
+    ],
+    "example_refs": []
+  },
+  {
+    "id": "inclusion-exclusion",
+    "name": "Inclusion-Exclusion",
+    "area": "combinatorics",
+    "subarea": "counting",
+    "level": [
+      "10",
+      "12",
+      "AIME"
+    ],
+    "statement": "$|A\\cup B|=|A|+|B|-|A\\cap B|$, extended with alternating signs.",
+    "frequency": "common",
+    "triggers": [
+      "the word or between overlapping conditions",
+      "divisible by $3$ or $5$",
+      "arrangements avoiding several forbidden positions"
+    ],
+    "confusable_with": [
+      "complementary-counting",
+      "casework"
+    ],
+    "example_refs": []
+  },
+  {
+    "id": "geometric-probability",
+    "name": "Geometric Probability",
+    "area": "combinatorics",
+    "subarea": "probability",
+    "level": [
+      "10",
+      "12",
+      "AIME"
+    ],
+    "statement": "When outcomes are uniform over an interval or region, probability is a ratio of lengths, areas, or volumes.",
+    "frequency": "core",
+    "triggers": [
+      "real numbers chosen at random from an interval",
+      "a random point in a square or disk",
+      "conditions that become inequalities between continuous variables"
+    ],
+    "confusable_with": [
+      "complementary-counting",
+      "casework",
+      "coordinate-geometry"
+    ],
+    "example_refs": []
+  },
+  {
+    "id": "states-recursion",
+    "name": "States and Recursion",
+    "area": "combinatorics",
+    "subarea": "probability",
+    "level": [
+      "10",
+      "12",
+      "AIME"
+    ],
+    "statement": "Name the states of a process and write equations or recurrences relating them.",
+    "frequency": "core",
+    "triggers": [
+      "repeat until something happens",
+      "random walks or games with turns",
+      "strings that must avoid a forbidden pattern"
+    ],
+    "confusable_with": [
+      "casework",
+      "linearity-of-expectation",
+      "sequences",
+      "geometric-probability"
+    ],
+    "example_refs": []
+  },
+  {
+    "id": "graph-structure-counting",
+    "name": "Graph and Structure Counting",
+    "area": "combinatorics",
+    "subarea": "counting",
+    "level": [
+      "10",
+      "12",
+      "AIME"
+    ],
+    "statement": "Model the configuration as a graph or a rigid structure (a cycle, grid, or adjacency pattern) and count using that structure.",
+    "frequency": "core",
+    "triggers": [
+      "colorings where neighbors must differ",
+      "arrangements in a ring or on a grid with adjacency rules",
+      "paths through a network"
+    ],
+    "confusable_with": [
+      "casework",
+      "states-recursion",
+      "overcounting",
+      "binomial-coefficients"
+    ],
+    "example_refs": []
+  },
+  {
+    "id": "linearity-of-expectation",
+    "name": "Linearity of Expectation",
+    "area": "combinatorics",
+    "subarea": "probability",
+    "level": [
+      "10",
+      "12",
+      "AIME"
+    ],
+    "statement": "The expectation of a sum is the sum of expectations; count with indicator variables.",
+    "frequency": "common",
+    "triggers": [
+      "the expected number of something",
+      "events that are dependent but are only being counted",
+      "a total that splits into many small yes/no pieces"
+    ],
+    "confusable_with": [
+      "states-recursion",
+      "casework",
+      "complementary-counting"
+    ],
+    "example_refs": []
+  },
+  {
+    "id": "pigeonhole",
+    "name": "Pigeonhole Principle",
+    "area": "combinatorics",
+    "subarea": "existence",
+    "level": [
+      "10",
+      "12",
+      "AIME"
+    ],
+    "statement": "If more than $kn$ objects go into $n$ boxes, some box holds at least $k+1$.",
+    "frequency": "common",
+    "triggers": [
+      "guarantee, or must contain",
+      "the smallest number that forces a repeat",
+      "a worst-case selection"
+    ],
+    "confusable_with": [
+      "complementary-counting",
+      "casework"
+    ],
+    "example_refs": []
+  },
+  {
+    "id": "catalan-numbers",
+    "name": "Catalan Numbers",
+    "area": "combinatorics",
+    "subarea": "counting",
+    "level": [
+      "AIME",
+      "Beyond"
+    ],
+    "statement": "$C_n=\\tfrac{1}{n+1}\\binom{2n}{n}$ counts balanced parentheses, paths staying above a diagonal, and triangulations.",
+    "frequency": "rare",
+    "triggers": [
+      "lattice paths that never cross a diagonal",
+      "balanced sequences of two symbols",
+      "ways to triangulate a polygon"
+    ],
+    "confusable_with": [
+      "binomial-coefficients",
+      "states-recursion"
+    ],
+    "example_refs": []
+  },
+  {
+    "id": "vandermonde",
+    "name": "Vandermonde's Identity",
+    "area": "combinatorics",
+    "subarea": "identities",
+    "level": [
+      "12",
+      "AIME"
+    ],
+    "statement": "$\\sum_k\\binom{m}{k}\\binom{n}{r-k}=\\binom{m+n}{r}$.",
+    "frequency": "rare",
+    "triggers": [
+      "a sum of products of two binomial coefficients",
+      "choosing a committee from two separate groups, summed over splits"
+    ],
+    "confusable_with": [
+      "binomial-coefficients",
+      "casework"
+    ],
+    "example_refs": []
+  },
+  {
+    "id": "diophantine-factoring",
+    "name": "Factoring Diophantine Equations",
+    "area": "number-theory",
+    "subarea": "diophantine",
+    "level": [
+      "10",
+      "12",
+      "AIME"
+    ],
+    "statement": "Rearrange into (factor)(factor) = constant, often by adding a constant to both sides, then run through factor pairs.",
+    "frequency": "core",
+    "triggers": [
+      "integer solutions of an equation with a product term $xy$",
+      "reciprocals like $\\tfrac1x+\\tfrac1y$ equal to a constant",
+      "the number of ordered pairs of integers"
+    ],
+    "confusable_with": [
+      "divisor-counting",
+      "modular-arithmetic",
+      "gcd-lcm"
+    ],
+    "example_refs": []
+  },
+  {
+    "id": "digits",
+    "name": "Digit Representation",
+    "area": "number-theory",
+    "subarea": "representation",
+    "level": [
+      "10",
+      "12",
+      "AIME"
+    ],
+    "statement": "Write a number by its digits, $\\overline{abc}=100a+10b+c$, or in base $b$.",
+    "frequency": "core",
+    "triggers": [
+      "reversing digits",
+      "sums or products of digits",
+      "numbers written in a base other than $10$"
+    ],
+    "confusable_with": [
+      "modular-arithmetic",
+      "diophantine-factoring",
+      "systems-of-equations"
+    ],
+    "example_refs": []
+  },
+  {
+    "id": "divisor-counting",
+    "name": "Divisor Counting",
+    "area": "number-theory",
+    "subarea": "divisibility",
+    "level": [
+      "10",
+      "12",
+      "AIME"
+    ],
+    "statement": "If $n=p_1^{e_1}\\cdots p_k^{e_k}$, then $n$ has $(e_1+1)\\cdots(e_k+1)$ positive divisors.",
+    "frequency": "core",
+    "triggers": [
+      "how many divisors, or how many divisors with a property",
+      "divisors that are perfect squares or cubes",
+      "the smallest number with a given number of divisors"
+    ],
+    "confusable_with": [
+      "gcd-lcm",
+      "legendre-formula",
+      "diophantine-factoring"
+    ],
+    "example_refs": []
+  },
+  {
+    "id": "modular-arithmetic",
+    "name": "Modular Arithmetic",
+    "area": "number-theory",
+    "subarea": "congruences",
+    "level": [
+      "10",
+      "12",
+      "AIME"
+    ],
+    "statement": "Work with remainders; powers mod $n$ eventually cycle.",
+    "frequency": "common",
+    "triggers": [
+      "remainders of huge powers",
+      "last digit or last two digits",
+      "an equation impossible modulo a small number"
+    ],
+    "confusable_with": [
+      "digits",
+      "chinese-remainder",
+      "fermat-euler"
+    ],
+    "example_refs": []
+  },
+  {
+    "id": "fermat-euler",
+    "name": "Fermat and Euler Theorems",
+    "area": "number-theory",
+    "subarea": "congruences",
+    "level": [
+      "12",
+      "AIME"
+    ],
+    "statement": "If $\\gcd(a,n)=1$, then $a^{\\varphi(n)}\\equiv 1 \\pmod n$; for prime $p$, $a^{p-1}\\equiv1$.",
+    "frequency": "common",
+    "triggers": [
+      "an exponent far larger than the modulus",
+      "a prime modulus with a power",
+      "the order of an element"
+    ],
+    "confusable_with": [
+      "modular-arithmetic",
+      "chinese-remainder"
+    ],
+    "example_refs": []
+  },
+  {
+    "id": "chinese-remainder",
+    "name": "Chinese Remainder Theorem",
+    "area": "number-theory",
+    "subarea": "congruences",
+    "level": [
+      "10",
+      "12",
+      "AIME"
+    ],
+    "statement": "Congruences modulo pairwise coprime moduli have a unique simultaneous solution modulo their product.",
+    "frequency": "common",
+    "triggers": [
+      "one number with remainder conditions for several moduli",
+      "splitting a composite modulus like $1000=8\\cdot125$"
+    ],
+    "confusable_with": [
+      "modular-arithmetic",
+      "fermat-euler",
+      "gcd-lcm"
+    ],
+    "example_refs": []
+  },
+  {
+    "id": "gcd-lcm",
+    "name": "GCD and LCM",
+    "area": "number-theory",
+    "subarea": "divisibility",
+    "level": [
+      "10",
+      "12",
+      "AIME"
+    ],
+    "statement": "$\\gcd(a,b)\\cdot\\operatorname{lcm}(a,b)=ab$; compare prime exponents with min and max.",
+    "frequency": "common",
+    "triggers": [
+      "a given gcd or lcm",
+      "pairs of numbers sharing factors",
+      "exponents compared prime by prime"
+    ],
+    "confusable_with": [
+      "divisor-counting",
+      "diophantine-factoring",
+      "chinese-remainder"
+    ],
+    "example_refs": []
+  },
+  {
+    "id": "legendre-formula",
+    "name": "Legendre's Formula",
+    "area": "number-theory",
+    "subarea": "factorials",
+    "level": [
+      "10",
+      "12",
+      "AIME"
+    ],
+    "statement": "The exponent of prime $p$ in $n!$ is $\\sum_{k\\ge1}\\lfloor n/p^k\\rfloor$.",
+    "frequency": "common",
+    "triggers": [
+      "trailing zeros of a factorial",
+      "the largest power of a prime dividing $n!$"
+    ],
+    "confusable_with": [
+      "divisor-counting",
+      "floor-functions"
+    ],
+    "example_refs": []
+  },
+  {
+    "id": "wilson-theorem",
+    "name": "Wilson's Theorem",
+    "area": "number-theory",
+    "subarea": "congruences",
+    "level": [
+      "AIME",
+      "Beyond"
+    ],
+    "statement": "For prime $p$, $(p-1)!\\equiv-1 \\pmod p$.",
+    "frequency": "rare",
+    "triggers": [
+      "a factorial reduced modulo a prime just above it",
+      "products of all residues modulo a prime"
+    ],
+    "confusable_with": [
+      "fermat-euler",
+      "modular-arithmetic"
+    ],
+    "example_refs": []
+  },
+  {
+    "id": "lte",
+    "name": "Lifting the Exponent",
+    "area": "number-theory",
+    "subarea": "valuations",
+    "level": [
+      "AIME",
+      "Beyond"
+    ],
+    "statement": "For odd prime $p$ dividing $a-b$ but neither $a$ nor $b$: $v_p(a^n-b^n)=v_p(a-b)+v_p(n)$.",
+    "frequency": "rare",
+    "triggers": [
+      "the largest power of a prime dividing $a^n-b^n$",
+      "differences of large powers"
+    ],
+    "confusable_with": [
+      "fermat-euler",
+      "modular-arithmetic"
+    ],
+    "example_refs": []
+  },
+  {
+    "id": "pell-equations",
+    "name": "Pell Equations",
+    "area": "number-theory",
+    "subarea": "diophantine",
+    "level": [
+      "AIME",
+      "Beyond"
+    ],
+    "statement": "Solutions of $x^2-dy^2=1$ come from powers of the fundamental solution.",
+    "frequency": "rare",
+    "triggers": [
+      "$x^2-dy^2=1$ or a similar form with a nonsquare $d$",
+      "triangular numbers that are also squares"
+    ],
+    "confusable_with": [
+      "diophantine-factoring",
+      "modular-arithmetic"
+    ],
+    "example_refs": []
+  }
+]

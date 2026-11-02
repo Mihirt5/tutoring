@@ -14,7 +14,10 @@
     "courses:validate": "node scripts/courses/check.mjs",
     "test:e2e": "playwright test",
     "db:migrate": "node --env-file=.env.local scripts/migrate.mjs",
-    "problems:generate": "node --env-file=.env.local scripts/generate-problems.mjs"
+    "problems:generate": "node --env-file=.env.local scripts/generate-problems.mjs",
+    "spot:validate": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/spot/validate.mjs",
+    "spot:verify": "scripts/spot/.venv/bin/python scripts/spot/verify_answers.py",
+    "spot:generate": "node --env-file-if-exists=.env.local --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/spot/generate.mjs"
   },
   "dependencies": {
     "@ai-sdk/react": "^3.0.0",

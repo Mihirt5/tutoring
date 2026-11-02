@@ -1,0 +1,81 @@
+[
+  {
+    "id": "geo-0001",
+    "problem": "Chords $\\overline{AB}$ and $\\overline{CD}$ of a circle intersect at $E$. If $AE = 6$, $EB = 4$, and $CE$ is $5$ more than $ED$, what is $CD$?",
+    "level": "10",
+    "difficulty": 2,
+    "primary_concept": "power-of-a-point",
+    "also_valid": [
+      "similar-triangles"
+    ],
+    "also_valid_notes": {
+      "similar-triangles": "Triangles $AEC$ and $DEB$ are similar, which gives the same equation. Power of a point is that similarity packaged, so it gets you there in one line."
+    },
+    "distractors": [
+      "pythagorean-theorem",
+      "angle-bisector-theorem",
+      "law-of-cosines"
+    ],
+    "trigger_explanation": "Two chords cross at one point and the problem gives segment lengths along both. Products of segments through one point are the signature of power of a point.",
+    "why_not": {
+      "pythagorean-theorem": "Nothing in the figure is a right angle, and the circle's radius is unknown.",
+      "angle-bisector-theorem": "No angle is bisected; $E$ divides the chords for a different reason.",
+      "law-of-cosines": "You don't know any angle at $E$ or any third side, so there's no triangle to apply it to."
+    },
+    "first_move": "Set $AE\\cdot EB = CE\\cdot ED$, i.e. $24 = ED\\,(ED+5)$.",
+    "answer": "11",
+    "solution_sketch": "$ED^2 + 5ED - 24 = 0$ gives $ED = 3$, so $CE = 8$ and $CD = 11$."
+  },
+  {
+    "id": "geo-0002",
+    "problem": "A rectangular box has edges of length $6$, $8$, and $10$ meeting at a vertex $V$. A plane passes through the other endpoints of those three edges, cutting off a small piece that contains $V$. What is the volume of the larger piece?",
+    "level": "10",
+    "difficulty": 2,
+    "primary_concept": "three-d-volume",
+    "also_valid": [],
+    "also_valid_notes": {},
+    "distractors": [
+      "pythagorean-theorem",
+      "heron-formula",
+      "similar-triangles"
+    ],
+    "trigger_explanation": "A corner cut off a box: three edges meet at right angles, so the cut-off piece is a tetrahedron whose height is one of those edges.",
+    "why_not": {
+      "pythagorean-theorem": "You can find the sides of the slanted triangle, but you would still need the tetrahedron's height to that face, which is the hard way round.",
+      "heron-formula": "The area of the slanted cut doesn't give a volume without the perpendicular distance from $V$, which you don't have.",
+      "similar-triangles": "No two figures here are scaled copies of each other."
+    },
+    "first_move": "Take the right triangle with legs $6$ and $8$ as the base and the edge $10$ as the height of the corner tetrahedron.",
+    "answer": "400",
+    "solution_sketch": "The tetrahedron has volume $\\frac13\\cdot\\frac{6\\cdot8}{2}\\cdot10 = 80$. The box has volume $480$, so the larger piece is $400$."
+  },
+  {
+    "id": "geo-0003",
+    "problem": "Equilateral triangle $ABC$ is inscribed in a circle, and $P$ is a point on minor arc $\\widehat{BC}$. If $PA = 13$ and $PB = 5$, find $PC$.",
+    "level": "AIME",
+    "difficulty": 2,
+    "primary_concept": "ptolemy",
+    "also_valid": [
+      "law-of-cosines"
+    ],
+    "also_valid_notes": {
+      "law-of-cosines": "Using $\\angle APB = \\angle APC = 60^\\circ$ and the law of cosines works, but it produces a quadratic with two roots ($5$ and $8$) that you then have to sort out. Ptolemy gives $PA = PB + PC$ in one step."
+    },
+    "distractors": [
+      "power-of-a-point",
+      "pythagorean-theorem",
+      "angle-bisector-theorem",
+      "similar-triangles"
+    ],
+    "trigger_explanation": "Four points on a circle, $A$, $B$, $P$, $C$, form a cyclic quadrilateral, and you're given lengths from $P$ to the vertices of an equilateral triangle. That points to the relation among the sides and diagonals of the quadrilateral.",
+    "why_not": {
+      "power-of-a-point": "No two chords or secants pass through a common point here; $P$ is on the circle, so its power is zero.",
+      "pythagorean-theorem": "No right angle appears unless you add a diameter, and that doesn't relate $PA$, $PB$, $PC$.",
+      "angle-bisector-theorem": "$PA$ does bisect $\\angle BPC$, but where it crosses $BC$ involves an extra unknown length and never gives $PC$ on its own.",
+      "similar-triangles": "Ptolemy can be proved with a clever similar-triangle construction, but nothing in the figure is similar until you build that point yourself."
+    },
+    "first_move": "Apply Ptolemy to $ABPC$: $PA\\cdot BC = PB\\cdot AC + PC\\cdot AB$, and cancel the common side length.",
+    "answer": "8",
+    "solution_sketch": "Since $AB = BC = CA$, Ptolemy gives $PA = PB + PC$, so $PC = 13 - 5 = 8$. (Check: then $AB^2 = 5^2 + 8^2 + 5\\cdot8 = 129$, which is consistent.)"
+  }
+]

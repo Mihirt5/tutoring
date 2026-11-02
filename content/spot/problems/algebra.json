@@ -1,0 +1,77 @@
+[
+  {
+    "id": "alg-0001",
+    "problem": "The polynomial $x^3 - 7x^2 + 5x + 2$ has three distinct real roots $a$, $b$, and $c$. What is $a^2 + b^2 + c^2$?",
+    "level": "12",
+    "difficulty": 2,
+    "primary_concept": "vieta",
+    "also_valid": [
+      "newton-sums"
+    ],
+    "also_valid_notes": {
+      "newton-sums": "Newton's sums gives $p_2 = e_1p_1 - 2e_2$ directly, which is the same computation. The key idea is still reading $a+b+c$ and $ab+bc+ca$ off the coefficients, which is Vieta."
+    },
+    "distractors": [
+      "polynomial-remainder",
+      "quadratics",
+      "systems-of-equations"
+    ],
+    "trigger_explanation": "You're asked for a symmetric expression in three roots you can't find: the cubic has no rational roots. That combination means read the symmetric sums off the coefficients.",
+    "why_not": {
+      "polynomial-remainder": "Evaluating the polynomial at specific points gives values of $P$, not sums of its roots.",
+      "quadratics": "This is a cubic with no rational root, so there's no way to factor it down to a quadratic you can solve.",
+      "systems-of-equations": "Treating $a$, $b$, $c$ as unknowns to solve for means finding irrational roots of a cubic. The question never needs the individual roots."
+    },
+    "first_move": "Read off $a+b+c = 7$ and $ab+bc+ca = 5$.",
+    "answer": "39",
+    "solution_sketch": "$a^2+b^2+c^2 = (a+b+c)^2 - 2(ab+bc+ca) = 49 - 10 = 39$."
+  },
+  {
+    "id": "alg-0002",
+    "problem": "How many real numbers $x$ satisfy $x^2 - 5\\lfloor x \\rfloor + 4 = 0$?",
+    "level": "10",
+    "difficulty": 3,
+    "primary_concept": "floor-functions",
+    "also_valid": [],
+    "also_valid_notes": {},
+    "distractors": [
+      "quadratics",
+      "algebraic-manipulation",
+      "polynomial-remainder"
+    ],
+    "trigger_explanation": "The equation mixes $x$ with its integer part $\\lfloor x \\rfloor$. Fix the integer part as $n$, solve, then check that $n \\le x < n+1$.",
+    "why_not": {
+      "quadratics": "It looks quadratic, but $\\lfloor x \\rfloor$ isn't a constant, so the quadratic formula doesn't apply until you fix the integer part.",
+      "algebraic-manipulation": "No rearrangement removes $\\lfloor x\\rfloor$. You have to split by its value.",
+      "polynomial-remainder": "There's no polynomial division here; the floor makes the left side not a polynomial at all."
+    },
+    "first_move": "Let $n = \\lfloor x \\rfloor$, so $x^2 = 5n - 4$ and $n \\le x < n+1$.",
+    "answer": "4",
+    "solution_sketch": "Negative $x$ would need $5n-4 \\ge 0$ with $n<0$, which is impossible. For $x \\ge 0$, $n \\le \\sqrt{5n-4} < n+1$ gives $1 \\le n \\le 4$, and each works: $x = 1, \\sqrt6, \\sqrt{11}, 4$. So there are $4$ solutions."
+  },
+  {
+    "id": "alg-0003",
+    "problem": "The product $\\displaystyle\\prod_{k=2}^{40} \\frac{k^3 - 1}{k^3 + 1}$ equals $\\tfrac{m}{n}$, where $m$ and $n$ are relatively prime positive integers. Find $m + n$.",
+    "level": "AIME",
+    "difficulty": 2,
+    "primary_concept": "telescoping",
+    "also_valid": [],
+    "also_valid_notes": {},
+    "distractors": [
+      "sequences",
+      "polynomial-remainder",
+      "vieta",
+      "logarithms"
+    ],
+    "trigger_explanation": "A long product indexed by consecutive integers, with factors that split nicely: $k^3 \\pm 1$ factor, and the pieces line up between neighboring terms so most of them cancel.",
+    "why_not": {
+      "sequences": "The factors don't form an arithmetic or geometric sequence, so there's no closed-form sum or product formula to apply.",
+      "polynomial-remainder": "Factoring $k^3-1$ uses the root $k=1$, but evaluating polynomials doesn't make the product collapse.",
+      "vieta": "There are no roots of a fixed polynomial being combined; the product runs over many different values of $k$.",
+      "logarithms": "Taking logs turns the product into a sum, but the sum has no nicer structure. The cancellation only shows after factoring."
+    },
+    "first_move": "Factor each term as $\\frac{(k-1)(k^2+k+1)}{(k+1)(k^2-k+1)}$ and note that $k^2+k+1 = (k+1)^2 - (k+1) + 1$.",
+    "answer": "1367",
+    "solution_sketch": "The $\\frac{k-1}{k+1}$ factors leave $\\frac{1\\cdot 2}{40\\cdot 41}$. The quadratic factors telescope to $\\frac{40^2+40+1}{2^2-2+1} = \\frac{1641}{3}$. The product is $\\frac{2\\cdot1641}{3\\cdot40\\cdot41} = \\frac{547}{820}$, so $m+n = 1367$."
+  }
+]

@@ -21,6 +21,7 @@ import {
   newBadges,
   xpForProblem,
 } from "./engine/xp";
+import { emptySpotState, schedule, type SpotAttempt } from "./spot/engine";
 import { problemById } from "@/content/problems";
 import type { CourseLessonState } from "./courses/types";
 import { normalizeCourseState } from "./courses/state";
@@ -41,6 +42,7 @@ export function defaultProgress(): Progress {
     lessons: {},
     reviews: [],
     contests: [],
+    spot: emptySpotState(),
     minutesByDay: {},
     track: "amc10",
   };
@@ -329,6 +331,48 @@ export function recordContestRun(run: ContestRun) {
       run.perProblemSeconds.reduce((a, b) => a + b, 0),
     ),
   );
+}
+
+export const XP_SPOT = { correct: 3, "also-valid": 2, wrong: 0, timeout: 0 };
+
+export function recordSpotAttempt(attempt: SpotAttempt) {
+  mutate((p) => {
+    const spot = p.spot ?? emptySpotState();
+    return addMinutes(
+      {
+        ...p,
+        spot: {
+          attempts: [...spot.attempts, attempt],
+          boxes: {
+            ...spot.boxes,
+            [attempt.conceptId]: schedule(
+              spot.boxes[attempt.conceptId],
+              attempt.verdict,
+              attempt.ts,
+            ),
+          },
+        },
+        xp: p.xp + XP_SPOT[attempt.verdict],
+        streak: bumpStreak(p.streak),
+      },
+      attempt.ms / 1000,
+    );
+  });
+}
+
+export function updateSpotAttempt(
+  id: string,
+  patch: Pick<SpotAttempt, "solved"> | Pick<SpotAttempt, "highlight">,
+) {
+  mutate((p) => ({
+    ...p,
+    spot: {
+      ...p.spot,
+      attempts: p.spot.attempts.map((a) =>
+        a.id === id ? { ...a, ...patch } : a,
+      ),
+    },
+  }));
 }
 
 export function setTrack(trackId: string) {

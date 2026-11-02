@@ -12,6 +12,8 @@ const NAV = [
   { href: "/learn", label: "Learn", glyph: "∂" },
   { href: "/courses", label: "Courses", glyph: "▤" },
   { href: "/problems", label: "Problems", glyph: "Σ" },
+  { href: "/pattern", label: "Pattern", glyph: "⚡" },
+  { href: "/spot", label: "Spot", glyph: "◎" },
   { href: "/contests", label: "Contests", glyph: "⊕" },
   { href: "/review", label: "Review", glyph: "↻" },
   { href: "/dashboard", label: "Dashboard", glyph: "∇" },

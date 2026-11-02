@@ -193,6 +193,7 @@ export interface Progress {
   lessons: Record<string, LessonProgress>;
   reviews: SrsItem[];
   contests: ContestRun[];
+  spot: import("./spot/engine").SpotState; // Spot the Concept history
   minutesByDay: Record<string, number>;
   track: string; // chosen competition track
 }
